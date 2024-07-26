@@ -54,16 +54,12 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ---
 
 # Traitforge audit details
-- Total Prize Pool: $28000 in USDC
-  - HM awards: $22300 in USDC
-  - (remove this line if there is no Analysis pool) Analysis awards: XXX XXX USDC (Notion: Analysis pool)
+- Total Prize Pool: $28,000 in USDC
+  - HM awards: $22,300 in USDC
   - QA awards: $900 in USDC
-  - (remove this line if there is no Bot race) Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
- 
-  - Judge awards: $2600 in USDC
-  - Validator awards: XXX XXX USDC (Notion: Triage fee - final)
+  - Judge awards: $2,600 in USDC
+  - Validator awards: $1,700 USDC 
   - Scout awards: $500 in USDC
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-07-traitforge/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)

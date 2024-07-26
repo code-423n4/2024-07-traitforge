@@ -1,0 +1,15 @@
+{
+  "extends": "solhint:recommended",
+  "plugins": [],
+  "rules": {
+    "indent": ["error", 2],
+    "variable-declaration-spacing": ["error", "always"],
+    "operator-whitespace": ["error", "always"],
+    "pragma-on-top": "error",
+    "max-line-length": ["warn", 120],
+    "function-max-lines": ["error", 50],
+    "contract-name-camelcase": "off",
+    "no-unused-vars": "warn",
+    "no-empty-blocks": "off"
+  }
+}

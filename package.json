@@ -1,0 +1,36 @@
+{
+  "name": "trait-forge-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "npx hardhat clean",
+    "test": "yarn compile && npx hardhat test",
+    "compile": "npx hardhat clean && npx hardhat compile",
+    "deploy": "yarn compile && npx hardhat deploy-all",
+    "genMerkleTree": "npx hardhat run ./scripts/saveMerkleTreeToJson.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "@openzeppelin/contracts": "4.9.3",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.3",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.10.0",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.4.0",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.3.3"
+  }
+}

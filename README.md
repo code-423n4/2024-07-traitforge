@@ -12,6 +12,20 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
+## TraitForge Overview - ManPeach
+
+TraitForge is a competetive and collaborative breeding game with a nuke function. Each NFT (Entity), has set Traits, created and calculated before mint, by indexing the entropy slots. Each digit or total entropy, gives the NFT its unqique traits, that are determined but completely dispursed/random. Players can forge (breed), by either listing a forger, or paying a forger and receiving the new NFT. Nuking is a function where players burn their NFT, in return claim a portion of ETH from the nuke-fund, in proportion to the 'nuke factor' of the entity, which increases overtime.
+Players compete in every aspect of the game, whether its minting the best NFT's available, trading or listing for forging in a competetive market or nuking when the time is right.
+
+## Resources
+Client repo - https://github.com/TraitForge/traitforge-client
+Docs Repo (needs to be updated) - https://github.com/TraitForge/docs
+Game Website (test-net) - https://traitforge.game/home
+Info Website - https://traitforge.info/
+WhitePaper - https://docs.google.com/document/d/1pihtkKyyxobFWdaNU4YfAy56Q7WIMbFJjSHUAfRm6BA/edit
+GitBook - https://github.com/TraitForge/GitBook
+
+
 # Audit setup
 
 ## 🐺 C4: Set up repos

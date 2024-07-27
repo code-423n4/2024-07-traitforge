@@ -69,8 +69,6 @@ TraitForge is not just a game; it's an evolving NFT ecosystem designed for strat
 
 # Scope
 
-### Files out of scope
-
 ## Scoping Q &amp; A
 
 ### General questions

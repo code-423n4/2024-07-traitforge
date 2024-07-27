@@ -1,0 +1,419 @@
+INFO:Detectors:
+Airdrop.startAirdrop(uint256) (contracts/Airdrop/Airdrop.sol#24-32) uses arbitrary from in transferFrom: traitToken.transferFrom(tx.origin,address(this),amount) (contracts/Airdrop/Airdrop.sol#29)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom 
+
+INFO:Detectors:
+DevFund.safeRewardTransfer(address,uint256) (contracts/DevFund/DevFund.sol#83-92) sends eth to arbitrary user
+	Dangerous calls:
+	- (success,None) = address(to).call{value: amount}() (contracts/DevFund/DevFund.sol#89)
+NukeFund.nuke(uint256) (contracts/NukeFund/NukeFund.sol#153-182) sends eth to arbitrary user
+	Dangerous calls:
+	- (success,None) = address(msg.sender).call{value: claimAmount}() (contracts/NukeFund/NukeFund.sol#177)
+TraitForgeNft._distributeFunds(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#358-365) sends eth to arbitrary user
+	Dangerous calls:
+	- (success,None) = nukeFundAddress.call{value: totalAmount}() (contracts/TraitForgeNft/TraitForgeNft.sol#361)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#functions-that-send-ether-to-arbitrary-destinations 
+
+INFO:Detectors:
+EntropyGenerator.initializeAlphaIndices() (contracts/EntropyGenerator/EntropyGenerator.sol#206-216) uses a weak PRNG: "numberIndexSelection = hashValue % 13 (contracts/EntropyGenerator/EntropyGenerator.sol#212)" 
+EntropyGenerator.initializeAlphaIndices() (contracts/EntropyGenerator/EntropyGenerator.sol#206-216) uses a weak PRNG: "slotIndexSelection = (hashValue % 258) + 512 (contracts/EntropyGenerator/EntropyGenerator.sol#211)" 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#weak-PRNG 
+
+INFO:Detectors:
+Reentrancy in EntityTrading.buyNFT(uint256) (contracts/EntityTrading/EntityTrading.sol#63-92):
+	External calls:
+	- transferToNukeFund(nukeFundContribution) (contracts/EntityTrading/EntityTrading.sol#74)
+		- (success,None) = nukeFundAddress.call{value: amount}() (contracts/EntityTrading/EntityTrading.sol#114)
+	- (success,None) = address(listing.seller).call{value: sellerProceeds}() (contracts/EntityTrading/EntityTrading.sol#77-79)
+	- nftContract.transferFrom(address(this),msg.sender,tokenId) (contracts/EntityTrading/EntityTrading.sol#81)
+	External calls sending eth:
+	- transferToNukeFund(nukeFundContribution) (contracts/EntityTrading/EntityTrading.sol#74)
+		- (success,None) = nukeFundAddress.call{value: amount}() (contracts/EntityTrading/EntityTrading.sol#114)
+	- (success,None) = address(listing.seller).call{value: sellerProceeds}() (contracts/EntityTrading/EntityTrading.sol#77-79)
+	State variables written after the call(s):
+	- delete listings[listedTokenIds[tokenId]] (contracts/EntityTrading/EntityTrading.sol#83)
+	EntityTrading.listings (contracts/EntityTrading/EntityTrading.sol#20) can be used in cross function reentrancies:
+	- EntityTrading.listings (contracts/EntityTrading/EntityTrading.sol#20)
+Reentrancy in DevFund.claim() (contracts/DevFund/DevFund.sol#61-75):
+	External calls:
+	- claimedAmount = safeRewardTransfer(msg.sender,pending) (contracts/DevFund/DevFund.sol#69)
+		- (success,None) = address(to).call{value: amount}() (contracts/DevFund/DevFund.sol#89)
+	State variables written after the call(s):
+	- info.pendingRewards = pending - claimedAmount (contracts/DevFund/DevFund.sol#70)
+	DevFund.devInfo (contracts/DevFund/DevFund.sol#12) can be used in cross function reentrancies:
+	- DevFund.addDev(address,uint256) (contracts/DevFund/DevFund.sol#30-38)
+	- DevFund.devInfo (contracts/DevFund/DevFund.sol#12)
+	- DevFund.pendingRewards(address) (contracts/DevFund/DevFund.sol#77-81)
+	- DevFund.removeDev(address) (contracts/DevFund/DevFund.sol#51-59)
+	- DevFund.updateDev(address,uint256) (contracts/DevFund/DevFund.sol#40-49)
+	- info.rewardDebt = totalRewardDebt (contracts/DevFund/DevFund.sol#74)
+	DevFund.devInfo (contracts/DevFund/DevFund.sol#12) can be used in cross function reentrancies:
+	- DevFund.addDev(address,uint256) (contracts/DevFund/DevFund.sol#30-38)
+	- DevFund.devInfo (contracts/DevFund/DevFund.sol#12)
+	- DevFund.pendingRewards(address) (contracts/DevFund/DevFund.sol#77-81)
+	- DevFund.removeDev(address) (contracts/DevFund/DevFund.sol#51-59)
+	- DevFund.updateDev(address,uint256) (contracts/DevFund/DevFund.sol#40-49)
+Reentrancy in EntityForging.forgeWithListed(uint256,uint256) (contracts/EntityForging/EntityForging.sol#102-175):
+	External calls:
+	- newTokenId = nftContract.forge(msg.sender,forgerTokenId,mergerTokenId,) (contracts/EntityForging/EntityForging.sol#150-155)
+	- (success,None) = nukeFundAddress.call{value: devFee}() (contracts/EntityForging/EntityForging.sol#156)
+	- (success_forge,None) = forgerOwner.call{value: forgerShare}() (contracts/EntityForging/EntityForging.sol#158)
+	External calls sending eth:
+	- (success,None) = nukeFundAddress.call{value: devFee}() (contracts/EntityForging/EntityForging.sol#156)
+	- (success_forge,None) = forgerOwner.call{value: forgerShare}() (contracts/EntityForging/EntityForging.sol#158)
+	State variables written after the call(s):
+	- _cancelListingForForging(forgerTokenId) (contracts/EntityForging/EntityForging.sol#162)
+		- delete listings[listedTokenIds[tokenId]] (contracts/EntityForging/EntityForging.sol#194)
+	EntityForging.listings (contracts/EntityForging/EntityForging.sol#21) can be used in cross function reentrancies:
+	- EntityForging.fetchListings() (contracts/EntityForging/EntityForging.sol#48-53)
+	- EntityForging.getListings(uint256) (contracts/EntityForging/EntityForging.sol#61-65)
+	- EntityForging.listings (contracts/EntityForging/EntityForging.sol#21)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities 
+
+INFO:Detectors:
+Airdrop.startAirdrop(uint256) (contracts/Airdrop/Airdrop.sol#24-32) ignores return value by traitToken.transferFrom(tx.origin,address(this),amount) (contracts/Airdrop/Airdrop.sol#29)
+Airdrop.claim() (contracts/Airdrop/Airdrop.sol#67-74) ignores return value by traitToken.transfer(msg.sender,amount) (contracts/Airdrop/Airdrop.sol#72)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer 
+
+INFO:Detectors:
+DevFund.receive() (contracts/DevFund/DevFund.sol#14-28) performs a multiplication on the result of a division:
+	- amountPerWeight = msg.value / totalDevWeight (contracts/DevFund/DevFund.sol#16)
+	- remaining = msg.value - (amountPerWeight * totalDevWeight) (contracts/DevFund/DevFund.sol#17)
+NukeFund.calculateAge(uint256) (contracts/NukeFund/NukeFund.sol#118-133) performs a multiplication on the result of a division:
+	- daysOld = (block.timestamp - nftContract.getTokenCreationTimestamp(tokenId)) / 60 / 60 / 24 (contracts/NukeFund/NukeFund.sol#121-125)
+	- age = (daysOld * perfomanceFactor * MAX_DENOMINATOR * ageMultiplier) / 365 (contracts/NukeFund/NukeFund.sol#128-131)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply 
+
+INFO:Detectors:
+DAOFund.receive() (contracts/DAOFund/DAOFund.sol#16-34) uses a dangerous strict equality:
+	- require(bool,string)(token.burn(token.balanceOf(address(this))) == true,Token burn failed) (contracts/DAOFund/DAOFund.sol#30-33)
+EntityForging._resetForgingCountIfNeeded(uint256) (contracts/EntityForging/EntityForging.sol#199-207) uses a dangerous strict equality:
+	- lastForgeResetTimestamp[tokenId] == 0 (contracts/EntityForging/EntityForging.sol#201)
+EntropyGenerator.deriveTokenParameters(uint256,uint256) (contracts/EntropyGenerator/EntropyGenerator.sol#136-161) uses a dangerous strict equality:
+	- isForger = role == 0 (contracts/EntropyGenerator/EntropyGenerator.sol#158)
+EntropyGenerator.getEntropy(uint256,uint256) (contracts/EntropyGenerator/EntropyGenerator.sol#164-185) uses a dangerous strict equality:
+	- slotIndex == slotIndexSelectionPoint && numberIndex == numberIndexSelectionPoint (contracts/EntropyGenerator/EntropyGenerator.sol#171-172)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities 
+
+INFO:Detectors:
+Reentrancy in TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309):
+	External calls:
+	- _incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#282)
+		- entropyGenerator.initializeAlphaIndices() (contracts/TraitForgeNft/TraitForgeNft.sol#353)
+	- _mint(to,newItemId) (contracts/TraitForgeNft/TraitForgeNft.sol#287)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	- entropyValue = entropyGenerator.getNextEntropy() (contracts/TraitForgeNft/TraitForgeNft.sol#288)
+	State variables written after the call(s):
+	- generationMintCounts[currentGeneration] ++ (contracts/TraitForgeNft/TraitForgeNft.sol#293)
+	TraitForgeNft.generationMintCounts (contracts/TraitForgeNft/TraitForgeNft.sol#45) can be used in cross function reentrancies:
+	- TraitForgeNft.calculateMintPrice() (contracts/TraitForgeNft/TraitForgeNft.sol#227-232)
+	- TraitForgeNft.generationMintCounts (contracts/TraitForgeNft/TraitForgeNft.sol#45)
+Reentrancy in TraitForgeNft._mintNewEntity(address,uint256,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#311-343):
+	External calls:
+	- _mint(newOwner,newTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#323)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	State variables written after the call(s):
+	- generationMintCounts[gen] ++ (contracts/TraitForgeNft/TraitForgeNft.sol#328)
+	TraitForgeNft.generationMintCounts (contracts/TraitForgeNft/TraitForgeNft.sol#45) can be used in cross function reentrancies:
+	- TraitForgeNft.calculateMintPrice() (contracts/TraitForgeNft/TraitForgeNft.sol#227-232)
+	- TraitForgeNft.generationMintCounts (contracts/TraitForgeNft/TraitForgeNft.sol#45)
+Reentrancy in TraitForgeNft._mintNewEntity(address,uint256,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#311-343):
+	External calls:
+	- _mint(newOwner,newTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#323)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	- _incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#334)
+		- entropyGenerator.initializeAlphaIndices() (contracts/TraitForgeNft/TraitForgeNft.sol#353)
+	State variables written after the call(s):
+	- _incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#334)
+		- generationMintCounts[currentGeneration] = 0 (contracts/TraitForgeNft/TraitForgeNft.sol#351)
+	TraitForgeNft.generationMintCounts (contracts/TraitForgeNft/TraitForgeNft.sol#45) can be used in cross function reentrancies:
+	- TraitForgeNft.calculateMintPrice() (contracts/TraitForgeNft/TraitForgeNft.sol#227-232)
+	- TraitForgeNft.generationMintCounts (contracts/TraitForgeNft/TraitForgeNft.sol#45)
+Reentrancy in EntityTrading.cancelListing(uint256) (contracts/EntityTrading/EntityTrading.sol#94-109):
+	External calls:
+	- nftContract.transferFrom(address(this),msg.sender,tokenId) (contracts/EntityTrading/EntityTrading.sol#104)
+	State variables written after the call(s):
+	- delete listings[listedTokenIds[tokenId]] (contracts/EntityTrading/EntityTrading.sol#106)
+	EntityTrading.listings (contracts/EntityTrading/EntityTrading.sol#20) can be used in cross function reentrancies:
+	- EntityTrading.listings (contracts/EntityTrading/EntityTrading.sol#20)
+Reentrancy in Airdrop.claim() (contracts/Airdrop/Airdrop.sol#67-74):
+	External calls:
+	- traitToken.transfer(msg.sender,amount) (contracts/Airdrop/Airdrop.sol#72)
+	State variables written after the call(s):
+	- userInfo[msg.sender] = 0 (contracts/Airdrop/Airdrop.sol#73)
+	Airdrop.userInfo (contracts/Airdrop/Airdrop.sol#18) can be used in cross function reentrancies:
+	- Airdrop.userInfo (contracts/Airdrop/Airdrop.sol#18)
+Reentrancy in Airdrop.startAirdrop(uint256) (contracts/Airdrop/Airdrop.sol#24-32):
+	External calls:
+	- traitToken.transferFrom(tx.origin,address(this),amount) (contracts/Airdrop/Airdrop.sol#29)
+	State variables written after the call(s):
+	- started = true (contracts/Airdrop/Airdrop.sol#30)
+	Airdrop.started (contracts/Airdrop/Airdrop.sol#11) can be used in cross function reentrancies:
+	- Airdrop.airdropStarted() (contracts/Airdrop/Airdrop.sol#34-36)
+	- Airdrop.allowDaoFund() (contracts/Airdrop/Airdrop.sol#38-42)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1 
+
+INFO:Detectors:
+DAOFund.receive() (contracts/DAOFund/DAOFund.sol#16-34) ignores return value by uniswapV2Router.swapExactETHForTokens{value: msg.value}(0,path,address(this),block.timestamp) (contracts/DAOFund/DAOFund.sol#23-28)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-return 
+
+INFO:Detectors:
+Airdrop.startAirdrop(uint256) (contracts/Airdrop/Airdrop.sol#24-32) should emit an event for: 
+	- totalTokenAmount = amount (contracts/Airdrop/Airdrop.sol#31) 
+Airdrop.addUserAmount(address,uint256) (contracts/Airdrop/Airdrop.sol#48-55) should emit an event for: 
+	- totalValue += amount (contracts/Airdrop/Airdrop.sol#54) 
+Airdrop.subUserAmount(address,uint256) (contracts/Airdrop/Airdrop.sol#57-65) should emit an event for: 
+	- totalValue -= amount (contracts/Airdrop/Airdrop.sol#64) 
+EntityForging.setOneYearInDays(uint256) (contracts/EntityForging/EntityForging.sol#40-42) should emit an event for: 
+	- oneYearInDays = value (contracts/EntityForging/EntityForging.sol#41) 
+EntityTrading.setTaxCut(uint256) (contracts/EntityTrading/EntityTrading.sol#33-35) should emit an event for: 
+	- taxCut = _taxCut (contracts/EntityTrading/EntityTrading.sol#34) 
+NukeFund.setTaxCut(uint256) (contracts/NukeFund/NukeFund.sol#63-65) should emit an event for: 
+	- taxCut = _taxCut (contracts/NukeFund/NukeFund.sol#64) 
+NukeFund.setMinimumDaysHeld(uint256) (contracts/NukeFund/NukeFund.sol#67-69) should emit an event for: 
+	- minimumDaysHeld = value (contracts/NukeFund/NukeFund.sol#68) 
+NukeFund.setDefaultNukeFactorIncrease(uint256) (contracts/NukeFund/NukeFund.sol#71-73) should emit an event for: 
+	- defaultNukeFactorIncrease = value (contracts/NukeFund/NukeFund.sol#72) 
+NukeFund.setMaxAllowedClaimDivisor(uint256) (contracts/NukeFund/NukeFund.sol#75-77) should emit an event for: 
+	- maxAllowedClaimDivisor = value (contracts/NukeFund/NukeFund.sol#76) 
+NukeFund.setNukeFactorMaxParam(uint256) (contracts/NukeFund/NukeFund.sol#79-81) should emit an event for: 
+	- nukeFactorMaxParam = value (contracts/NukeFund/NukeFund.sol#80) 
+NukeFund.setAgeMultplier(uint256) (contracts/NukeFund/NukeFund.sol#109-111) should emit an event for: 
+	- ageMultiplier = _ageMultiplier (contracts/NukeFund/NukeFund.sol#110) 
+TraitForgeNft.setStartPrice(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#100-102) should emit an event for: 
+	- startPrice = _startPrice (contracts/TraitForgeNft/TraitForgeNft.sol#101) 
+TraitForgeNft.setPriceIncrement(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#104-106) should emit an event for: 
+	- priceIncrement = _priceIncrement (contracts/TraitForgeNft/TraitForgeNft.sol#105) 
+TraitForgeNft.setPriceIncrementByGen(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#108-112) should emit an event for: 
+	- priceIncrementByGen = _priceIncrementByGen (contracts/TraitForgeNft/TraitForgeNft.sol#111) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-arithmetic 
+
+INFO:Detectors:
+EntityForging.setNukeFundAddress(address)._nukeFundAddress (contracts/EntityForging/EntityForging.sol#31) lacks a zero-check on :
+		- nukeFundAddress = _nukeFundAddress (contracts/EntityForging/EntityForging.sol#33)
+EntityForging.forgeWithListed(uint256,uint256).forgerOwner (contracts/EntityForging/EntityForging.sol#148) lacks a zero-check on :
+		- (success_forge,None) = forgerOwner.call{value: forgerShare}() (contracts/EntityForging/EntityForging.sol#158)
+EntityTrading.setNukeFundAddress(address)._nukeFundAddress (contracts/EntityTrading/EntityTrading.sol#28) lacks a zero-check on :
+		- nukeFundAddress = _nukeFundAddress (contracts/EntityTrading/EntityTrading.sol#30)
+EntropyGenerator.constructor(address)._traitForgetNft (contracts/EntropyGenerator/EntropyGenerator.sol#30) lacks a zero-check on :
+		- allowedCaller = _traitForgetNft (contracts/EntropyGenerator/EntropyGenerator.sol#31)
+EntropyGenerator.setAllowedCaller(address)._allowedCaller (contracts/EntropyGenerator/EntropyGenerator.sol#36) lacks a zero-check on :
+		- allowedCaller = _allowedCaller (contracts/EntropyGenerator/EntropyGenerator.sol#37)
+NukeFund.constructor(address,address,address,address)._devAddress (contracts/NukeFund/NukeFund.sol#30) lacks a zero-check on :
+		- devAddress = _devAddress (contracts/NukeFund/NukeFund.sol#35)
+NukeFund.constructor(address,address,address,address)._daoAddress (contracts/NukeFund/NukeFund.sol#31) lacks a zero-check on :
+		- daoAddress = _daoAddress (contracts/NukeFund/NukeFund.sol#36)
+NukeFund.setDevAddress(address).account (contracts/NukeFund/NukeFund.sol#94) lacks a zero-check on :
+		- devAddress = account (contracts/NukeFund/NukeFund.sol#95)
+NukeFund.setDaoAddress(address).account (contracts/NukeFund/NukeFund.sol#99) lacks a zero-check on :
+		- daoAddress = account (contracts/NukeFund/NukeFund.sol#100)
+TraitForgeNft.setNukeFundContract(address)._nukeFundAddress (contracts/TraitForgeNft/TraitForgeNft.sol#67) lacks a zero-check on :
+		- nukeFundAddress = _nukeFundAddress (contracts/TraitForgeNft/TraitForgeNft.sol#69)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation 
+
+INFO:Detectors:
+TraitForgeNft._incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#345-355) has external calls inside a loop: entropyGenerator.initializeAlphaIndices() (contracts/TraitForgeNft/TraitForgeNft.sol#353)
+TraitForgeNft._beforeTokenTransfer(address,address,uint256,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#367-395) has external calls inside a loop: listedId = entityForgingContract.getListedTokenIds(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#375)
+TraitForgeNft._beforeTokenTransfer(address,address,uint256,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#367-395) has external calls inside a loop: listing = entityForgingContract.getListings(listedId) (contracts/TraitForgeNft/TraitForgeNft.sol#382-384)
+TraitForgeNft._beforeTokenTransfer(address,address,uint256,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#367-395) has external calls inside a loop: entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309) has external calls inside a loop: entropyValue = entropyGenerator.getNextEntropy() (contracts/TraitForgeNft/TraitForgeNft.sol#288)
+TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309) has external calls inside a loop: ! airdropContract.airdropStarted() (contracts/TraitForgeNft/TraitForgeNft.sol#296)
+TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309) has external calls inside a loop: airdropContract.addUserAmount(to,entropyValue) (contracts/TraitForgeNft/TraitForgeNft.sol#297)
+TraitForgeNft._distributeFunds(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#358-365) has external calls inside a loop: (success,None) = nukeFundAddress.call{value: totalAmount}() (contracts/TraitForgeNft/TraitForgeNft.sol#361)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop 
+
+INFO:Detectors:
+Reentrancy in TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309):
+	External calls:
+	- _incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#282)
+		- entropyGenerator.initializeAlphaIndices() (contracts/TraitForgeNft/TraitForgeNft.sol#353)
+	State variables written after the call(s):
+	- _tokenIds ++ (contracts/TraitForgeNft/TraitForgeNft.sol#285)
+Reentrancy in TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309):
+	External calls:
+	- _incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#282)
+		- entropyGenerator.initializeAlphaIndices() (contracts/TraitForgeNft/TraitForgeNft.sol#353)
+	- _mint(to,newItemId) (contracts/TraitForgeNft/TraitForgeNft.sol#287)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	State variables written after the call(s):
+	- _mint(to,newItemId) (contracts/TraitForgeNft/TraitForgeNft.sol#287)
+		- lastTokenTransferredTimestamp[firstTokenId] = block.timestamp (contracts/TraitForgeNft/TraitForgeNft.sol#378)
+Reentrancy in TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309):
+	External calls:
+	- _incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#282)
+		- entropyGenerator.initializeAlphaIndices() (contracts/TraitForgeNft/TraitForgeNft.sol#353)
+	- _mint(to,newItemId) (contracts/TraitForgeNft/TraitForgeNft.sol#287)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	- entropyValue = entropyGenerator.getNextEntropy() (contracts/TraitForgeNft/TraitForgeNft.sol#288)
+	State variables written after the call(s):
+	- initialOwners[newItemId] = to (contracts/TraitForgeNft/TraitForgeNft.sol#294)
+	- tokenCreationTimestamps[newItemId] = block.timestamp (contracts/TraitForgeNft/TraitForgeNft.sol#290)
+	- tokenEntropy[newItemId] = entropyValue (contracts/TraitForgeNft/TraitForgeNft.sol#291)
+	- tokenGenerations[newItemId] = currentGeneration (contracts/TraitForgeNft/TraitForgeNft.sol#292)
+Reentrancy in TraitForgeNft._mintNewEntity(address,uint256,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#311-343):
+	External calls:
+	- _mint(newOwner,newTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#323)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	State variables written after the call(s):
+	- initialOwners[newTokenId] = newOwner (contracts/TraitForgeNft/TraitForgeNft.sol#329)
+	- tokenCreationTimestamps[newTokenId] = block.timestamp (contracts/TraitForgeNft/TraitForgeNft.sol#325)
+	- tokenEntropy[newTokenId] = entropy (contracts/TraitForgeNft/TraitForgeNft.sol#326)
+	- tokenGenerations[newTokenId] = gen (contracts/TraitForgeNft/TraitForgeNft.sol#327)
+Reentrancy in TraitForgeNft.burn(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#141-151):
+	External calls:
+	- airdropContract.subUserAmount(initialOwners[tokenId],entropy) (contracts/TraitForgeNft/TraitForgeNft.sol#148)
+	- _burn(tokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#150)
+		- entityForgingContract.cancelListingForForging(firstTokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#390)
+	State variables written after the call(s):
+	- _burn(tokenId) (contracts/TraitForgeNft/TraitForgeNft.sol#150)
+		- lastTokenTransferredTimestamp[firstTokenId] = block.timestamp (contracts/TraitForgeNft/TraitForgeNft.sol#378)
+Reentrancy in EntityTrading.listNFTForSale(uint256,uint256) (contracts/EntityTrading/EntityTrading.sol#38-60):
+	External calls:
+	- nftContract.transferFrom(msg.sender,address(this),tokenId) (contracts/EntityTrading/EntityTrading.sol#53)
+	State variables written after the call(s):
+	- listedTokenIds[tokenId] = listingCount (contracts/EntityTrading/EntityTrading.sol#57)
+	- ++ listingCount (contracts/EntityTrading/EntityTrading.sol#55)
+	- listings[listingCount] = Listing(msg.sender,tokenId,price,true) (contracts/EntityTrading/EntityTrading.sol#56)
+Reentrancy in Airdrop.startAirdrop(uint256) (contracts/Airdrop/Airdrop.sol#24-32):
+	External calls:
+	- traitToken.transferFrom(tx.origin,address(this),amount) (contracts/Airdrop/Airdrop.sol#29)
+	State variables written after the call(s):
+	- totalTokenAmount = amount (contracts/Airdrop/Airdrop.sol#31)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2 
+
+INFO:Detectors:
+Reentrancy in DevFund.receive() (contracts/DevFund/DevFund.sol#14-28):
+	External calls:
+	- (success,None) = address(owner()).call{value: remaining}() (contracts/DevFund/DevFund.sol#20)
+	- (success_scope_0,None) = address(owner()).call{value: msg.value}() (contracts/DevFund/DevFund.sol#24)
+	Event emitted after the call(s):
+	- FundReceived(msg.sender,msg.value) (contracts/DevFund/DevFund.sol#27)
+Reentrancy in NukeFund.receive() (contracts/NukeFund/NukeFund.sol#40-61):
+	External calls:
+	- (success,None) = devAddress.call{value: devShare}() (contracts/NukeFund/NukeFund.sol#47)
+	Event emitted after the call(s):
+	- DevShareDistributed(devShare) (contracts/NukeFund/NukeFund.sol#49)
+Reentrancy in NukeFund.receive() (contracts/NukeFund/NukeFund.sol#40-61):
+	External calls:
+	- (success_scope_1,None) = daoAddress.call{value: devShare}() (contracts/NukeFund/NukeFund.sol#54)
+	Event emitted after the call(s):
+	- DevShareDistributed(devShare) (contracts/NukeFund/NukeFund.sol#56)
+Reentrancy in NukeFund.receive() (contracts/NukeFund/NukeFund.sol#40-61):
+	External calls:
+	- (success,None) = devAddress.call{value: devShare}() (contracts/NukeFund/NukeFund.sol#47)
+	- (success_scope_0,None) = address(owner()).call{value: devShare}() (contracts/NukeFund/NukeFund.sol#51)
+	- (success_scope_1,None) = daoAddress.call{value: devShare}() (contracts/NukeFund/NukeFund.sol#54)
+	Event emitted after the call(s):
+	- FundBalanceUpdated(fund) (contracts/NukeFund/NukeFund.sol#60)
+	- FundReceived(msg.sender,msg.value) (contracts/NukeFund/NukeFund.sol#59)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3 
+
+INFO:Detectors:
+EntityForging._resetForgingCountIfNeeded(uint256) (contracts/EntityForging/EntityForging.sol#199-207) uses timestamp for comparisons
+	Dangerous comparisons:
+	- lastForgeResetTimestamp[tokenId] == 0 (contracts/EntityForging/EntityForging.sol#201)
+	- block.timestamp >= lastForgeResetTimestamp[tokenId] + oneYear (contracts/EntityForging/EntityForging.sol#203)
+EntropyGenerator.getEntropy(uint256,uint256) (contracts/EntropyGenerator/EntropyGenerator.sol#164-185) uses timestamp for comparisons
+	Dangerous comparisons:
+	- slotIndex == slotIndexSelectionPoint && numberIndex == numberIndexSelectionPoint (contracts/EntropyGenerator/EntropyGenerator.sol#171-172)
+NukeFund.nuke(uint256) (contracts/NukeFund/NukeFund.sol#153-182) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(success,Failed to send Ether) (contracts/NukeFund/NukeFund.sol#178)
+	- finalNukeFactor > nukeFactorMaxParam (contracts/NukeFund/NukeFund.sol#170-172)
+NukeFund.canTokenBeNuked(uint256) (contracts/NukeFund/NukeFund.sol#184-194) uses timestamp for comparisons
+	Dangerous comparisons:
+	- tokenAgeInSeconds >= minimumDaysHeld (contracts/NukeFund/NukeFund.sol#193)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp 
+
+INFO:Detectors:
+DAOFund.receive() (contracts/DAOFund/DAOFund.sol#16-34) compares to a boolean constant:
+	-require(bool,string)(token.burn(token.balanceOf(address(this))) == true,Token burn failed) (contracts/DAOFund/DAOFund.sol#30-33)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality 
+
+INFO:Detectors:
+TraitForgeNft._incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#345-355) has costly operations inside a loop:
+	- currentGeneration ++ (contracts/TraitForgeNft/TraitForgeNft.sol#350)
+TraitForgeNft._incrementGeneration() (contracts/TraitForgeNft/TraitForgeNft.sol#345-355) has costly operations inside a loop:
+	- priceIncrement = priceIncrement + priceIncrementByGen (contracts/TraitForgeNft/TraitForgeNft.sol#352)
+TraitForgeNft._mintInternal(address,uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#280-309) has costly operations inside a loop:
+	- _tokenIds ++ (contracts/TraitForgeNft/TraitForgeNft.sol#285)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop 
+
+INFO:Detectors:
+Low level call in DevFund.receive() (contracts/DevFund/DevFund.sol#14-28):
+	- (success,None) = address(owner()).call{value: remaining}() (contracts/DevFund/DevFund.sol#20)
+	- (success_scope_0,None) = address(owner()).call{value: msg.value}() (contracts/DevFund/DevFund.sol#24)
+Low level call in DevFund.safeRewardTransfer(address,uint256) (contracts/DevFund/DevFund.sol#83-92):
+	- (success,None) = address(to).call{value: amount}() (contracts/DevFund/DevFund.sol#89)
+Low level call in EntityForging.forgeWithListed(uint256,uint256) (contracts/EntityForging/EntityForging.sol#102-175):
+	- (success,None) = nukeFundAddress.call{value: devFee}() (contracts/EntityForging/EntityForging.sol#156)
+	- (success_forge,None) = forgerOwner.call{value: forgerShare}() (contracts/EntityForging/EntityForging.sol#158)
+Low level call in EntityTrading.buyNFT(uint256) (contracts/EntityTrading/EntityTrading.sol#63-92):
+	- (success,None) = address(listing.seller).call{value: sellerProceeds}() (contracts/EntityTrading/EntityTrading.sol#77-79)
+Low level call in EntityTrading.transferToNukeFund(uint256) (contracts/EntityTrading/EntityTrading.sol#112-117):
+	- (success,None) = nukeFundAddress.call{value: amount}() (contracts/EntityTrading/EntityTrading.sol#114)
+Low level call in NukeFund.receive() (contracts/NukeFund/NukeFund.sol#40-61):
+	- (success,None) = devAddress.call{value: devShare}() (contracts/NukeFund/NukeFund.sol#47)
+	- (success_scope_0,None) = address(owner()).call{value: devShare}() (contracts/NukeFund/NukeFund.sol#51)
+	- (success_scope_1,None) = daoAddress.call{value: devShare}() (contracts/NukeFund/NukeFund.sol#54)
+Low level call in NukeFund.nuke(uint256) (contracts/NukeFund/NukeFund.sol#153-182):
+	- (success,None) = address(msg.sender).call{value: claimAmount}() (contracts/NukeFund/NukeFund.sol#177)
+Low level call in TraitForgeNft.mintToken(bytes32[]) (contracts/TraitForgeNft/TraitForgeNft.sol#181-200):
+	- (refundSuccess,None) = msg.sender.call{value: excessPayment}() (contracts/TraitForgeNft/TraitForgeNft.sol#197)
+Low level call in TraitForgeNft.mintWithBudget(bytes32[]) (contracts/TraitForgeNft/TraitForgeNft.sol#202-225):
+	- (refundSuccess,None) = msg.sender.call{value: budgetLeft}() (contracts/TraitForgeNft/TraitForgeNft.sol#222)
+Low level call in TraitForgeNft._distributeFunds(uint256) (contracts/TraitForgeNft/TraitForgeNft.sol#358-365):
+	- (success,None) = nukeFundAddress.call{value: totalAmount}() (contracts/TraitForgeNft/TraitForgeNft.sol#361)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls 
+
+INFO:Detectors:
+Parameter Airdrop.setTraitToken(address)._traitToken (contracts/Airdrop/Airdrop.sol#20) is not in mixedCase
+Function IUniswapV2Router01.WETH() (contracts/DAOFund/IUniswapV2Router.sol#7) is not in mixedCase
+Parameter EntityForging.setNukeFundAddress(address)._nukeFundAddress (contracts/EntityForging/EntityForging.sol#31) is not in mixedCase
+Parameter EntityForging.setTaxCut(uint256)._taxCut (contracts/EntityForging/EntityForging.sol#36) is not in mixedCase
+Parameter EntityForging.setMinimumListingFee(uint256)._fee (contracts/EntityForging/EntityForging.sol#44) is not in mixedCase
+Parameter EntityTrading.setNukeFundAddress(address)._nukeFundAddress (contracts/EntityTrading/EntityTrading.sol#28) is not in mixedCase
+Parameter EntityTrading.setTaxCut(uint256)._taxCut (contracts/EntityTrading/EntityTrading.sol#33) is not in mixedCase
+Parameter EntropyGenerator.setAllowedCaller(address)._allowedCaller (contracts/EntropyGenerator/EntropyGenerator.sol#36) is not in mixedCase
+Parameter NukeFund.setTaxCut(uint256)._taxCut (contracts/NukeFund/NukeFund.sol#63) is not in mixedCase
+Parameter NukeFund.setTraitForgeNftContract(address)._traitForgeNft (contracts/NukeFund/NukeFund.sol#84) is not in mixedCase
+Parameter NukeFund.setAirdropContract(address)._airdrop (contracts/NukeFund/NukeFund.sol#89) is not in mixedCase
+Parameter NukeFund.setAgeMultplier(uint256)._ageMultiplier (contracts/NukeFund/NukeFund.sol#109) is not in mixedCase
+Parameter TraitForgeNft.setNukeFundContract(address)._nukeFundAddress (contracts/TraitForgeNft/TraitForgeNft.sol#67) is not in mixedCase
+Parameter TraitForgeNft.setStartPrice(uint256)._startPrice (contracts/TraitForgeNft/TraitForgeNft.sol#100) is not in mixedCase
+Parameter TraitForgeNft.setPriceIncrement(uint256)._priceIncrement (contracts/TraitForgeNft/TraitForgeNft.sol#104) is not in mixedCase
+Parameter TraitForgeNft.setPriceIncrementByGen(uint256)._priceIncrementByGen (contracts/TraitForgeNft/TraitForgeNft.sol#109) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions 
+
+INFO:Detectors:
+EntropyGenerator.deriveTokenParameters(uint256,uint256) (contracts/EntropyGenerator/EntropyGenerator.sol#136-161) uses literals with too many digits:
+	- nukeFactor = entropy / 4000000 (contracts/EntropyGenerator/EntropyGenerator.sol#152)
+EntropyGenerator.getEntropy(uint256,uint256) (contracts/EntropyGenerator/EntropyGenerator.sol#164-185) uses literals with too many digits:
+	- entropy = (slotValue / (10 ** (72 - position))) % 1000000 (contracts/EntropyGenerator/EntropyGenerator.sol#181)
+NukeFund.slitherConstructorConstantVariables() (contracts/NukeFund/NukeFund.sol#11-195) uses literals with too many digits:
+	- MAX_DENOMINATOR = 100000 (contracts/NukeFund/NukeFund.sol#12)
+TraitForgeNft.slitherConstructorVariables() (contracts/TraitForgeNft/TraitForgeNft.sol#14-396) uses literals with too many digits:
+	- priceIncrementByGen = 5000000000000 (contracts/TraitForgeNft/TraitForgeNft.sol#25)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#too-many-digits 
+
+INFO:Detectors:
+The following unused import(s) in contracts/EntityTrading/EntityTrading.sol should be removed:
+	-import '@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol'; (contracts/EntityTrading/EntityTrading.sol#4)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-imports 
+
+INFO:Detectors:
+EntropyGenerator.batchSize1 (contracts/EntropyGenerator/EntropyGenerator.sol#14) should be constant 
+EntropyGenerator.batchSize2 (contracts/EntropyGenerator/EntropyGenerator.sol#15) should be constant 
+EntropyGenerator.maxNumberIndex (contracts/EntropyGenerator/EntropyGenerator.sol#18) should be constant 
+EntropyGenerator.maxSlotIndex (contracts/EntropyGenerator/EntropyGenerator.sol#17) should be constant 
+TraitForgeNft.maxTokensPerGen (contracts/TraitForgeNft/TraitForgeNft.sol#22) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant 
+
+INFO:Detectors:
+DAOFund.token (contracts/DAOFund/DAOFund.sol#8) should be immutable 
+DAOFund.uniswapV2Router (contracts/DAOFund/DAOFund.sol#9) should be immutable 
+EntityForging.nftContract (contracts/EntityForging/EntityForging.sol#11) should be immutable 
+EntityTrading.nftContract (contracts/EntityTrading/EntityTrading.sol#12) should be immutable 
+Trait._decimals (contracts/Trait/Trait.sol#8) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Slither:. analyzed (44 contracts with 94 detectors), 116 result(s) found

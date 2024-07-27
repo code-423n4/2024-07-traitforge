@@ -67,8 +67,6 @@ Built with Next.js, Hardhat, and ethers.js, featuring a community-driven approac
 
 TraitForge is not just a game; it's an evolving NFT ecosystem designed for strategic depth, community involvement, and sustainable value growth.
 
-# Scope
-
 ## Scoping Q &amp; A
 
 ### General questions

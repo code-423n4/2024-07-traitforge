@@ -22,9 +22,9 @@ _Note for C4 wardens: Anything included in this `Automated Findings` section is 
 
 ## TraitForge Overview - ManPeach
 
-TraitForge is a competetive and collaborative breeding game with a nuke function. Each NFT (Entity), has set Traits, created and calculated before mint, by indexing the entropy slots. Each digit or total entropy, gives the NFT its unqique traits, that are determined but completely dispursed/random. Players can forge (breed), by either listing a forger, or paying a forger and receiving the new NFT. Nuking is a function where players burn their NFT, in return claim a portion of ETH from the nuke-fund, in proportion to the 'nuke factor' of the entity, which increases overtime.
+TraitForge is a competitive and collaborative breeding game with a nuke function. Each NFT (Entity), has set Traits, created and calculated before mint, by indexing the entropy slots. Each digit or total entropy, gives the NFT its unqique traits, that are determined but completely dispursed/random. Players can forge (breed), by either listing a forger, or paying a forger and receiving the new NFT. Nuking is a function where players burn their NFT, in return claim a portion of ETH from the nuke-fund, in proportion to the 'nuke factor' of the entity, which increases overtime.
 
-Players compete in every aspect of the game, whether its minting the best NFT's available, trading or listing for forging in a competetive market or nuking when the time is right.
+Players compete in every aspect of the game, whether its minting the best NFT's available, trading or listing for forging in a competitive market or nuking when the time is right.
 
 ## Resources
 

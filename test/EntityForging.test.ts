@@ -24,6 +24,8 @@ describe('EntityForging', () => {
   let entityTrading: EntityTrading;
   let nukeFund: NukeFund;
   let devFund: DevFund;
+  let FORGER_TOKEN_ID: number;
+  let MERGER_TOKEN_ID: number;
 
   const FORGING_FEE = ethers.parseEther('1.0'); // 1 ETH
 
@@ -101,6 +103,24 @@ describe('EntityForging', () => {
     await nft.connect(user1).mintToken(merkleInfo.whitelist[1].proof, {
       value: ethers.parseEther('1'),
     });
+
+    for (let i = 0; i < 10; i++) {
+      await nft.connect(owner).mintToken(merkleInfo.whitelist[0].proof, {
+        value: ethers.parseEther('1'),
+      });
+      const isForger = await nft.isForger(i + 4);
+      if (isForger) {
+        FORGER_TOKEN_ID = i + 4;
+        break;
+      }
+    }
+
+    MERGER_TOKEN_ID = 3;
+
+    console.log(await nft.isForger(FORGER_TOKEN_ID));
+    console.log(await nft.isForger(MERGER_TOKEN_ID));
+    console.log(await entityForging.forgingCounts(FORGER_TOKEN_ID));
+    console.log(await nft.getTokenEntropy(FORGER_TOKEN_ID));
   });
 
   describe('listForForging', () => {
@@ -114,7 +134,7 @@ describe('EntityForging', () => {
     });
 
     it('should allow the owner to list a token for forging', async () => {
-      const tokenId = 1;
+      const tokenId = FORGER_TOKEN_ID;
       const fee = FORGING_FEE;
 
       await entityForging.connect(owner).listForForging(tokenId, fee);
@@ -128,8 +148,8 @@ describe('EntityForging', () => {
 
   describe('Forge With Listed', () => {
     it('should not allow forging with an unlisted forger token', async () => {
-      const forgerTokenId = 2;
-      const mergerTokenId = 1;
+      const forgerTokenId = MERGER_TOKEN_ID;
+      const mergerTokenId = FORGER_TOKEN_ID;
 
       await expect(
         entityForging
@@ -143,13 +163,15 @@ describe('EntityForging', () => {
     });
 
     it('should allow forging with a listed token', async () => {
-      const forgerTokenId = 1;
-      const mergerTokenId = 2;
+      const forgerTokenId = FORGER_TOKEN_ID;
+      const mergerTokenId = MERGER_TOKEN_ID;
 
       const initialBalance = await ethers.provider.getBalance(owner.address);
 
       const forgerEntropy = await nft.getTokenEntropy(forgerTokenId);
       const mergerEntrypy = await nft.getTokenEntropy(mergerTokenId);
+      /// The new token id will be forger token id + 1, cause it's the last item
+      const expectedTokenId = FORGER_TOKEN_ID + 1;
       await expect(
         entityForging
           .connect(user1)
@@ -159,7 +181,7 @@ describe('EntityForging', () => {
       )
         .to.emit(entityForging, 'EntityForged')
         .withArgs(
-          4,
+          expectedTokenId,
           forgerTokenId,
           mergerTokenId,
           (forgerEntropy + mergerEntrypy) / 2n,
@@ -168,7 +190,7 @@ describe('EntityForging', () => {
         .to.emit(nft, 'NewEntityMinted')
         .withArgs(
           await user1.getAddress(),
-          4,
+          expectedTokenId,
           2,
           (forgerEntropy + mergerEntrypy) / 2n
         );
@@ -186,7 +208,7 @@ describe('EntityForging', () => {
 
   describe('Auto cancel listing after list for sale in EntityTrading', () => {
     it('Shoudl cancel list for forging after list for sale in Entity Trading', async () => {
-      const tokenId = 1;
+      const tokenId = FORGER_TOKEN_ID;
       const fee = FORGING_FEE;
       const LISTING_PRICE = ethers.parseEther('1.0');
 

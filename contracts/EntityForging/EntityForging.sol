@@ -1,208 +1,209 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+import { parseEther } from 'ethers';
+import {
+  Airdrop,
+  DevFund,
+  EntityForging,
+  EntropyGenerator,
+  EntityTrading,
+  NukeFund,
+  TraitForgeNft,
+} from '../typechain-types';
+import { HardhatEthersSigner } from '@nomicfoundation/hardhat-ethers/signers';
+import generateMerkleTree from '../scripts/genMerkleTreeLib';
+const { expect } = require('chai');
+const { ethers } = require('hardhat');
+describe('EntityForging', () => {
+  let entityForging: EntityForging;
+  let nft: TraitForgeNft;
+  let owner: HardhatEthersSigner;
+  let user1: HardhatEthersSigner;
+  let user2: HardhatEthersSigner;
+  let user3: HardhatEthersSigner;
+  let entityTrading: EntityTrading;
+  let nukeFund: NukeFund;
+  let devFund: DevFund;
+  let FORGER_TOKEN_ID: number;
+  let MERGER_TOKEN_ID: number;
 
-import '@openzeppelin/contracts/security/ReentrancyGuard.sol';
-import '@openzeppelin/contracts/access/Ownable.sol';
-import '@openzeppelin/contracts/security/Pausable.sol';
-import './IEntityForging.sol';
-import '../TraitForgeNft/ITraitForgeNft.sol';
+  const FORGING_FEE = ethers.parseEther('1.0'); // 1 ETH
 
-contract EntityForging is IEntityForging, ReentrancyGuard, Ownable, Pausable {
-  ITraitForgeNft public nftContract;
-  address payable public nukeFundAddress;
-  uint256 public taxCut = 10;
-  uint256 public oneYearInDays = 365 days;
-  uint256 public listingCount = 0;
-  uint256 public minimumListFee = 0.01 ether;
+  before(async () => {
+    [owner, user1, user2, user3] = await ethers.getSigners();
+    // Deploy TraitForgeNft contract
+    const TraitForgeNft = await ethers.getContractFactory('TraitForgeNft');
+    nft = (await TraitForgeNft.deploy()) as TraitForgeNft;
+    // Deploy Airdrop contract
+    const airdropFactory = await ethers.getContractFactory('Airdrop');
+    const airdrop = (await airdropFactory.deploy()) as Airdrop;
+    await nft.setAirdropContract(await airdrop.getAddress());
+    await airdrop.transferOwnership(await nft.getAddress());
+    // Deploy EntityForging contract
+    const EntropyGenerator = await ethers.getContractFactory(
+      'EntropyGenerator'
+    );
+    const entropyGenerator = (await EntropyGenerator.deploy(
+      await nft.getAddress()
+    )) as EntropyGenerator;
+    await entropyGenerator.writeEntropyBatch1();
+    await nft.setEntropyGenerator(await entropyGenerator.getAddress());
+    // Deploy EntityForging contract
+    const EntityForging = await ethers.getContractFactory('EntityForging');
+    entityForging = (await EntityForging.deploy(
+      await nft.getAddress()
+    )) as EntityForging;
+    await nft.setEntityForgingContract(await entityForging.getAddress());
+    devFund = await ethers.deployContract('DevFund');
+    await devFund.waitForDeployment();
+    const NukeFund = await ethers.getContractFactory('NukeFund');
+    nukeFund = (await NukeFund.deploy(
+      await nft.getAddress(),
+      await airdrop.getAddress(),
+      await devFund.getAddress(),
+      owner.address
+    )) as NukeFund;
+    await nukeFund.waitForDeployment();
+    await nft.setNukeFundContract(await nukeFund.getAddress());
+    entityTrading = await ethers.deployContract('EntityTrading', [
+      await nft.getAddress(),
+    ]);
+    // Set NukeFund address
+    await entityTrading.setNukeFundAddress(await nukeFund.getAddress());
+    const merkleInfo = generateMerkleTree([
+      owner.address,
+      user1.address,
+      user2.address,
+    ]);
+    await nft.setRootHash(merkleInfo.rootHash);
+    // Mint some tokens for testing
+    await nft.connect(owner).mintToken(merkleInfo.whitelist[0].proof, {
+      value: ethers.parseEther('1'),
+    });
+    await nft.connect(user1).mintToken(merkleInfo.whitelist[1].proof, {
+      value: ethers.parseEther('1'),
+    });
+    await nft.connect(user1).mintToken(merkleInfo.whitelist[1].proof, {
+      value: ethers.parseEther('1'),
+    });
 
-  /// @dev tokenid -> listings index
-  mapping(uint256 => uint256) public listedTokenIds;
-  /// @dev index -> listing info
-  mapping(uint256 => Listing) public listings;
-  mapping(uint256 => uint8) public forgingCounts; // track forgePotential
-  mapping(uint256 => uint256) private lastForgeResetTimestamp;
-
-  constructor(address _traitForgeNft) {
-    nftContract = ITraitForgeNft(_traitForgeNft);
-  }
-
-  // allows the owner to set NukeFund address
-  function setNukeFundAddress(
-    address payable _nukeFundAddress
-  ) external onlyOwner {
-    nukeFundAddress = _nukeFundAddress;
-  }
-
-  function setTaxCut(uint256 _taxCut) external onlyOwner {
-    taxCut = _taxCut;
-  }
-
-  function setOneYearInDays(uint256 value) external onlyOwner {
-    oneYearInDays = value;
-  }
-
-  function setMinimumListingFee(uint256 _fee) external onlyOwner {
-    minimumListFee = _fee;
-  }
-
-  function fetchListings() external view returns (Listing[] memory _listings) {
-    _listings = new Listing[](listingCount + 1);
-    for (uint256 i = 1; i <= listingCount; ++i) {
-      _listings[i] = listings[i];
+    for (let i = 0; i < 10; i++) {
+      await nft.connect(owner).mintToken(merkleInfo.whitelist[0].proof, {
+        value: ethers.parseEther('1'),
+      });
+      const isForger = await nft.isForger(i + 4);
+      if (isForger) {
+        FORGER_TOKEN_ID = i + 4;
+        break;
+      }
     }
-  }
 
-  function getListedTokenIds(
-    uint tokenId_
-  ) external view override returns (uint) {
-    return listedTokenIds[tokenId_];
-  }
+    MERGER_TOKEN_ID = 3;
 
-  function getListings(
-    uint id
-  ) external view override returns (Listing memory) {
-    return listings[id];
-  }
+    console.log(await nft.isForger(FORGER_TOKEN_ID));
+    console.log(await nft.isForger(MERGER_TOKEN_ID));
+    console.log(await entityForging.forgingCounts(FORGER_TOKEN_ID));
+    console.log(await nft.getTokenEntropy(FORGER_TOKEN_ID));
+  });
 
-  function listForForging(
-    uint256 tokenId,
-    uint256 fee
-  ) public whenNotPaused nonReentrant {
-    Listing memory _listingInfo = listings[listedTokenIds[tokenId]];
+  describe('listForForging', () => {
+    it('should not allow non-owners to list a token for forging', async () => {
+      const tokenId = 1;
+      const fee = FORGING_FEE;
+      await expect(
+        entityForging.connect(user1).listForForging(tokenId, fee)
+      ).to.be.revertedWith('Caller must own the token');
+    });
 
-    require(!_listingInfo.isListed, 'Token is already listed for forging');
-    require(
-      nftContract.ownerOf(tokenId) == msg.sender,
-      'Caller must own the token'
-    );
-    require(
-      fee >= minimumListFee,
-      'Fee should be higher than minimum listing fee'
-    );
+    it('should allow the owner to list a token for forging', async () => {
+      const tokenId = 1;
+      const tokenId = FORGER_TOKEN_ID;
+      const fee = FORGING_FEE;
 
-    _resetForgingCountIfNeeded(tokenId);
+      await entityForging.connect(owner).listForForging(tokenId, fee);
+      const listedTokenId = await entityForging.listedTokenIds(tokenId);
+      const listing = await entityForging.listings(listedTokenId);
+      expect(listing.isListed).to.be.true;
+      expect(listing.fee).to.equal(fee);
+    });
+  });
 
-    uint256 entropy = nftContract.getTokenEntropy(tokenId); // Retrieve entropy for tokenId
-    uint8 forgePotential = uint8((entropy / 10) % 10); // Extract the 5th digit from the entropy
-    require(
-      forgePotential > 0 && forgingCounts[tokenId] <= forgePotential,
-      'Entity has reached its forging limit'
-    );
+  describe('Forge With Listed', () => {
+    it('should not allow forging with an unlisted forger token', async () => {
+      const forgerTokenId = 2;
+      const mergerTokenId = 1;
+      const forgerTokenId = MERGER_TOKEN_ID;
+      const mergerTokenId = FORGER_TOKEN_ID;
 
-    bool isForger = (entropy % 3) == 0; // Determine if the token is a forger based on entropy
-    require(isForger, 'Only forgers can list for forging');
+      await expect(
+        entityForging
+          .connect(user1)
+          .forgeWithListed(forgerTokenId, mergerTokenId, {
+            value: FORGING_FEE,
+          })
+      ).to.be.revertedWith("Forger's entity not listed for forging");
+      // Additional assertions as needed
+    });
 
-    ++listingCount;
-    listings[listingCount] = Listing(msg.sender, tokenId, true, fee);
-    listedTokenIds[tokenId] = listingCount;
+    it('should allow forging with a listed token', async () => {
+      const forgerTokenId = 1;
+      const mergerTokenId = 2;
+      const forgerTokenId = FORGER_TOKEN_ID;
+      const mergerTokenId = MERGER_TOKEN_ID;
 
-    emit ListedForForging(tokenId, fee);
-  }
+      const initialBalance = await ethers.provider.getBalance(owner.address);
 
-  function forgeWithListed(
-    uint256 forgerTokenId,
-    uint256 mergerTokenId
-  ) external payable whenNotPaused nonReentrant returns (uint256) {
-    Listing memory _forgerListingInfo = listings[listedTokenIds[forgerTokenId]];
-    require(
-      _forgerListingInfo.isListed,
-      "Forger's entity not listed for forging"
-    );
-    require(
-      nftContract.ownerOf(mergerTokenId) == msg.sender,
-      'Caller must own the merger token'
-    );
-    require(
-      nftContract.ownerOf(forgerTokenId) != msg.sender,
-      'Caller should be different from forger token owner'
-    );
-    require(
-      nftContract.getTokenGeneration(mergerTokenId) ==
-        nftContract.getTokenGeneration(forgerTokenId),
-      'Invalid token generation'
-    );
+      const forgerEntropy = await nft.getTokenEntropy(forgerTokenId);
+      const mergerEntrypy = await nft.getTokenEntropy(mergerTokenId);
+      /// The new token id will be forger token id + 1, cause it's the last item
+      const expectedTokenId = FORGER_TOKEN_ID + 1;
+      await expect(
+        entityForging
+          .connect(user1)
+          .forgeWithListed(forgerTokenId, mergerTokenId, {
+            value: FORGING_FEE,
+          })
+      )
+        .to.emit(entityForging, 'EntityForged')
+        .withArgs(
+          4,
+          expectedTokenId,
+          forgerTokenId,
+          mergerTokenId,
+          (forgerEntropy + mergerEntrypy) / 2n,
+          FORGING_FEE
+        )
+        .to.emit(nft, 'NewEntityMinted')
+        .withArgs(
+          await user1.getAddress(),
+          4,
+          expectedTokenId,
+          2,
+          (forgerEntropy + mergerEntrypy) / 2n
+        );
+      const finalBalance = await ethers.provider.getBalance(owner.address);
+      expect(finalBalance - initialBalance).to.be.eq((FORGING_FEE * 9n) / 10n);
+      // Check forger nft delisted
+      const listingInfo = await entityForging.listings(forgerTokenId);
+      expect(listingInfo.isListed).to.be.eq(false);
+    });
+  });
 
-    uint256 forgingFee = _forgerListingInfo.fee;
-    require(msg.value >= forgingFee, 'Insufficient fee for forging');
+  describe('Auto cancel listing after list for sale in EntityTrading', () => {
+    it('Shoudl cancel list for forging after list for sale in Entity Trading', async () => {
+      const tokenId = 1;
+      const tokenId = FORGER_TOKEN_ID;
+      const fee = FORGING_FEE;
+      const LISTING_PRICE = ethers.parseEther('1.0');
 
-    _resetForgingCountIfNeeded(forgerTokenId); // Reset for forger if needed
-    _resetForgingCountIfNeeded(mergerTokenId); // Reset for merger if needed
-
-    // Check forger's breed count increment but do not check forge potential here
-    // as it is already checked in listForForging for the forger
-    forgingCounts[forgerTokenId]++;
-
-    // Check and update for merger token's forge potential
-    uint256 mergerEntropy = nftContract.getTokenEntropy(mergerTokenId);
-    require(mergerEntropy % 3 != 0, 'Not merger');
-    uint8 mergerForgePotential = uint8((mergerEntropy / 10) % 10); // Extract the 5th digit from the entropy
-    forgingCounts[mergerTokenId]++;
-    require(
-      mergerForgePotential > 0 &&
-        forgingCounts[mergerTokenId] <= mergerForgePotential,
-      'forgePotential insufficient'
-    );
-
-    uint256 devFee = forgingFee / taxCut;
-    uint256 forgerShare = forgingFee - devFee;
-    address payable forgerOwner = payable(nftContract.ownerOf(forgerTokenId));
-
-    uint256 newTokenId = nftContract.forge(
-      msg.sender,
-      forgerTokenId,
-      mergerTokenId,
-      ''
-    );
-    (bool success, ) = nukeFundAddress.call{ value: devFee }('');
-    require(success, 'Failed to send to NukeFund');
-    (bool success_forge, ) = forgerOwner.call{ value: forgerShare }('');
-    require(success_forge, 'Failed to send to Forge Owner');
-
-    // Cancel listed forger nft
-    _cancelListingForForging(forgerTokenId);
-
-    uint256 newEntropy = nftContract.getTokenEntropy(newTokenId);
-
-    emit EntityForged(
-      newTokenId,
-      forgerTokenId,
-      mergerTokenId,
-      newEntropy,
-      forgingFee
-    );
-
-    return newTokenId;
-  }
-
-  function cancelListingForForging(
-    uint256 tokenId
-  ) external whenNotPaused nonReentrant {
-    require(
-      nftContract.ownerOf(tokenId) == msg.sender ||
-        msg.sender == address(nftContract),
-      'Caller must own the token'
-    );
-    require(
-      listings[listedTokenIds[tokenId]].isListed,
-      'Token not listed for forging'
-    );
-
-    _cancelListingForForging(tokenId);
-  }
-
-  function _cancelListingForForging(uint256 tokenId) internal {
-    delete listings[listedTokenIds[tokenId]];
-
-    emit CancelledListingForForging(tokenId); // Emitting with 0 fee to denote cancellation
-  }
-
-  function _resetForgingCountIfNeeded(uint256 tokenId) private {
-    uint256 oneYear = oneYearInDays;
-    if (lastForgeResetTimestamp[tokenId] == 0) {
-      lastForgeResetTimestamp[tokenId] = block.timestamp;
-    } else if (block.timestamp >= lastForgeResetTimestamp[tokenId] + oneYear) {
-      forgingCounts[tokenId] = 0; // Reset to the forge potential
-      lastForgeResetTimestamp[tokenId] = block.timestamp;
-    }
-  }
-}
+      await entityForging.connect(owner).listForForging(tokenId, fee);
+      await nft
+        .connect(owner)
+        .approve(await entityTrading.getAddress(), tokenId);
+      await entityTrading.connect(owner).listNFTForSale(tokenId, LISTING_PRICE);
+      // Check the token is unlisted in entity forging
+      const listedTokenId = await entityForging.listedTokenIds(tokenId);
+      const listing = await entityForging.listings(listedTokenId);
+      expect(listing.isListed).to.be.false;
+      // expect(listing.fee).to.equal(fee);
+    });
+  });
+});

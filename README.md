@@ -59,11 +59,11 @@ TraitForge offers an enduring game experience, transcending the typical NFT mode
 
 ## Strategic Gameplay
 
-Involves managing entities through aging, merging, and strategic decisions impacting the honeypot's dynamics and player's potential gains.
+Involves managing entities through aging, forging, and strategic decisions impacting the honeypot's dynamics and player's potential gains.
 
 ## Development and Community
 
-Built with Next.js, Hardhat, and ethers.js, featuring a community-driven approach with DAO governance, allowing token holders to influence game direction.
+Built with Next.js, Hardhat, and Wagmi/Viem.
 
 TraitForge is not just a game; it's an evolving NFT ecosystem designed for strategic depth, community involvement, and sustainable value growth.
 
@@ -111,7 +111,7 @@ Most things won’t change aside from settable variables (eg: max generations)
 
 ## Describe any novel or unique curve logic or mathematical models implemented in the contracts
 
-But stuffing for entropy generator. 770 UINT256’s, each UINT = 78 digits /13 = 13 x 6 digit entropies
+Bit stuffing for entropy generator. 770 UINT256’s, each UINT = 78 digits /13 = 13 x 6 digit entropies
 
 ## Running tests
 

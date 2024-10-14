@@ -1,0 +1,6586 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / traitforge-jul29
+==============================================================
+
+[07/29/2024 12:53] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the **$28,000 in USDC TraitForge** audit!
+
+📆 Audit opens 07/29/2024 20:00 (20:00 UTC) and runs through 08/06/2024 20:00 (20:00 UTC) (6 days).
+
+Please give a warm welcome to the TraitForge team, particularly @ManPeach.0x and @Deleted User, who will be available for questions either here in the channel or via a PRIVATE thread in the ACST and AEST timezone(s). 
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try once the audit is live, by tagging `@Docs Wolf` in any thread (private or public) and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.  
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2024-07-traitforge#top
+
+{Reactions}
+🔥 (3) 🫡 
+
+[07/29/2024 12:53] kartoonjoy
+Pinned a message.
+
+
+[07/29/2024 13:51] traitforgedev
+https://tenor.com/view/hello-bear-gif-13207424737824225380
+
+{Embed}
+https://tenor.com/view/hello-bear-gif-13207424737824225380
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/hello-bear-8EAC3.png
+
+{Reactions}
+👋 (4) 
+
+[07/29/2024 14:28] 4gontuk
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image0-D62B3.gif
+
+
+[07/29/2024 15:08] gulshn321
+nsloc??
+
+
+[07/29/2024 15:31] zdravkohr
+Should be 937
+
+
+[07/29/2024 15:52] samuraii77
+Are you participating 🤔
+
+
+[07/29/2024 15:54] dimulski
+can you both please go and do the reserve audit, heard it will be much easier, and a lot less people will compete there
+
+{Reactions}
+😂 (14) 
+
+[07/29/2024 15:56] samuraii77
+Haha I will start the contest in a few days so wont have time to go over 5k sloc
+
+{Reactions}
+🥲 
+
+[07/29/2024 15:56] samuraii77
+But I think you are right, Zdravko should go compete there maybe 🤔
+
+{Reactions}
+💯 (2) 
+
+[07/29/2024 16:00] 0xshaheen
+this one looks hella interesting!
+
+{Reactions}
+GigaChadGamer 
+
+[07/29/2024 16:04] zdravkohr
+Planning to 😄
+
+{Reactions}
+👌 
+
+[07/29/2024 16:04] brivan
+I am seeing another version of AiArena contest. 
+Ready for $1 payment from now
+
+{Reactions}
+😂 (4) 
+
+[07/29/2024 16:07] traitforgedev
+Btw if yall get bored and have sepolia ETH you can play the test-net hahaha 
+
+Maybe we can forge😏
+
+https://traitforge.game/home
+
+
+[07/29/2024 16:08] uaarrr
+the irony of this contest will be to use hardhat
+
+{Reactions}
+pepe_bruh (2) 
+
+[07/29/2024 20:12] uaarrr
+😮‍💨
+
+
+[07/29/2024 20:14] granat__
+just add foundry
+
+
+[07/29/2024 20:15] uaarrr
+its all good, it was just a silly joke
+
+
+[07/29/2024 20:30] waydoum
+hey everyone
+
+
+[07/29/2024 20:35] sharonphiliplima
+are you able to do it yourself
+
+
+[07/29/2024 20:35] waydoum
+damn traitforge and basin very busy weeks
+
+
+[07/30/2024 01:35] pickpeak1024
+how should i fill .env file
+
+
+[07/30/2024 02:01] traitforgedev
+There should be .env.example
+
+
+[07/30/2024 02:01] traitforgedev
+Is there not?
+
+
+[07/30/2024 06:35] dimulski
+@ManPeach.0x project is going to be deployed only on Ethereum?
+
+
+[07/30/2024 06:36] traitforgedev
+Base. Solana in 12 months or so
+
+{Reactions}
+🙏 
+
+[07/30/2024 06:39] _karanel
+on the testnet nft minting price increases linearly by 0.0001 ETH, but on base mainnet it will be 0.005 ETH, correct??
+
+
+[07/30/2024 06:39] ivanchoveka
+How will the weight be represented in DevFund? Will it be e18 number or single digit?
+
+
+[07/30/2024 06:40] dimulski
+Ok, So no Ehtereum
+
+
+[07/30/2024 06:40] traitforgedev
+No L1, possibly later on after Solana but that’s for another time.
+
+{Reactions}
+👍 
+
+[07/30/2024 06:42] traitforgedev
+Anything that’s relative to max. Eg - 
+dev1 - 100 
+Dev2 - 100
+Total dev weights -200
+
+Is this correct @Deleted User? For clarification
+
+{Reactions}
+👍 
+
+[07/30/2024 06:42] traitforgedev
+Yes correct. Testnet started cheaper so we can do more for cheap
+
+
+[07/30/2024 08:30] _karanel
+On the google doc it is written:
+The first starts at 0.005 ETH and each subsequent one rises linearly by 0.0000245 ETH until the final is 0.25 ETH.
+
+On the website it is written:
+The first starts at 0.005 ETH and each subsequent one riseslinearly by 0.005 ETH until the final is 50 ETH.
+
+Which is correct?
+
+
+[07/30/2024 08:42] traitforgedev
+Where is this on the website? I think that needs to be edited. Google doc is up to date
+
+
+[07/30/2024 08:42] _karanel
+https://traitforge.info/gameplay
+
+
+[07/30/2024 08:42] traitforgedev
+Ok thanks. Will update this
+
+
+[07/30/2024 08:43] _karanel
+Also, doesn't this make the person who mints the NFT last, makes a loss if he nukes?
+
+
+[07/30/2024 08:48] strapontin
+It's also written on the github docs https://github.com/TraitForge/docs?tab=readme-ov-file#entities
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-3AF5B.png
+
+{Embed}
+https://github.com/TraitForge/docs?tab=readme-ov-file
+GitHub - TraitForge/docs: Legal docs, Gameplay docs and Token docs
+Legal docs, Gameplay docs and Token docs. Contribute to TraitForge/docs development by creating an account on GitHub.
+
+
+[07/30/2024 08:51] traitforgedev
+Thanks
+
+{Reactions}
+👌 
+
+[07/30/2024 08:51] _karanel
+Also in google docs, the last NFT price is incorrect.
+0.005 + 9999*0.0000245 = 0.2499755 ETH
+
+
+[07/30/2024 08:52] _karanel
+Total NFTs are 10k, for 0.25 ETH, it needs to be 10001 NFTs
+
+
+[07/30/2024 08:53] traitforgedev
+it was rounded for UX, most poeple dont really care about the 0.0000245 thats missing. its easier to read 0.25. i am aware of this thanks
+
+
+[07/30/2024 08:53] _karanel
+alright
+
+
+[07/30/2024 09:36] Deleted User
+Yeah, this is correct.
+
+
+[07/30/2024 09:45] _karanel
+On the google doc, it is written `Entropy = initialNukeFactor` 
+But on the website it is `Entropy / 4`
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-5FFA4.png
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-62147.png
+
+
+[07/30/2024 09:46] _karanel
+If google doc is the updated one, the max nukeFactor could be 99.99%
+
+
+[07/30/2024 09:48] traitforgedev
+999999/4 = 249999
+
+
+[07/30/2024 09:49] traitforgedev
+InitialNukeFactor is entropy/4 (max is 249999)
+
+
+[07/30/2024 09:49] pickpeak1024
+DevFund is HoneyPot Fund?
+
+
+[07/30/2024 09:49] traitforgedev
+No
+
+
+[07/30/2024 09:49] traitforgedev
+Honeypot is nukefund
+
+
+[07/30/2024 09:49] traitforgedev
+Devfund is what we will use to pay for development
+
+
+[07/30/2024 09:54] norah7603
+I am confused on following statements :
+
+`There are a total of 10 Generations (extended as the game goes on), which can be minted in parallel via a breeding mechanism.`
+
+and
+
+`Once Gen 1 is fully minted, then Gen 2 can only be minted.`
+
+Which of the above statements is true? What am I missing here?
+
+
+[07/30/2024 09:58] traitforgedev
+Both. Forging can create next-gen entities. But direct minting can only be in one generation until it’s completed and then it will move to the next (starting at how many have been forged already)
+
+
+[07/30/2024 10:00] traitforgedev
+2 ways of minting. Forging and Mint page. 
+
+Mint page starts at gen1 and only mints gen1 until all gen1s are minted. And then starts on gen2, at wherever the tokenIDs in that generation exist (eg 50 gen2’s have been created by forging, then it starts at 51)
+
+
+[07/30/2024 10:01] _karanel
+so there could be gen10 NFTs already in circulation even if the minting for gen1 is not completed?
+
+
+[07/30/2024 10:01] traitforgedev
+Correct
+
+
+[07/30/2024 10:01] traitforgedev
+From forging
+
+
+[07/30/2024 10:01] _karanel
+alright
+
+
+[07/30/2024 10:02] norah7603
+This make sense, thanks.
+
+
+[07/30/2024 10:06] strapontin
+Is the `Forge Potential` a characteristic for only Forgers or also Mergers ? 
+Do the Mergers have a limit for forging Gen+1 entity ?
+
+
+[07/30/2024 10:11] strapontin
+I'm also having trouble with this sentence in the `Role (gender)` part of the docs :
+`In total, if 50% of Gen 1 Merge, then 7,500 Gen 2’s will be produced (set as a maximum).`
+
+Here, is the `Merge` action the same as `Forging` ? How come 7,500 Gen 2 can be produced if only 50% of Gen 1 'reproduce' ?
+
+{Reactions}
+👆 
+
+[07/30/2024 10:14] traitforgedev
+Applicable to both. You can only forge with the same generation entities and it only creates generation + 1
+
+{Reactions}
+👍 
+
+[07/30/2024 10:14] _karanel
+Please also explain this:
+If forging runs out, then the next generation is minted with the genesis entropy off-by-one.
+
+
+[07/30/2024 10:16] traitforgedev
+2/3 of gen1 can reproduce (mergers) and can do so several times as they have a forge potential of 0-9.
+
+
+[07/30/2024 10:17] traitforgedev
+There are 10010 6 digit entropies in 770UINT 256’s, so actually it re starts at the entropy batches on the 10010th mint (10 of gen2)
+
+
+[07/30/2024 10:19] _karanel
+what does it mean for forging to run out? Forging creates entities with an entropy that is average of the two entities it was forged from. The above statement is still unclear.
+
+
+[07/30/2024 10:21] ebok21
+can you share the google doc?
+
+
+[07/30/2024 10:21] strapontin
+https://docs.google.com/document/d/1pihtkKyyxobFWdaNU4YfAy56Q7WIMbFJjSHUAfRm6BA/edit
+
+{Reactions}
+👍 
+
+[07/30/2024 10:21] traitforgedev
+ForgePotential is how many times the entity can forge in a year, if it reaches zero they must wait till it resets the next year. 
+
+Child entropy = (parent1 entropy + parent2 entropy) / 2
+@_karanel
+
+
+[07/30/2024 10:22] _karanel
+yes, if the forge potential runs out, that means the entity is infertile. So if another forge is tried it would mint from the genesis entropy or the forge would not be possible?
+
+
+[07/30/2024 10:23] traitforgedev
+Forge will revert and nothing will happen
+
+
+[07/30/2024 10:23] _karanel
+okay, i got confused because it's written `If forging runs out`
+
+{Reactions}
+👍 
+
+[07/30/2024 10:24] l9baldur
+There can only be 10,000 NFTs of a given generation?
+
+
+[07/30/2024 10:24] traitforgedev
+Correct
+
+
+[07/30/2024 10:24] strapontin
+Just to clarify : Merging == Forging ?
+
+
+[07/30/2024 10:25] traitforgedev
+If burn, it will not remove the genMintCount as nuking will provide a deflationary effect
+
+{Reactions}
+👍 
+
+[07/30/2024 10:25] traitforgedev
+Same thing, merging is old terminology. Did you find the term in a doc somewhere?
+
+
+[07/30/2024 10:26] strapontin
+Yes, in the `role (gender)` part of the docs. I put more details here : https://discord.com/channels/810916927919620096/1266325696079466609/1267786624943783946
+
+
+[07/30/2024 10:26] traitforgedev
+Thanks I’ll edit this
+
+{Reactions}
+❤️ 
+
+[07/30/2024 10:27] strapontin
+Out of curiosity, could I forge 2 Mergers or 2 Forgers together that I own, or must I use one of each even if they are both mine ?
+
+
+[07/30/2024 10:28] _karanel
+I guess one Merger and one Forger is required as stated in the doc
+
+
+[07/30/2024 10:29] _karanel
+Forger can list themselves for a fee. Merger can pay the fee for forging with them and get a new Gen entity.
+
+
+[07/30/2024 10:30] strapontin
+So I have to pay my own fee lol
+
+
+[07/30/2024 10:30] guy_in0xnito
+Started a thread.
+
+
+[07/30/2024 10:30] _karanel
+makes it essentially free xD
+
+
+[07/30/2024 10:33] strapontin
+lol, I don't know why I expected the fees to go in some pot 😅
+Actually, some of the fees go into the nuke fund though
+
+
+[07/30/2024 10:38] _karanel
+could be, i'm still looking at the docs, haven't seen the code
+
+
+[07/30/2024 10:40] senyab
+what is the incentives for the mergers to  pay the fee in order to mint the next generation Entity?
+
+
+[07/30/2024 10:46] traitforgedev
+Determined traits and could be cheaper. A powerful forger is worth more than a low power forger. No different to breeding IRL. The woman will pay more if the male is better haha
+
+{Reactions}
+😂 🤣 (2) 
+
+[07/30/2024 10:47] traitforgedev
+You cannot forge with yourself
+
+
+[07/30/2024 10:50] brivan
+Take some time to go read the contracts code. Most of the questions that arise when reading docs are self answered in contract code. The contracts are self explanatory that you can bypass the docs
+
+{Reactions}
+👍 (2) 
+
+[07/30/2024 10:55] _karanel
+Yeah, but docs are the source of truth. If the code is different than docs that's supposed to be a bug.
+
+{Reactions}
+🫶 
+
+[07/30/2024 11:05] ebok21
+Is entropy supposed to be unique per token?
+
+
+[07/30/2024 11:24] ebok21
+@ManPeach.0x
+
+
+[07/30/2024 11:25] traitforgedev
+Yes, every token should have a different 6 digit entropy
+
+{Reactions}
+👍 
+
+[07/30/2024 11:30] anonimoux2k
+Hi @ManPeach.0x Theoretically, how many entities (of all generations) can there be at most? 100000?
+
+
+[07/30/2024 11:31] traitforgedev
+Yes 100,000, 10k per gen
+
+{Reactions}
+😮 
+
+[07/30/2024 11:55] granat__
+can the owner be a contract?
+
+
+[07/30/2024 12:04] traitforgedev
+Contracts can own other contracts but I don’t think any of our contracts will be owned by another contract
+
+
+[07/30/2024 12:05] traitforgedev
+Owner will be our multisig (which is still a contract technically)
+
+
+[07/30/2024 12:15] Deleted User
+@Granat , cc: @ManPeach.0x 
+Only airdrop contract will be owned by TraitForgeNft contract.
+Owner of the other contracts will be our multisig
+
+{Reactions}
+😎 👍 
+
+[07/30/2024 13:14] ivanchoveka
+What is DevFund.totalRewardDebt exactly representing?
+
+
+[07/30/2024 13:52] 0x_shahil_hussain
+@ManPeach.0x @Deleted User 
+https://github.com/TraitForge/docs/blob/main/trait-token/trait.md
+50% to Airdrop
+30% to Devs
+10% to Investors
+20% to Liquidity
+
+this adds to 110%
+
+{Embed}
+https://github.com/TraitForge/docs/blob/main/trait-token/trait.md
+docs/trait-token/trait.md at main · TraitForge/docs
+Legal docs, Gameplay docs and Token docs. Contribute to TraitForge/docs development by creating an account on GitHub.
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/docs-C6FA6
+
+
+[07/30/2024 13:53] traitforgedev
+Will edit this. Typo, thankyou. We are actually changing the allocations all together
+
+
+[07/30/2024 14:02] 0xshaheen
+`CRITICAL`
+
+{Reactions}
+😆 (6) 😂 (4) 
+
+[07/30/2024 14:03] anonimoux2k
+Hi @ManPeach.0x , I find this line in source code: 
+nukeFactor = entropy / 4000000; 
+https://github.com/code-423n4/2024-07-traitforge/blob/69f64a4fe82f1ebcdf52307cee232de59ec48355/contracts/EntropyGenerator/EntropyGenerator.sol#L152
+
+{Embed}
+https://github.com/code-423n4/2024-07-traitforge/blob/69f64a4fe82f1ebcdf52307cee232de59ec48355/contracts/EntropyGenerator/EntropyGenerator.sol
+2024-07-traitforge/contracts/EntropyGenerator/EntropyGenerator.sol ...
+Contribute to code-423n4/2024-07-traitforge development by creating an account on GitHub.
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/703c8746-844e-4751-a256-077bb9bff5dc-DEDD3
+
+
+[07/30/2024 14:03] welith
+@ManPeach.0x in the NukeFund -> calculateNukeFactor, the initialNukeFactory =  entropy / 40, in the docs we have it in one place as  entropy / 4 and in another as  entropy. Which is it 😄
+
+
+[07/30/2024 14:04] traitforgedev
+It all depends on the denominator but all are correct from what I know
+
+
+[07/30/2024 14:07] traitforgedev
+999999 / 4 is 249999 (24.9%)
+999999/ 40 is 24999/100000 = 24.9%
+
+
+[07/30/2024 14:17] anonimoux2k
+Hi @ManPeach.0x , about "Setting all 770 uint256 slots cost 15m gas, and due to contract & block size limits, this cannot be set in contract initialisation. Instead a function writes in entropy in 3 passes after the contract is deployed". I think it is still possible to write all 770 slots in the same tx without splitting into 3 batches because Base's block gas limit is 112.5M (much larger than Ethereum's 30M)
+
+
+[07/30/2024 14:25] traitforgedev
+Interesting. I will have a think about this, it’s not really a worry to write after deployment but we can definitely change to write on-deployment if that’s the case
+
+
+[07/30/2024 15:32] kalogerone
+Can the POC tests be written in foundry?
+
+
+[07/30/2024 15:35] 0x_shahil_hussain
+tell me what you got, i'll write hardhat PoC for you ☠️
+
+{Reactions}
+😂 (16) 🐀 
+
+[07/30/2024 15:57] ebok21
+nah fr though someone confirm lol
+
+{Reactions}
+❤️ 
+
+[07/30/2024 15:58] traitforgedev
+I don’t know foundry hahaha @Deleted User do you?
+
+
+[07/30/2024 15:58] traitforgedev
+I don’t see why they couldn’t be but I have never used foundry
+
+
+[07/30/2024 15:59] kalogerone
+I believe it has more to do with the judging part of the issue. If the issue is well explained in the report I wouldn’t believe that there is an issue
+
+{Reactions}
+👆 (2) 
+
+[07/30/2024 15:59] ebok21
+it's very intuitive and the tests are much faster and simpler than HH
+
+
+[07/30/2024 16:00] ebok21
+true
+
+
+[07/30/2024 16:00] traitforgedev
+Gotcha, I’ll look into it
+
+{Reactions}
+🤝 (4) 
+
+[07/30/2024 16:01] shui1
+getting this error after yarn test
+```
+  1) DAOFund
+       should swap tokens and burn with received ETH:
+     Error: Transaction reverted: function returned an unexpected amount of data
+```
+something i missed ?
+
+{Reactions}
+👆 
+
+[07/30/2024 16:03] traitforgedev
+This unit test needs to be individual +  it uses the uniswap router, so we should set the hardhat config forking with block number specified.
+
+
+[07/30/2024 16:03] traitforgedev
+But that contract is out of scope anyway
+
+{Reactions}
+👍 
+
+[07/30/2024 16:03] shui1
+gotcha
+
+
+[07/30/2024 16:04] Deleted User
+Yeah, I know
+
+
+[07/30/2024 16:04] kalogerone
+I deleted the test file because it’s out of scope and annoying to get the same error
+
+{Reactions}
+👆 
+
+[07/30/2024 16:09] traitforgedev
+How desperate are you for a foundry test script/s?
+
+
+[07/30/2024 16:11] kalogerone
+I mean I can live without it but for me and for a lot more auditors it would save a good amount of time. Especially since this audit is only 8 days long
+
+
+[07/30/2024 16:12] kalogerone
+For a lot of us it would mean more time to look at the contracts
+
+
+[07/30/2024 16:17] traitforgedev
+I think the foundry scripts will take too long to write for it to be effective. Sorry😬 will keep it in mind for next audit
+
+{Reactions}
+👍 (3) 
+
+[07/30/2024 16:45] ivanfitro
+do you have the NFT implementation?
+
+
+[07/30/2024 16:57] pickpeak1024
+mintToken() function of TraitForgeNft have no tokenId parameter. If users call this function, which tokenId is minted?
+
+
+[07/30/2024 17:12] waydoum
+the next on the list for example, this is very basic
+
+
+[07/30/2024 17:13] 0x_shahil_hussain
+check `_mintInternal` function
+
+
+[07/30/2024 17:28] granat__
+yes
+
+
+[07/30/2024 17:29] granat__
+simply add foundry into an hardhat project
+
+
+[07/30/2024 17:29] granat__
+they’re compatible
+
+
+[07/30/2024 17:29] granat__
+it is written in the foundry docs
+
+
+[07/30/2024 18:07] dimulski
+@ManPeach.0x can you give an example value of ageMultiplier in the NukeFund contract
+
+
+[07/30/2024 18:10] iwildsniperi
+Have you made your mind yet?
+
+
+[07/30/2024 18:11] zdravkohr
+Yeah, I will
+
+{Reactions}
+🥲 
+
+[07/30/2024 18:11] zdravkohr
+But probably for 3 4 days only
+
+
+[07/30/2024 18:11] iwildsniperi
+Thats alot for it to be honest, good luck any way🫡
+
+{Reactions}
+❤️ 
+
+[07/30/2024 18:11] zdravkohr
+Thankss, you too!
+
+{Reactions}
+❤️ 
+
+[07/30/2024 22:00] d_auditor
+co-ask @ManPeach.0x
+
+
+[07/30/2024 23:47] traitforgedev
+This variable was for testing phase only so we could test maturing at a faster rate. Ignore it
+
+{Reactions}
+🙏 
+
+[07/30/2024 23:48] traitforgedev
+It will be removed from code, I just forgot I left it in there😅
+
+
+[07/31/2024 02:07] anonimoux2k
+Hi @ManPeach.0x , I have PM u for some private questions, thank u so much
+
+
+[07/31/2024 02:33] traitforgedev
+Make a private thread pls. No DM’s
+
+{Reactions}
+🙌 
+
+[07/31/2024 07:36] yashpatel2003
+Anyone have basic Test setup for foundry ?
+
+{Reactions}
+🧐 
+
+[07/31/2024 07:42] yashpatel2003
+@Kalogerone ??
+
+
+[07/31/2024 07:43] kalogerone
+Don’t have one
+
+
+[07/31/2024 08:00] dimulski
+you just add foundry and create a test file, there is nothing complicated about the set up of this porject, simply deploy the contracts and test what you want
+
+{Reactions}
+✅ 
+
+[07/31/2024 08:17] yashpatel2003
+I integrated the foundry , I am looking for baseTest file So I didn't have to setup everything if anyone have here 😅
+
+
+[07/31/2024 08:24] pascal9476
+Difference between mint new entity and mint internal ? 
+Or forge and mint
+
+
+[07/31/2024 08:25] waydoum
+as the name suggest one is an internal function, the other isn't
+
+
+[07/31/2024 08:28] pascal9476
+I don’t think so
+
+
+[07/31/2024 08:28] wanziskata
+https://traitforge.game/home check this out
+
+
+[07/31/2024 08:28] dimulski
+```
+    address public owner = makeAddr("owner");
+
+    EntropyGenerator public entropyGenerator;
+    DevFund public devFund;
+    Airdrop public airdrop;
+    TraitForgeNft public traitForgeNft;
+    EntityForging public entityForging;
+    MockERC20 public mockERC20;
+
+    function setUp() public {
+        vm.startPrank(owner);
+        devFund = new DevFund();
+        entropyGenerator = new EntropyGenerator(owner);
+        airdrop = new Airdrop();
+        traitForgeNft = new TraitForgeNft();
+        entityForging = new EntityForging(address(traitForgeNft));
+        vm.stopPrank();
+    }
+```
+
+{Reactions}
+👍🏻 (2) 
+
+[07/31/2024 08:29] waydoum
+what do you mean you don't think so it's right there (i'm talking about mintinternal and mintnew entity)
+
+
+[07/31/2024 08:30] wanziskata
+mint is used to "create" an entirely new NFT, whereas forge is used to combine two NFTs and create a new one, based on the stats of the two provided tokens
+
+
+[07/31/2024 08:30] _karanel
+One is for minting process the other is for forging process
+
+
+[07/31/2024 08:33] anonimoux2k
+I think the term "combine" here needs to be clarified. Forge only mints 1 new token, not burns 2 old tokens.
+
+{Reactions}
+✅ (2) 
+
+[07/31/2024 08:34] wanziskata
+sure, the docs explain the process a bit better, but I tried to simplify it a bit 👍
+
+{Reactions}
+👍 (2) 
+
+[07/31/2024 10:48] 0x_shahil_hussain
+how can i run a single test in hardhat?
+i tried this:- https://ethereum.stackexchange.com/questions/113296/run-a-single-hardhat-test
+but it's giving error
+
+{Embed}
+https://ethereum.stackexchange.com/questions/113296/run-a-single-hardhat-test
+Run a single hardhat test
+I have a test file in hardhat like so:
+const { expect } = require("chai");
+
+describe("contract tests", function () {
+  it("does function one", async function () {
+    ...
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/apple-touch-icon%402-EBA58.png
+
+
+[07/31/2024 10:52] traitforgedev
+NPX hardhat run test/daofund.test.ts for example
+
+
+[07/31/2024 10:59] 0x_shahil_hussain
+not working
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/Screenshot_2024-07-31_at_4.28.45_PM-608ED.png
+
+
+[07/31/2024 11:00] traitforgedev
+You have all libraries?
+
+
+[07/31/2024 11:00] 0x_shahil_hussain
+i think i need to install something
+
+
+[07/31/2024 11:00] traitforgedev
+Yarn add
+
+
+[07/31/2024 11:01] traitforgedev
+Unless maybe you are using a different version of hardhat that doesn’t like ‘describe’ not sure
+
+
+[07/31/2024 11:02] zdravkohr
+Did you run `yarn` in the root folder
+
+
+[07/31/2024 11:03] 0x_shahil_hussain
+i did
+
+
+[07/31/2024 11:04] 0x_shahil_hussain
+i ran all the commands given in the audit page
+
+
+[07/31/2024 11:04] 0x_shahil_hussain
+`yarn test` is working
+
+
+[07/31/2024 11:04] 0x_shahil_hussain
+except for 1 test
+
+
+[07/31/2024 11:04] zdravkohr
+Can you run `git status` and see if you haven't changed something in `DevFund.test.ts`
+
+
+[07/31/2024 11:06] 0x_shahil_hussain
+Ayo why you deleted that message?
+
+
+[07/31/2024 11:06] 0x_shahil_hussain
+it worked
+
+
+[07/31/2024 11:06] 0x_shahil_hussain
+thank you whosoever was that lol
+
+
+[07/31/2024 11:06] _karanel
+i don't like much attention xD
+
+
+[07/31/2024 11:06] zdravkohr
+What was the solution 😄
+
+
+[07/31/2024 11:07] 0x_shahil_hussain
+lol, you don't want attention, but attention wants you
+
+
+[07/31/2024 11:07] _karanel
+`npx hardhat test` not `npx hardhat run`
+
+
+[07/31/2024 11:07] 0x_shahil_hussain
+npx hardhat test <path>
+
+
+[07/31/2024 11:07] traitforgedev
+My fault😅
+
+{Reactions}
+👍 
+
+[07/31/2024 11:15] myc3l1um.
+Hello, 
+I'm not sure if it's appropriate to ask here, but I have a question.
+I'm trying to use the mintToken function from the TraitForgeNFT contract which is deployed on a local Hardhat node. Since none of the default Hardhat accounts are whitelisted how can I mint an NFT for local testing?
+Thanks
+
+
+[07/31/2024 11:17] zdravkohr
+You can advance time after the whitelist period
+
+{Reactions}
+3458froglike 
+
+[07/31/2024 11:18] traitforgedev
+You can use our testnet game aswell if it helps
+
+
+[07/31/2024 11:19] traitforgedev
+This is correct. You can set whitelistEndTime
+
+
+[07/31/2024 11:19] myc3l1um.
+Thank you both. I'm quite new to this.
+
+{Reactions}
+❤️ (3) 🍄 
+
+[07/31/2024 11:19] myc3l1um.
+🙂
+
+
+[07/31/2024 12:02] granat__
+The price of a nft can’t overpass 0.25 ETH right?
+
+
+[07/31/2024 12:03] traitforgedev
+For gen1, the finishing NFT for gen2 will be 0.3, gen3 = 0.35 etc etc
+
+
+[07/31/2024 12:05] granat__
+ok so the maximum “priceIncrementByGen” can be 0.05 ETH right?
+
+
+[07/31/2024 12:06] traitforgedev
+Start price = 0.005, price increment = 0.0000245, priceIncrementIncreasePerGen = 0.000005
+
+
+[07/31/2024 12:07] granat__
+I mean the maximum value it can achieve
+
+
+[07/31/2024 12:13] traitforgedev
+Gen10 will be 
+startPrice = 0.005 
+price increment = 0.0000295
+
+
+[07/31/2024 12:16] granat__
+why 0.05? it’s not 0.005?
+
+
+[07/31/2024 12:17] traitforgedev
+Agh
+
+
+[07/31/2024 12:17] traitforgedev
+My fault it is 0.005
+
+
+[07/31/2024 12:18] _karanel
+Start price is always same, right?
+Price increment is increasing
+
+
+[07/31/2024 12:18] traitforgedev
+Yes
+
+
+[07/31/2024 12:18] granat__
+based on what the price increment?
+
+
+[07/31/2024 12:19] _karanel
+Gen 10 price increment should be 0.0000695
+
+
+[07/31/2024 12:19] _karanel
+0.0000245+0.000005×9
+
+
+[07/31/2024 12:20] traitforgedev
+This is correct also. I think I need to sleep hahaha
+
+
+[07/31/2024 12:21] granat__
+is there formula for this or not?
+
+
+[07/31/2024 12:22] waydoum
+The Mint fee for generation 1 starts at 0.005 ETH and ends at 0.25ETH after 10,000. Generation 2 starts at 0.005 ETH and ends at 0.3ETH. Generation 3 starts at 0.005 ETH and ends at 0.35 ETH, and so on.
+
+
+[07/31/2024 12:22] traitforgedev
+This calculates the increment for each gen. Then times the Increment by how many entities there are then + 0.005
+
+
+[07/31/2024 12:22] traitforgedev
+But it’s also a clear pattern
+
+
+[07/31/2024 12:22] granat__
+so 0.05 is added after each gen
+
+
+[07/31/2024 12:22] _karanel
+Arithmetic progression
+
+
+[07/31/2024 12:23] _karanel
+More specifically "AP with common difference in AP"
+
+
+[07/31/2024 12:24] granat__
+and what should “priceIncrementByGen” do?
+
+
+[07/31/2024 12:25] granat__
+it is 0.000005  ETH
+
+
+[07/31/2024 12:29] traitforgedev
+Increase the increment by that value every generation
+
+
+[07/31/2024 12:32] granat__
+ok so in the gen 2 the price increment will be 0.0000295 right?
+
+
+[07/31/2024 12:32] granat__
+and so on
+
+
+[07/31/2024 12:39] traitforgedev
+Yes
+
+
+[07/31/2024 13:17] yashpatel2003
+Is it ?
+
+
+[07/31/2024 13:17] yashpatel2003
+Because the entity price will increase according to docs in generation 1 with this amount
+
+
+[07/31/2024 13:18] yashpatel2003
+The Generation 2 will have increase of 0.005 + 0.000005 which is 0.005005
+
+
+[07/31/2024 13:19] waydoum
+it's the incrementation price that addes up not the starting price
+
+
+[07/31/2024 13:19] yashpatel2003
+0.000005 this price increase is for Generations and this  0.0000245 one is for the entities in the generation right
+
+
+[07/31/2024 13:21] yashpatel2003
+if we see this :-
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-E0BF5.png
+
+
+[07/31/2024 13:21] waydoum
+yes it's weritten generation's price increment "increases"
+
+
+[07/31/2024 13:22] yashpatel2003
+But see here the gen 2 price starts with 0.005 only
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-AAA05.png
+
+
+[07/31/2024 13:22] traitforgedev
+Incorrect
+
+
+[07/31/2024 13:23] waydoum
+that"s the starting price, read carefully
+
+
+[07/31/2024 13:23] traitforgedev
+It starts at 0.005 always, the price increment between mints changes over generations
+
+
+[07/31/2024 13:24] yashpatel2003
+Okay so gen 2 will have  0.0000245 + 0.000005 as the increment price for mint right?
+
+
+[07/31/2024 13:31] granat__
+traitForgeNft is the owner of Airdrop?
+
+
+[07/31/2024 13:32] granat__
+no right?
+
+
+[07/31/2024 13:32] traitforgedev
+Correct
+
+
+[07/31/2024 13:33] granat__
+@ManPeach.0x
+
+
+[07/31/2024 13:34] traitforgedev
+Yes
+
+
+[07/31/2024 13:35] granat__
+How a contract can be the owner of a another contract if the logic is not implemented? 🤔
+
+
+[07/31/2024 13:36] 0xlemon
+`Ownable::transferOwnership()`
+
+
+[07/31/2024 13:36] traitforgedev
+Yes there is
+
+
+[07/31/2024 13:36] granat__
+oh yes…
+
+
+[07/31/2024 13:36] traitforgedev
+`startAirdrop`
+
+
+[07/31/2024 14:29] nihavent.
+Could someone help me setup the generateMerkleTree() to work with foundry tests? Basically trying to figure out how to get the calldata for the mintToken() calls
+
+
+[07/31/2024 14:31] waydoum
+you can escape it by making a transaction after the whitelist ending time
+
+{Reactions}
+👍 (2) 
+
+[07/31/2024 14:31] welith
+You could just bypass the modifier
+
+{Reactions}
+👍 
+
+[07/31/2024 14:31] nihavent.
+Thanks both 🙂
+
+
+[07/31/2024 14:43] strapontin
+https://docs.code4rena.com/roles/wardens/submission-guidelines#gas-optimization-reports
+This C4 doc says that `Not all audits include a Gas optimization pool; please check the audit repo before submitting a Gas report.`
+Does this one has such a pool ? I can't find details on the audit details, nor the github repository
+
+
+[07/31/2024 14:45] itsmetechjay
+No gas pool for this one.  If so, it would be listed as part of the prize pool breakdown.
+
+
+[07/31/2024 14:46] strapontin
+Oh ok, thanks for the explanation
+
+
+[07/31/2024 15:47] 0xhelium
+I have an ambigus question , what if I find an issue , I wrote PoC for it but I can’t recommand a fix ? Will I get rewarded ?
+
+
+[07/31/2024 15:52] avoloder
+As someone above said, tell us what's the issue and we will come up with the solution together, don't worry  😋 😄
+
+{Reactions}
+😆 (2) 🤣 (8) 4739_Skeletor (2) 🐀 
+
+[07/31/2024 16:03] uaarrr
+you are a hacker, find ways to hack the protocol,  the developers will develop the fix  lol
+
+
+[07/31/2024 16:03] uaarrr
+dont remember the black hats to dm the protocol with the mitigation after exploiting it
+
+
+[07/31/2024 16:27] mctoady
+Yeah you can say you don't have a suitable fix, just means you might be less likely to be selected for report than someone who does provide a good mitigation
+
+
+[07/31/2024 16:28] 0xhelium
+What if it’s a solo ?
+
+
+[07/31/2024 16:29] dimulski
+you will get a good pay day
+
+{Reactions}
+dab (3) 
+
+[07/31/2024 16:32] brivan
+Then it's time to retire for a good amount of time
+
+{Reactions}
+🤣 (4) 
+
+[07/31/2024 17:11] brivan
+@ManPeach.0x  Sorry for this dumb question, but why would you change the days of a year 
+https://github.com/code-423n4/2024-07-traitforge/blob/279b2887e3d38bc219a05d332cbcb0655b2dc644/contracts/EntityForging/EntityForging.sol#L40-L42
+
+It would be great if it could happen in real life although
+
+
+[07/31/2024 17:16] _karanel
+i guess it is edge case for a leap year 366 days
+
+
+[07/31/2024 17:17] brivan
+Yea thought of it, but this happens once in 4 years.
+
+
+[07/31/2024 17:51] ivanfitro
+mintWithBudget() can be used for anyone next 24h and mint other generations?
+
+
+[07/31/2024 18:28] d_auditor
+@ManPeach.0x I'm not sure you've answered this question though. The generated entropy is divided by 4_000_000 in EntropyGenerator::deriveTokenParameters(). Is this a mistake?
+
+
+[07/31/2024 18:32] welith
+This one is not used anywhere, I asked in a private thread, it's an old function which will be removed
+
+
+[07/31/2024 18:35] d_auditor
+Makes sense. Thanks @0xb0k0
+
+{Reactions}
+🍻 
+
+[07/31/2024 19:02] irving6969
+can we list NFT for sale and list for forge at the same time?
+
+
+[07/31/2024 19:04] _karanel
+No
+
+{Reactions}
+thankyou 
+
+[07/31/2024 19:04] _karanel
+If you list for sale it'll transfer nft from your wallet to the EntityTrading contract
+
+{Reactions}
+thankyou 
+
+[07/31/2024 19:05] _karanel
+Also if you have listed for forging beforehand, _beforeTokenTransfer will remove the listing for forging.
+
+
+[07/31/2024 20:02] 0x_shahil_hussain
+https://github.com/code-423n4/2024-07-traitforge/blob/279b2887e3d38bc219a05d332cbcb0655b2dc644/contracts/EntityTrading/EntityTrading.sol#L100
+`cancel`
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/Screenshot_2024-08-01_at_1.32.37_AM-7E92C.png
+
+
+[07/31/2024 21:22] pickpeak1024
+can you give me the test code of forge
+
+
+[07/31/2024 21:23] pickpeak1024
+ManPeach
+
+
+[07/31/2024 23:49] traitforgedev
+Old function and isn’t used anywhere
+
+{Reactions}
+👍 
+
+[07/31/2024 23:49] traitforgedev
+Easier to work with
+
+
+[07/31/2024 23:49] traitforgedev
+It’s in the repo
+
+
+[08/01/2024 00:03] ui.ui.ui
+so the function deriveTokenParameters will not be used?
+
+
+[08/01/2024 00:10] traitforgedev
+Correct
+
+
+[08/01/2024 00:29] traitforgedev
+@kartoonjoy | C4🎇🎇 what are the chances of including deployment script into scope? I realised it is worth checking aswell. Is it still early enough?
+
+
+[08/01/2024 02:41] cloudellie
+We’re looking into this and will get back to you asap, but may need to wait for Europe to wake up 🙂
+
+
+[08/01/2024 02:41] traitforgedev
+No worries😎
+
+{Reactions}
+hi5 
+
+[08/01/2024 03:10] _karanel
+Will the pool be increased accordingly? xD
+
+
+[08/01/2024 03:50] tigerfrake
+Quick one!! 
+
+Does the `merger` get to keep their old `mergerTokenId` and receive a `newTokenId` as well during forging?
+
+
+[08/01/2024 04:11] traitforgedev
+Yeah think of it as having a baby. The mum is still the same but now she has a child
+
+{Reactions}
+😂 
+
+[08/01/2024 04:13] tigerfrake
+Thanks, lol
+
+
+[08/01/2024 05:20] anonimoux2k
+But if they are mantis or spiders, you should add logic to burn the "dad" NFT after forging =))))
+
+{Reactions}
+😂 (2) 
+
+[08/01/2024 05:21] traitforgedev
+Haha true😅
+
+
+[08/01/2024 08:03] mahi_vasisth
+I want to integrate foundry in this project . How can I do guys
+
+
+[08/01/2024 08:04] welith
+https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry
+
+{Embed}
+https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry
+Integrating with Foundry | Ethereum development environment for pro...
+Ethereum development environment for professionals by Nomic Foundation
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/card-676D2.jpg
+
+{Reactions}
+❤️ (2) 
+
+[08/01/2024 08:04] mahi_vasisth
+Thanks . 😄
+
+
+[08/01/2024 08:54] _karanel
+Is deployment script going to be included in scope?
+
+{Reactions}
+😂 (2) 
+
+[08/01/2024 09:03] pickpeak1024
+One generation can't have more than 10000 entities, right? ManPeach
+
+{Reactions}
+👍 (2) 
+
+[08/01/2024 09:03] pickpeak1024
+in any situation?
+
+
+[08/01/2024 09:07] traitforgedev
+Correct 10000 max per gen
+
+
+[08/01/2024 09:08] pickpeak1024
+any situation?
+
+
+[08/01/2024 09:08] ninja72x
+that's basic.
+
+
+[08/01/2024 09:08] traitforgedev
+?
+
+
+[08/01/2024 09:09] 0x_shahil_hussain
+he is asking if this is invariant
+
+
+[08/01/2024 09:09] traitforgedev
+It will never go above 10000 ever
+
+
+[08/01/2024 09:10] mahi_vasisth
+Is DevInfo any struct guys
+
+{Reactions}
+👍 
+
+[08/01/2024 09:11] mahi_vasisth
+Where it is declared
+
+
+[08/01/2024 09:11] 0x_shahil_hussain
+struct DevInfo {
+    uint256 weight;
+    uint256 rewardDebt;
+    uint256 pendingRewards;
+  }
+
+
+[08/01/2024 09:11] _karanel
+Interface
+
+
+[08/01/2024 09:11] 0x_shahil_hussain
+IDevFund
+
+
+[08/01/2024 09:11] mahi_vasisth
+Oh
+
+
+[08/01/2024 09:11] gscoder
+dev can be funded ? how much guys
+
+{Reactions}
+❓ 
+
+[08/01/2024 09:13] gscoder
+tax [context] in NukeFund.sol ?
+
+
+[08/01/2024 09:27] dimulski
+are you going to pay for the nsloc increase?
+
+
+[08/01/2024 09:28] uaarrr
+the mocks too
+
+{Reactions}
+👆 😂 (2) 
+
+[08/01/2024 09:29] _karanel
+Lol, the sponsor wanted to.
+https://discord.com/channels/810916927919620096/1266325696079466609/1268365020996178003
+Even if there's no reward increase atleast if I'd submit something valid there I'll get a bigger share.
+
+
+[08/01/2024 09:51] traitforgedev
+The officials have decided not to include it in scope. But if you find an issue in the deploy file I will personally pay a bounty accordingly.
+
+
+[08/01/2024 09:53] 0x_shahil_hussain
+what if multiple people found the same bug? the money will be shared?
+
+
+[08/01/2024 09:57] traitforgedev
+First person to spot the issue gets paid. I’d suggest reading through our personal repo, as we will update as issues arise. But for now focus on this audit, our stuff isn’t going anywhere
+
+
+[08/01/2024 09:58] pickpeak1024
+what is the value of agemultiplier
+
+
+[08/01/2024 10:00] pickpeak1024
+@ManPeach.0x
+
+
+[08/01/2024 10:00] traitforgedev
+Ignore it
+
+
+[08/01/2024 10:00] traitforgedev
+It will be removed as it was used for testing
+
+
+[08/01/2024 10:08] mahi_vasisth
+I want to ask some questions in private thread . Who will have to mention guys
+
+
+[08/01/2024 10:09] anonimoux2k
+I thought according to Code4rena's rules, everyone who gets accepted with the same finding will be rewarded, not just the first person to discover it.
+
+
+[08/01/2024 10:10] 0x_shahil_hussain
+script is not under scope
+
+
+[08/01/2024 10:11] traitforgedev
+This is a private bounty. Not code4rena.
+
+
+[08/01/2024 10:11] traitforgedev
+Me and @Deleted User
+
+
+[08/01/2024 10:11] anonimoux2k
+Okay okay, got it, not my work =)))
+
+{Reactions}
+3458froglike 
+
+[08/01/2024 10:18] samuraii77
+so we should assume that for example this line:
+```uint256 age = (daysOld * perfomanceFactor * MAX_DENOMINATOR * ageMultiplier) / 365;```
+
+will not be multiplied by ageMultiplier?
+
+
+[08/01/2024 10:22] traitforgedev
+Correct
+
+
+[08/01/2024 10:23] traitforgedev
+use 1 or remove it from the sum during testing
+
+
+[08/01/2024 10:26] cholakovv
+In that case, shouldn't this be included somewhere in the README?
+
+
+[08/01/2024 10:27] traitforgedev
+You’re right. To be honest I forgot it was there. I will notify officials
+
+{Reactions}
+✅ 
+
+[08/01/2024 10:28] samuraii77
+Are there any other values that should be ignored?
+
+
+[08/01/2024 10:31] traitforgedev
+The deriveTokenParameters function in entropyGenerator contract
+
+
+[08/01/2024 10:54] granat__
+nft token can be minted in the generation 2 or above right?
+
+
+[08/01/2024 10:54] traitforgedev
+Yes any generation can forge, aslong as it’s with the same gen
+
+
+[08/01/2024 10:55] granat__
+so it is possible to mint in gen 2-10, thanks
+
+{Reactions}
+3458froglike (2) 
+
+[08/01/2024 10:58] traitforgedev
+Along as the previous generation is full, minting will begin in the next gen
+
+
+[08/01/2024 10:59] gscoder
+there is any past audits ?
+
+
+[08/01/2024 11:02] traitforgedev
+Never been audited
+
+{Reactions}
+👍 
+
+[08/01/2024 11:03] gscoder
+https://docs.google.com/document/d/1pihtkKyyxobFWdaNU4YfAy56Q7WIMbFJjSHUAfRm6BA/edit
+
+is this the latest white-paper ?
+
+{Embed}
+https://docs.google.com/document/d/1pihtkKyyxobFWdaNU4YfAy56Q7WIMbFJjSHUAfRm6BA/edit
+TraitForge
+TraitForge  NFT Honeypot Game with Strong Value-accrual Elements and Strategic P2P Gameplay.   Abstract NFT projects have huge potential but are currently squandered by grifters and profiteers with no vision. Profile-pic collections are one-time releases with large mints but lack roadmap and valu...
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/AHkbwyLlnv5joQ0PPDDWo4mDKfS3khRc0-c-HyuIAt-99F46
+
+
+[08/01/2024 11:04] traitforgedev
+Some minor updates need to be made
+
+
+[08/01/2024 11:04] traitforgedev
+I’ll do it now
+
+{Reactions}
+✍️ 
+
+[08/01/2024 11:04] gscoder
+ill wait
+
+
+[08/01/2024 11:08] traitforgedev
+Tweaked🫡
+
+
+[08/01/2024 11:10] traitforgedev
+It’s the same doc it just updates
+
+{Reactions}
+👍 
+
+[08/01/2024 11:15] gscoder
+what is 2/3 and 1/3 ?
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-F1707.png
+
+
+[08/01/2024 11:27] avoloder
+Two thirds ... If you have 9 Roles in total it means that two thirds are Mergers (9 * 2/3 = 6) and one third are Forgers (9 * 1/3 = 3)
+
+{Reactions}
+✍️ 👍 (2) 
+
+[08/01/2024 12:05] gscoder
+never used hardhat besides foundry
+
+
+[08/01/2024 12:06] gscoder
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-3E985.png
+
+
+[08/01/2024 12:08] wanziskata
+you have to install yarn first
+
+
+[08/01/2024 12:09] gscoder
+command
+
+
+[08/01/2024 12:11] gscoder
+@ManPeach.0x    mapping(uint256 => uint256) public tokenEntropy;         
+ used forr ?
+
+
+[08/01/2024 12:12] mylifechangefast.eth_70767
+When nft Is created to store tokens entropy
+
+
+[08/01/2024 12:12] traitforgedev
+To store the tokens entropy
+
+
+[08/01/2024 12:12] brevistw
+This is what Docs Wolf answered:
+
+```
+The mapping(uint256 => uint256) public tokenEntropy in the TraitForgeNft smart contract is a mapping that associates each token ID with its corresponding entropy value. Entropy in this context is likely a measure or value used to represent some form of randomness or unique characteristics associated with each token. This value can be used for various game mechanics or features within the smart contract ecosystem, such as determining the outcome of certain operations or influencing the behavior of tokens.
+
+Here's a brief overview of how it's used in the contract:
+
+Entropy Generation: When a new token is minted, an entropy value is generated and assigned to the token. This is done in the _mintInternal function where tokenEntropy[newItemId] = entropyValue; assigns the generated entropy to the newly minted token.
+
+Accessing Entropy: The entropy value of a token can be accessed using the getTokenEntropy function, which takes a token ID and returns its entropy value. This function ensures that the token exists before returning the entropy.
+
+
+Usage in Game Mechanics: The entropy value can influence various game mechanics. For example, in the forge function, the entropy values of parent tokens are used to calculate the entropy for a new token. Additionally, in the calculateAge function from the Aging.md documentation, the entropy influences the calculated age of a token.
+
+This mapping is crucial for maintaining the unique attributes and behaviors of tokens within the smart contract, contributing to the dynamic and engaging nature of the game or application.
+```
+
+{Reactions}
+👍 (2) 
+
+[08/01/2024 12:33] traitforgedev
+It’s not possible to mint NFTs over maximumGen @Granat 
+
+Owner will be deployer
+
+
+[08/01/2024 12:33] granat__
+ok
+
+
+[08/01/2024 12:35] traitforgedev
+If you have found an issue, make a thread and we can discuss
+
+
+[08/01/2024 12:37] traitforgedev
+Pls make a thread and we can talk abt it
+
+
+[08/01/2024 12:49] brivan
+Delete all your previous message related to this, you wanna discuss this in private thread
+
+{Reactions}
+☝️ (2) 
+
+[08/01/2024 12:51] _karanel
+Man, I don't wanna have 50+ dupes
+
+{Reactions}
+😂 (2) 
+
+[08/01/2024 12:51] brivan
+It's funny how people easily disclose their findings
+
+
+[08/01/2024 12:51] dontonka
++100 dup incoming
+
+
+[08/01/2024 12:52] _karanel
+Exactly. I create one private thread every contest and make sure I don't hint anyone else of any finding.
+
+{Reactions}
+☝️ 
+
+[08/01/2024 12:52] waydoum
+I'm mad that I didn't see it
+
+{Reactions}
+😂 
+
+[08/01/2024 12:52] waydoum
+lol
+
+
+[08/01/2024 12:52] _karanel
+I'm glad you didn't
+
+
+[08/01/2024 12:52] welith
+😄
+
+
+[08/01/2024 12:52] yashpatel2003
+Trait token is 18 decimal ?
+
+
+[08/01/2024 12:52] traitforgedev
+Out of scope
+
+
+[08/01/2024 12:52] waydoum
+hahaha there's still time
+
+
+[08/01/2024 12:53] yashpatel2003
+just want to know for testing
+
+{Reactions}
+👍 
+
+[08/01/2024 12:53] waydoum
+if I want to ask a question should I create a new private thread or just continue in my own
+
+
+[08/01/2024 12:53] traitforgedev
+Continue in the thread you made earlier
+
+
+[08/01/2024 12:54] yashpatel2003
+@ManPeach.0x I can consider 18 decimal right?
+
+
+[08/01/2024 12:55] traitforgedev
+@Deleted User
+
+
+[08/01/2024 12:56] Deleted User
+Yeah, it's 18
+
+{Reactions}
+👍🏻 
+
+[08/01/2024 13:51] tobi0x18
+@ManPeach.0x Could you check my private thread?
+
+{Reactions}
+👍 
+
+[08/01/2024 14:31] strapontin
+I just changed notification settings to all messages haha
+
+{Reactions}
+😂 (2) 
+
+[08/01/2024 14:33] 0x_shahil_hussain
+get ready for some turbulence then
+
+
+[08/01/2024 15:14] uaarrr
+what is the easiest way to create the merkle proofs / root   for ``TraitForgeNft`` related functions ?
+
+
+[08/01/2024 15:15] uaarrr
+if someone already have a js script and want to share, i can't figure out much from the tests
+
+
+[08/01/2024 16:12] nihavent.
+I asked a similar question and it was suggested I bypass the whitelist checks by sending transactions after the whitelist period
+
+
+[08/01/2024 16:15] uaarrr
+so after the deployment, skip 24 hours and everyone can mint tokens ?
+
+{Reactions}
+👍 
+
+[08/01/2024 16:16] granat__
+i did the same
+
+{Reactions}
+👍 
+
+[08/01/2024 16:16] granat__
+yes
+
+
+[08/01/2024 16:51] roc0837
+who else gets an error doing "yarn compile"?
+
+
+[08/01/2024 18:39] quaternion2691
+@ManPeach.0x  if a certain user can always manage to get the nft with entropy 99999, does that break the functionality of the game ??
+
+{Reactions}
+😅 (3) 
+
+[08/01/2024 18:43] quaternion2691
+@Docs Wolf what is padded entropy and why is it needed??
+
+
+[08/01/2024 18:55] kartoonjoy
+You'll want to ask this question in a thread.
+
+
+[08/01/2024 18:57] quaternion2691
+Started a thread.
+
+
+[08/01/2024 19:00] 0xhelium
+According to dev no , it’s what makes the game enjoyable because everyone knows what is coming next and it create a mint race between players who want to get nft with forger role or any other special nft . So someone being smart to frontrun or mint only special nft is not an issue
+
+
+[08/01/2024 19:13] granat__
+but some will have advantages (only developers/hackers) and others (all the normal users) haven’t this possibility
+
+
+[08/01/2024 19:14] waydoum
+There goes down the drain
+
+
+[08/01/2024 19:15] waydoum
+Please if you ask something can be an issue and it is everyone will be looking that way ask in a private thread
+
+
+[08/01/2024 19:15] waydoum
+This will make it less enjoyable
+
+{Reactions}
+👍 
+
+[08/01/2024 19:15] ui.ui.ui
+Less enjoyable for us 😂
+
+{Reactions}
+😂 (2) 
+
+[08/01/2024 19:16] granat__
+more enjoyable for devs, less enjoyable for normal users
+
+
+[08/02/2024 00:14] traitforgedev
+Yeah look it sounds rough and unfair but in every aspect of life, the smartest, hard working or richest person will always win. It’s inevitable to avoid this, so yes a front-runner may put in the effort to get the better NFT but that is just life and if they worked hard to do so then I don’t see the issue
+
+
+[08/02/2024 00:14] traitforgedev
+Arguably they deserve it more than the person who sat there doing nothing waiting for all the others to be minted
+
+
+[08/02/2024 02:34] anonimoux2k
+@ManPeach.0x I have a question about the purpose of DevFund. I see it is currently used to reward developers based on weight. But my question is, if the developer activity of the project is only internal to your team, then there is no need to have a devFund contract and devAddress can just be a normal EOA. And for how to divide the bonus, that is the internal work of your team/company.
+
+
+[08/02/2024 02:34] anonimoux2k
+Or in the future, will you guys open source completely and allow open contributors to contribute to the source code? I was wondering about this, thanks for the reply
+
+
+[08/02/2024 02:37] traitforgedev
+It’s easier and engrained in the contract for transparency. This is a personal choice. And yes possibly go full open source but by then it will probably be DAO run.
+
+{Reactions}
+🙌 (2) 
+
+[08/02/2024 02:43] gscoder
+@ManPeach.0x forging is like tranformation, what is merging like ? [terminology].
+
+
+[08/02/2024 03:56] traitforgedev
+Merging is old terminology for forging
+
+
+[08/02/2024 03:56] traitforgedev
+They are the same
+
+{Reactions}
+👍 
+
+[08/02/2024 06:12] naties29
+How can a user be whitelisted what is hte process for that?
+
+
+[08/02/2024 06:14] welith
+He needs to be added to the Merkle Tree. This is done prior to dpeloyment. It's a VIP process
+
+
+[08/02/2024 06:15] naties29
+Is there documentation of how these users are selected etc? Or is this at the discretion of the protocol?
+
+
+[08/02/2024 06:17] welith
+No idea. This is not part of the scope, but I guess they are pre selected, thats why its called whitelisting 😄
+
+
+[08/02/2024 06:18] naties29
+@ManPeach.0x How are whitelisted users selected? Is this done by yall?
+
+
+[08/02/2024 06:18] naties29
+Thanks bro will ping the sponsor
+
+
+[08/02/2024 06:18] traitforgedev
+Yes I have a big list
+
+{Reactions}
+❤️ 
+
+[08/02/2024 06:20] _karanel
+add me to it xD
+
+{Reactions}
+🤣 (2) 
+
+[08/02/2024 06:21] traitforgedev
+Yeah dm addresses. I’ll add whoever wants to be in
+
+{Reactions}
+🤣 (2) 😮 (2) 
+
+[08/02/2024 06:30] naties29
+Thanks for getting back to me man!
+
+
+[08/02/2024 07:25] naties29
+The white list mecahism is a headache for tests lol
+
+
+[08/02/2024 07:26] gscoder
+its a headache to convert hardhat tests into foundry tests
+
+
+[08/02/2024 07:27] naties29
+Yeah bro is what it is lol, I just changed teh toml to point to another test folder I made and built out a new test suite
+
+{Reactions}
+👍 
+
+[08/02/2024 07:34] 0xhelium
+Tell me  your finding , I will write the hardhat PoC for you
+
+
+[08/02/2024 07:34] 0xhelium
+I think this is a fair deal 😂
+
+
+[08/02/2024 07:40] naties29
+Need a donation of $1 first bro
+
+{Reactions}
+😂 
+
+[08/02/2024 07:42] welith
+Just remove the modifier? Why do you need it?
+
+
+[08/02/2024 07:44] granat__
+just skip 24 hours
+
+
+[08/02/2024 07:44] granat__
+and you’re ok
+
+
+[08/02/2024 07:48] naties29
+THANK YOU
+
+
+[08/02/2024 07:52] wanziskata
+even after I skip a billion hours, the minting doesn't work for me; do you guys just pass in an empty bytes32 array?
+
+
+[08/02/2024 07:55] granat__
+pass something like this 
+keccak255(abi.encode(“Hey”));
+
+{Reactions}
+👍 
+
+[08/02/2024 07:56] naties29
+Yeah mine is still acting up, ended up having to create a freakin merkle leef etc
+
+
+[08/02/2024 07:56] naties29
+pain lol
+
+
+[08/02/2024 07:57] granat__
+we learned what is a merklee tree 😂
+
+
+[08/02/2024 07:57] wanziskata
+Thank you, but it still doesn't work. I will just stick to using the hardhat tests :4739_Skeletor:
+
+
+[08/02/2024 07:58] naties29
+The foundry work around is a slog lol
+
+
+[08/02/2024 07:58] naties29
+hahaha oh well its the life we live
+
+
+[08/02/2024 07:58] granat__
+create 1 array with javascript, and put in that array that code
+
+
+[08/02/2024 07:59] granat__
+if you’re using hardhat
+
+
+[08/02/2024 07:59] wanziskata
+I tried to use foundry and passed in an empty bytes32[], and also tried your suggestion with keccak256, however none of them worked 😄
+
+
+[08/02/2024 08:00] wanziskata
+screw it, no need to waste your time as well
+
+
+[08/02/2024 08:01] strapontin
+Using foundry :
+```js
+// Used to avoid whitelist proof
+vm.warp(86402);
+vm.roll(86402);
+```
+Only 1 between `warp` and `roll` is needed, but using both is ok
+
+
+[08/02/2024 08:02] granat__
+do this with foundry:
+
+bytes32[] memory argument = new bytes32[](1)
+argument0] = keccak256(abi.encode(“Hi”)); 
+
+and pass the “argument” variable
+
+
+[08/02/2024 08:02] cryptomoon9046
+Is POC compulsory for code4rena?
+
+
+[08/02/2024 08:04] granat__
+i prefer using skip
+
+
+[08/02/2024 08:05] wanziskata
+A picture is worth a thousand words
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-E15AF.png
+
+
+[08/02/2024 08:06] granat__
+if it is evmRevert that means the argument is correct
+
+
+[08/02/2024 08:06] granat__
+something else is wrong, check if you setted all the contracts, because traitforgenft calls others ones, and if they’re 0 address that reverts
+
+
+[08/02/2024 08:07] granat__
+share the complete log (the last lines)
+
+
+[08/02/2024 08:07] wanziskata
+I was honest when I told you that there's no need to waste any more time, but sure 😄 Here you go:
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-653A7.png
+
+
+[08/02/2024 08:08] wanziskata
+my setup is correct, I can see it with max verbosity
+
+
+[08/02/2024 08:08] granat__
+en fact that is the problem 😂
+
+{Reactions}
+🧐 
+
+[08/02/2024 08:09] granat__
+see, in the last lines the contract is calling “getListedTokens”, but the call is to a 0 address
+
+
+[08/02/2024 08:09] granat__
+if i remember wel, you need to set the nuke and the entropy contract
+
+
+[08/02/2024 08:10] granat__
+so those are not more 0 address and can be called
+
+
+[08/02/2024 08:10] wanziskata
+I see what you mean
+
+
+[08/02/2024 08:10] wanziskata
+I've completely missed them as I was just looking at the constructor and nothing else
+
+
+[08/02/2024 08:10] strapontin
+Started a thread.
+
+{Reactions}
+✅ 
+
+[08/02/2024 08:10] strapontin
+May we keep the main ~~thread~~ channel clean ^^'
+
+
+[08/02/2024 08:27] _karanel
+Not compulsory, but helps strengthen the case
+
+{Reactions}
+👍🏻 (3) 
+
+[08/02/2024 09:09] mgnfy_view
+you have not set the addresses after deployment
+
+
+[08/02/2024 09:34] gscoder
+writing tests from scratch in foundry, consuming lot of time
+
+
+[08/02/2024 09:51] dontonka
+@cryptomoon also minimize fights/arguments in PJQA, as coded PoC is the proven by facts.
+
+{Reactions}
+👍 (2) 
+
+[08/02/2024 09:57] mgnfy_view
+Are you porting the Hardhat tests to foundry?
+
+
+[08/02/2024 10:06] gscoder
+yes and u?
+
+
+[08/02/2024 10:07] mgnfy_view
+I'm directly jumping to PoCs haha
+
+
+[08/02/2024 10:07] gscoder
+coded PoCs ?
+
+
+[08/02/2024 10:07] mgnfy_view
+Yup
+
+
+[08/02/2024 10:07] mgnfy_view
+Foundry tests
+
+{Reactions}
+👍 (2) 
+
+[08/02/2024 10:08] mgnfy_view
+Using the @nomiclabs/hardhat-foundry plugin
+
+
+[08/02/2024 10:10] gscoder
+but still need to write foundry tests
+
+
+[08/02/2024 10:16] ebok21
+Who's the judge for this contest?
+
+
+[08/02/2024 10:21] mahi_vasisth
+`TestERC721::mintToken(alice: [0x328809Bc894f92807417D2dAD6b7C998c1aFdac6])
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: alice: [0x328809Bc894f92807417D2dAD6b7C998c1aFdac6], tokenId: 1)
+    │   └─ ← [Stop] 
+    ├─ [625] TestERC721::getTokenId(alice: [0x328809Bc894f92807417D2dAD6b7C998c1aFdac6])
+    │   └─ ← [Return] 1
+    ├─ [0] VM::startPrank(alice: [0x328809Bc894f92807417D2dAD6b7C998c1aFdac6])
+    │   └─ ← [Return] 
+    ├─ [25169] TestERC721::approve(EntityTrading: [0xF62849F9A0B5Bf2913b396098F7c7019b51A820a], 1)
+    │   ├─ emit Approval(owner: alice: [0x328809Bc894f92807417D2dAD6b7C998c1aFdac6], approved: EntityTrading: [0xF62849F9A0B5Bf2913b396098F7c7019b51A820a], tokenId: 1)   
+    │   └─ ← [Stop] 
+    ├─ [0] VM::stopPrank()
+    │   └─ ← [Return] 
+    ├─ [747] TestERC721::getApproved(1) [staticcall]
+    │   └─ ← [Return] EntityTrading: [0xF62849F9A0B5Bf2913b396098F7c7019b51A820a]
+    ├─ [0] VM::startPrank(alice: [0x328809Bc894f92807417D2dAD6b7C998c1aFdac6])
+    │   └─ ← [Return] 
+    ├─ [15016] EntityTrading::listNFTForSale(1, 10000000000000000000 [1e19])
+    │   ├─ [2628] TraitForgeNft::ownerOf(1) [staticcall]
+    │   │   └─ ← [Revert] revert: ERC721: invalid token ID
+    │   └─ ← [Revert] revert: ERC721: invalid token ID
+    └─ ← [Revert] revert: ERC721: invalid token ID
+`  why I am revert guys
+
+
+[08/02/2024 10:22] welith
+YTou are using TestERC721
+
+
+[08/02/2024 10:22] welith
+You need to use the TraitsNft token contract
+
+
+[08/02/2024 10:22] gscoder
+u write this test by yourself ? in foundry
+
+
+[08/02/2024 10:23] welith
+TraitForgeNft::ownerOf(1)  this is looking in the TraitNft, whereas you've minted a TestERC721 token
+
+
+[08/02/2024 12:29] cryptomoon9046
+@ManPeach.0x why should forger token holder and merger token holder be different?
+
+
+[08/02/2024 13:10] traitforgedev
+Otherwise people will just constantly forge with themselves, the point of forging is to literally fornicate with other people. If everybody just forged with themselves it’d ruin the community aspect and the idea in general
+
+
+[08/02/2024 13:11] strapontin
+How do you expect to handle multi account ?
+
+
+[08/02/2024 13:11] traitforgedev
+Impossible, it will happen yes, hence the minimum forge fee
+
+{Reactions}
+👍 (2) 
+
+[08/02/2024 13:12] traitforgedev
+But it won’t be as easy, lowkey an inconvenience
+
+
+[08/02/2024 13:28] mgnfy_view
+Design decision
+
+
+[08/02/2024 14:40] exolorkistis
+having trouble understanding teh parentIds that are used on forge on the TraitForgeNFT contract what are they?
+
+
+[08/02/2024 14:41] avoloder
+Ids of the nfts that are being forged
+
+
+[08/02/2024 14:55] mgnfy_view
+What is the minimum forge fee?
+
+
+[08/02/2024 15:00] welith
+uint256 public minimumListFee = 0.01 ether; in EntityForging.sol global vars
+
+{Reactions}
+👍 
+
+[08/02/2024 15:19] mahi_vasisth
+Yes
+
+
+[08/02/2024 16:43] mahi_vasisth
+hey guys. Can anyone explain me about pending rewards
+
+
+[08/02/2024 16:44] _karanel
+if a dev's share/weight in the reward is updated, his so far earned rewards are added to his pendingReward
+
+
+[08/02/2024 16:50] mahi_vasisth
+Thanks
+
+
+[08/02/2024 17:47] ericwillworkforcryptopunks
+I don't see any other contracts integrating with DevFund.sol. What is the point of this contract? I get it splits payment to the devs but how is it getting funded?
+
+
+[08/02/2024 17:53] strapontin
+Other contracts have `address devAddress`, funding the contract this way
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-6C86C.png
+
+{Reactions}
+👍🏻 (3) 
+
+[08/02/2024 19:16] fastchecker_27
+what is mean "Some mature faster than others, with the fastest maturing in around 30 days, and slowest 600 days. " in docs?
+
+
+[08/02/2024 19:16] fastchecker_27
+@ManPeach.0x where is code corresponding to this part?
+
+
+[08/02/2024 19:22] strapontin
+Entities have a nukeFactor. This describes the rewards given to the owner based on the time he owned the NFT. 
+The calculation of the nukeFactor is in the function `calculateNukeFactor`
+
+
+[08/02/2024 19:23] fastchecker_27
+pls give me screenshot corresponding to this code
+
+
+[08/02/2024 19:24] strapontin
+Dude I gave you the function name, you could simply `CTRL + SHIFT + F`
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-93CEE.png
+
+{Reactions}
+🤣 (5) 
+
+[08/02/2024 19:25] fastchecker_27
+bro, thank you very much
+
+
+[08/02/2024 20:00] rcontre360
+read the code, man. Its self explanatory
+
+
+[08/02/2024 20:00] fastchecker_27
+what is code man?
+
+
+[08/02/2024 20:09] granat__
+can people nuke their nfts in the first generations? for example in the first generation after they minted it
+
+
+[08/02/2024 20:11] mladenov0603
+Does someone have the same issue as mine in `TraitForge.test.ts`?
+
+Here's the error
+`Cannot find module '../typechain-types' or its corresponding type declarations.`
+I have installed all the dependacies
+
+
+[08/02/2024 20:17] nihavent.
+Seems like they can as long as the minimum time period has passed. I think this is 3 days in the code
+
+
+[08/02/2024 20:18] granat__
+yeah i think too
+
+
+[08/02/2024 23:08] 0xwizard
+@ManPeach.0x  did you guys calcuate the new share distirbuation percentage?
+
+
+[08/03/2024 03:17] gscoder
+uint256 public taxCut = 10;
+
+10% ? is it ?
+
+
+[08/03/2024 03:17] rodiontrubnikov
+yes
+
+
+[08/03/2024 03:33] traitforgedev
+Did you compile?
+
+
+[08/03/2024 03:34] traitforgedev
+Yes but they must wait 3 days after acquiring
+
+
+[08/03/2024 03:43] gscoder
+@ManPeach.0x u guys charge 10% taxcut for your profits to each NFT selling which goes to (Nuke-fund-contract) ?
+
+
+[08/03/2024 03:45] traitforgedev
+10 of all forging and trading TX goes to nuke fund, and then from there 10% goes to devs and the 90 goes into the nukefund itself. Pls read the code properly
+
+{Reactions}
+👍 (4) 😬 
+
+[08/03/2024 06:35] ebok21
+does the waiting period also apply for traded tokens?
+
+
+[08/03/2024 07:06] strapontin
+Yes, it’s in the code. Even if you list an entity for sale and cancel the sale, the waiting time resets
+
+{Reactions}
+🤝 
+
+[08/03/2024 07:24] steadyman.
+Why can’t the caller be the forger token owner?
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-F8BEC.png
+
+
+[08/03/2024 07:47] bajagasec
+Because can't forging with himself
+
+
+[08/03/2024 08:01] traitforgedev
+Otherwise people will forget with themselves
+
+
+[08/03/2024 09:15] mgnfy_view
+Started a thread.
+
+
+[08/03/2024 09:50] cryptomoon9046
+@ManPeach.0x the `devWeight` values used in the tests are the representation of values used in production?
+
+
+[08/03/2024 11:10] traitforgedev
+Yes
+
+
+[08/03/2024 12:43] vic_43
+@Docs Wolf whats setOneYearInDays
+
+{Reactions}
+👀 
+
+[08/03/2024 13:06] d_auditor
+@ManPeach.0x how many Golden God should exist at a time for every generation?
+
+
+[08/03/2024 13:24] traitforgedev
+1 per gen
+
+{Reactions}
+👍 (2) 
+
+[08/03/2024 13:32] m1nhtriet
+@ManPeach.0x are all entropies the same for each generation and does generationMintCounts count for forging or just count for minting only
+
+
+[08/03/2024 14:14] traitforgedev
+Yes all entropies are the same in each gen and yeah genMinCounts Counts for forging
+
+
+[08/03/2024 14:24] ivanchoveka
+Is Airdrop.sol in scope of the contest?
+
+
+[08/03/2024 14:25] 0xakira1
+No
+
+{Reactions}
+👍 (2) 
+
+[08/03/2024 15:46] blockchain555
+what is mean " infertile from birth" in docs?
+
+
+[08/03/2024 15:46] cryptomoon9046
+I guess it means that they can't be forged with others
+
+
+[08/03/2024 15:49] .justuzair
+i too am struggling with docs because code isn't documented too well
+
+
+[08/03/2024 15:50] blockchain555
+what is mean "10%"?
+
+
+[08/03/2024 15:52] cryptomoon9046
+not sure what you mean. I am not a sponsor
+
+
+[08/03/2024 15:53] samuraii77
+in my opinion it means 10 percent 👍
+
+{Reactions}
+😀 😂 (18) 
+
+[08/03/2024 15:58] .justuzair
+i think he is asking for devCut or something
+
+
+[08/03/2024 15:58] .justuzair
+i dont know
+
+
+[08/03/2024 16:02] welith
+they have a forging potential of 0, their entropy is xxxx0x (where x denotes a random digit)
+
+{Reactions}
+👍 
+
+[08/03/2024 16:54] blockchain555
+what is mean "10%"?
+
+
+[08/03/2024 17:11] strapontin
+The second number can be between 0 and 9, randomly set.
+If it is 0, the entity can’t forge. It has 10% to be 0, so 10% to be infertile
+
+
+[08/03/2024 17:17] fastchecker_27
+what you mean is that infertile can be 100%?
+
+
+[08/03/2024 17:17] strapontin
+I don’t understand your question
+
+
+[08/03/2024 17:18] strapontin
+Infertility can happen to once every 10 entities
+
+
+[08/03/2024 17:20] fastchecker_27
+why can infertility happen to once every 10 entities? It's random so can be nothing?
+
+
+[08/03/2024 17:22] zdravkohr
+Wait, does it work like that ;D
+
+
+[08/03/2024 17:24] welith
+To determine the probability that the 5th digit of a 6-digit number is 0, we need to consider the structure of 6-digit numbers and the nature of digit placement.
+
+A 6-digit number ranges from 100,000 to 999,999. Each of these positions can be any digit from 0 to 9, but with some restrictions on the first digit to ensure it remains a 6-digit number.
+
+### Analysis of the 5th Digit
+
+- The total number of possible 6-digit numbers: From 100,000 to 999,999, there are \(999,999 - 100,000 + 1 = 900,000\) possible numbers.
+
+- The 5th digit can be any digit from 0 to 9.
+
+Since each digit in the number (except for the first digit) can be any value from 0 to 9 independently, the probability for each specific digit position being a particular value (0 in this case) is the same. 
+
+### Calculation of Probability
+
+The probability \(P\) that the 5th digit of a 6-digit number is 0 can be calculated as the ratio of favorable outcomes (where the 5th digit is 0) to the total number of possible outcomes (any 6-digit number).
+
+1. **Total possible outcomes**:
+   Each digit from the 1st to the 6th has 10 possible values (0-9), except the first digit, which has 9 possible values (1-9):
+   - First digit: 1 to 9 (9 possible values)
+   - Remaining digits: 0 to 9 (10 possible values each)
+
+2. **Favorable outcomes for the 5th digit being 0**:
+   - The first digit: 9 possible values (1-9)
+   - The 2nd, 3rd, 4th, and 6th digits: 10 possible values each (0-9)
+   - The 5th digit is fixed as 0
+
+Thus, the number of favorable outcomes where the 5th digit is 0:
+\[ 9 \times 10 \times 10 \times 10 \times 1 \times 10 = 90000 \]
+
+### Total number of possible 6-digit numbers:
+\[ 900000 \]
+
+### Probability \(P\):
+\[ P = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}} = \frac{90000}{900000} = \frac{1}{10} = 0.1 \]
+
+### Conclusion
+
+The chance that the 5th digit of a 6-digit number is 0 is \(\boxed{0.1 \text{ or 10\%}}\).
+
+{Reactions}
+❤️ (2) 
+
+[08/03/2024 17:24] welith
+Use those AI tools, plase 😄
+
+
+[08/03/2024 17:25] welith
+Copy pasting broke the formatting, but you can simply ask chat gpt these things 😄
+
+
+[08/03/2024 17:37] brevistw
+Beautiful 🔥
+
+
+[08/03/2024 17:38] strapontin
+This is good, but I think I saw some padding in the code (I may be wrong about it, to double check) in case the value is under 100,000 so it would still be 6 digits with 0 at first
+
+Thanks for the explanation and the AI tip
+
+
+[08/03/2024 17:57] cryptomoon9046
+What is the significance of `oneYear` time in `EntityForging`?
+
+
+[08/03/2024 18:00] brevistw
+According to DocsWolf:
+
+The significance of the oneYear time in the context of EntityForging is crucial for managing the Forge Potential of entities within the game. This period acts as a reset mechanism for an entity's ability to forge new entities.
+
+In the game, each entity has a Forge Potential determined by the fifth digit of its entropy. This potential dictates how many times an entity can forge new entities. Once an entity has reached its forging limit, it cannot forge again until this limit is reset.
+
+The oneYear time period is the duration after which the forging count of an entity is reset. This is implemented in the _resetForgingCountIfNeeded function, which checks if a year has passed since the last reset for a given entity. If a year has passed, the function resets the forging count to zero and updates the last forge reset timestamp to the current block timestamp. Here is the relevant code snippet:
+
+```js
+function _resetForgingCountIfNeeded(uint256 tokenId) private {
+    uint256 oneYear = oneYearInDays;
+    if (lastForgeResetTimestamp[tokenId] == 0) {
+        lastForgeResetTimestamp[tokenId] = block.timestamp;
+    } else if (block.timestamp >= lastForgeResetTimestamp[tokenId] + oneYear) {
+        forgingCounts[tokenId] = 0; // Reset to the forge potential
+        lastForgeResetTimestamp[tokenId] = block.timestamp;
+    }
+}
+```
+
+This reset mechanism encourages strategic gameplay, as players need to manage their forging activities within the one-year timeframe to maximize their entities' potential. It also helps maintain economic balance and long-term engagement in the game by allowing entities to regain their forging abilities periodically, thus sustaining their value and utility in the game ecosystem.
+
+
+[08/03/2024 19:10] mgnfy_view
+Forge count is reset after one year
+
+
+[08/04/2024 00:21] blockchain555
+why do uses call `forge()` and what profit can users get by calling `forge()`?
+
+
+[08/04/2024 01:05] fastchecker_27
+what is minium of entropy?
+
+
+[08/04/2024 01:16] traitforgedev
+0 is possible
+
+
+[08/04/2024 01:39] fastchecker_27
+@ManPeach.0x if 0 except?
+
+
+[08/04/2024 02:32] tigerfrake
+Yea? I thought entropy was a 6 digit figure
+
+
+[08/04/2024 02:34] traitforgedev
+It is, but solidity does not accept 000000 so it becomes 0, which is just a dud, but a part of the game
+
+{Reactions}
+👍 
+
+[08/04/2024 02:34] traitforgedev
+Like humans ig😭
+
+{Reactions}
+😂 
+
+[08/04/2024 03:10] _karanel
+After 000000, the next lowest number would be 100000, right?
+
+
+[08/04/2024 04:52] welith
+users cant call forge as it expects to be called by the entity forging contract
+
+
+[08/04/2024 05:31] ebok21
+Facts lmao
+
+
+[08/04/2024 05:43] traitforgedev
+ya
+
+
+[08/04/2024 07:30] samuraii77
+did someone have issues with the remappings when setting up foundry for the project? 
+
+I have the following remapping set: `@openzeppelin/=lib/openzeppelin-contracts/` which makes the path like this: `....../lib/openzeppelin-contracts/lib/openzeppelin-contracts/access/Ownable.sol"` so essentially the `lib/openzeppelin-contracts` is doubled when it should be just once. 
+
+I tried setting it to this `@openzeppelin/=/` as logically speaking, it should work as now it won't be doubled but then this is the path I reach: `"/contracts/access/Ownable.sol"`
+
+
+[08/04/2024 07:31] wanziskata
+I had a similiar issue when I tried to install openzeppelin's contracts on my own. Check out the artifacts folder, I think the issue is that the protocol isn't using the actual contracts but .json files
+
+
+[08/04/2024 07:32] wanziskata
+not sure if that helps you in any sort of way though 😄
+
+
+[08/04/2024 07:34] samuraii77
+so did you fix it or you couldn't? I'm just trying to validate my unique bug 🥲
+
+
+[08/04/2024 07:35] wanziskata
+I couldn't and had to clone the repo again 🥹
+
+
+[08/04/2024 07:38] welith
+Did you follow hardhat's guide to add foundry -> https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry or are you trying to install foundry separately? I did it the first way and it worked from the first try
+
+{Embed}
+https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry
+Integrating with Foundry | Ethereum development environment for pro...
+Ethereum development environment for professionals by Nomic Foundation
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/card-676D2.jpg
+
+
+[08/04/2024 07:42] _karanel
+Try with `@openzeppelin/=./`
+
+
+[08/04/2024 07:43] _karanel
+Just using `/` would mean the root folder of your system, so it'll never work
+
+{Reactions}
+😮 
+
+[08/04/2024 07:47] samuraii77
+thanks!
+
+
+[08/04/2024 07:48] _karanel
+Did it work?
+
+{Reactions}
+✅ 
+
+[08/04/2024 08:25] granat__
+hi guys, the more higher entropy value an nft has, the more value he will get back if he nukes right?
+
+{Reactions}
+✅ 
+
+[08/04/2024 10:00] namx05
+hey @ManPeach.0x, sent you DM. Could you please check?
+
+
+[08/04/2024 10:19] traitforgedev
+Make a thread pls
+
+
+[08/04/2024 12:49] cryptomoon9046
+What is the reason behind following values?
+
+```
+uint256 slotIndexSelection = (hashValue % 258) + 512;
+uint256 numberIndexSelection = hashValue % 13;
+```
+
+
+[08/04/2024 12:56] oxwhite
+these are calculated for special indices , which are used in setting golden god entropy=999999
+
+
+[08/04/2024 12:57] namx05
+Done ser!
+
+
+[08/04/2024 12:59] 0xhelium
+@Deleted User is also from the team right ?
+
+
+[08/04/2024 13:00] mahi_vasisth
+`Merkle::testVerify()
+    ├─ [0] VM::startPrank(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2)
+    │   └─ ← [Return] 
+    ├─ [8969] TraitForgeNft::calculateMintPrice() [staticcall]
+    │   └─ ← [Return] 5000000000000000 [5e15]
+    ├─ [0] VM::deal(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2, 1005000000000000000 [1.005e18])
+    │   └─ ← [Return] 
+    ├─ [124256] TraitForgeNft::mintToken{value: 1005000000000000000}([0xac408eb0fe48e15a479a221e816e74b4aecc5415457c49a2a341c1e6312457e9, 0x7f1cc0c8f18cc1808347bea550120adbe1661f305ede406dea0f8ab0413570e5])
+    │   ├─ [0] 0x0000000000000000000000000000000000000000::getListedTokenIds(2) [staticcall]
+    │   │   └─ ← [Stop] 
+    │   └─ ← [Revert] EvmError: Revert
+    └─ ← [Revert] EvmError: Revert
+`  I don't know why it going to revert guys .I am a beginner Can anybody help me please.
+
+
+[08/04/2024 13:01] 0xhelium
+Do -vvvv to print more context
+
+
+[08/04/2024 13:02] 0xhelium
+I can see it’s reverting because you are calling a function on a non existant contract address (0x0)
+
+
+[08/04/2024 13:04] mahi_vasisth
+No sir . That's not the thing
+
+
+[08/04/2024 13:04] 0xhelium
+So what’s the thing ?
+
+
+[08/04/2024 13:05] mahi_vasisth
+I don't know sir. 😅What I do wrong
+
+
+[08/04/2024 13:05] 0xhelium
+I already told you what is happening that throw the error
+
+
+[08/04/2024 13:06] 0xhelium
+You are doing 0x0::getListedTokenIds(2)
+
+
+[08/04/2024 13:08] mahi_vasisth
+@0xHelium I ping you on my private thread. Can u please talk there. 🙂
+
+
+[08/04/2024 13:12] 0xhelium
+I cannot help you fix all your issues sir .
+
+
+[08/04/2024 13:13] 0xhelium
+This is the issue , and it’s printed . Now you have to spend some time looking it up . I also have my own issue to attends sir . Good luck
+
+
+[08/04/2024 13:14] strapontin
+Follow the steps in this thread https://discord.com/channels/810916927919620096/1268843346558717966/1268843348538425456
+
+
+[08/04/2024 13:15] zdravkohr
+You probably haven't called `setEntityForgingContract`
+
+
+[08/04/2024 13:16] mahi_vasisth
+Thanks guys.🙂
+
+
+[08/04/2024 13:17] mahi_vasisth
+Yes sir.😀.I will definitely fix it.
+
+
+[08/04/2024 13:36] kalogerone
+only 1 golden god nft per generation
+
+
+[08/04/2024 13:48] dimulski
+I think this is one of life greatest mysteries
+
+
+[08/04/2024 14:15] cryptomoon9046
+I think it's possible theoritically but not possible practically due to large sample size. Any thoughts?
+
+
+[08/04/2024 14:16] 0xhelium
+If you can PoC this and argue a little during PJQA , you get a solo
+
+
+[08/04/2024 14:17] cryptomoon9046
+but how can I generate that during POC, lol?
+
+
+[08/04/2024 14:18] cryptomoon9046
+so I should argue to get a solo?
+
+
+[08/04/2024 14:19] 0xhelium
+If you are submitting a highly hypothetical bug that is doable theorically but  would require a quantum computer practically
+
+
+[08/04/2024 14:19] 0xhelium
+….
+
+
+[08/04/2024 14:19] 0xhelium
+Maybe you will have to argue with judge
+
+
+[08/04/2024 14:23] granat__
+hey, what’s a solo? i’m new to auditing
+
+
+[08/04/2024 14:23] cryptomoon9046
+he means bug with no dups
+
+
+[08/04/2024 14:24] granat__
+that’s wrong
+
+
+[08/04/2024 14:25] corporalkinng
+You are the expert, you should tell this and prove it or argument it well if this is possible. Also, why auditors keep asking such questions that they convey potential bug information to other auditors ? 🤦‍♂️ Just make a private thread and ask the sponsor if you think their assumptions are wrong.
+
+
+[08/04/2024 14:26] cryptomoon9046
+deleted bro. no need to be salty
+
+{Reactions}
+🙏 
+
+[08/04/2024 14:28] corporalkinng
+Not being salty, just spotted a few similar questions and wanted to warn/accent on how participants ask their questions. Thanks for deleting!
+
+{Reactions}
+👍🏻 
+
+[08/04/2024 14:42] brivan
+Did this contest become a teamwork one? Please keep dropping more hints, switching to this mode:
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/kvt-DB294.jpg
+
+{Reactions}
+😭 (4) 😂 (12) 
+
+[08/04/2024 14:48] dimulski
+He is not a greedy person maybe, he wants to share with other auditors.
+
+
+[08/04/2024 14:48] zdravkohr
+I closed the chat for a minute and missed this one as well :DD
+
+
+[08/04/2024 14:48] brivan
+You missed the PJQA sir, unfortunately
+
+
+[08/04/2024 15:03] 0xdemonnn
+yeah , i write a POC to confirm some issue and i miss the other issue 😂
+
+{Reactions}
+😂 
+
+[08/04/2024 15:03] 0xdemonnn
+that's how life works i guess
+
+
+[08/04/2024 15:06] cryptomoon9046
+was this asked before too? I am not sure
+
+
+[08/04/2024 15:06] brivan
+You're not monitoring the discord channel very well, you are a chad auditor
+
+
+[08/04/2024 15:09] blackvul
+If my explanation about a bug is clearly explained I don't need POC right,?
+
+
+[08/04/2024 15:10] namx05
+I feel, adding a test PoC is +1, however If you feel not adding that, then you should atleast add a scenario based poc (:
+
+
+[08/04/2024 15:11] kalogerone
+There is always the possibility a judge won’t agree with you. Having a PoC seals the deal. There is no counter argument to a poc
+
+{Reactions}
+➕ (3) 
+
+[08/04/2024 15:12] blackvul
+Yeah so if my proof of concept is clearly explained there is no need right
+
+
+[08/04/2024 15:12] blackvul
+Hard hat spoiled everything bro
+
+
+[08/04/2024 15:24] oxwhite
+Abdessamed, do you still feel  this will  be another ai arena?
+
+{Reactions}
+💯 
+
+[08/04/2024 15:27] namx05
+~~are admin trusted?~~
+
+
+[08/04/2024 15:28] 0x_shahil_hussain
+owner is trusted
+
+{Reactions}
+✅ 
+
+[08/04/2024 15:28] _karanel
+Mentioned in contest readme
+
+
+[08/04/2024 15:30] namx05
+oh, I was searching for `admin` instead of `owner`. Thanks (:
+
+{Reactions}
+👍 
+
+[08/04/2024 16:14] welith
+Does anyone know the address of the deployed test game? https://traitforge.game/home
+
+
+[08/04/2024 17:46] _killua69_
+0x69013613913D6C22a95C1f2bB4D331BB3947ef51 (sepolia)
+
+
+[08/04/2024 18:01] kalogerone
+I was afk for a couple hours, surely I didn’t miss another bug written in public chat
+
+{Reactions}
+😂 (5) 
+
+[08/04/2024 18:14] zdravkohr
+The winner of the contest came back from future and accidentally sent all their findings
+
+{Reactions}
+😂 (2) 
+
+[08/04/2024 18:14] zdravkohr
+But it's all good now, they deleted them 👍
+
+
+[08/04/2024 18:15] kalogerone
+Oh thank god, would be really bad if he didn’t
+
+
+[08/04/2024 18:18] samuraii77
+hm I don't remember doing that
+
+{Reactions}
+😂 
+
+[08/04/2024 18:19] 0xhelium
+Seems like you reached the Flash Point paradox
+
+{Reactions}
+🤔 
+
+[08/04/2024 18:19] 0xhelium
+If you go back in time your old self will remember it
+
+
+[08/04/2024 18:22] zdravkohr
+You will remember when you reach that point in time in the future
+
+{Reactions}
+🤝 
+
+[08/04/2024 18:26] brivan
+I like the confidence
+
+
+[08/04/2024 18:27] karl_38410
+Don't know if this is a valid finding, but can anyone please confirm it:
+So, there is a bug where all funds can be withdrawn due to, 
+|| Bruh, just go and do some audit and find yourself a solo, instead of hoping someone would drop you a bug here ||
+
+{Reactions}
+4739_Skeletor (7) 
+
+[08/04/2024 19:16] rcontre360
+Its anoying when ppl send hints here. Then the ones that also found them end like: 🙂
+
+{Reactions}
+🙂 👍 
+
+[08/04/2024 19:27] ililhunterlili
+Should i just stay more on public chat for some findings?
+
+
+[08/04/2024 19:29] memorydump55555
+what do you mean by this?
+
+
+[08/04/2024 19:55] 0x_shahil_hussain
+QA awards: $900 in USDC
+Scout awards: $500 in USDC
+
+what does these two mean?
+
+
+[08/04/2024 20:00] ebok21
+QA includes Low+Informational findings, top 3 reports share the $900
+
+Scouts are folks that work on scoping the project prior to the contest, they're rewarded $500.
+
+{Reactions}
+❤️ 
+
+[08/04/2024 20:01] 0x_shahil_hussain
+ohk!!
+
+
+[08/04/2024 20:59] kalogerone
+Petition to change scout rewards to issues that are submitted because of the scouting of the contest chat
+
+
+[08/04/2024 21:01] 0x_shahil_hussain
+lol
+
+
+[08/04/2024 21:45] ililhunterlili
+I mean people are hinting for findings every where but they delete it before i see😢
+
+
+[08/04/2024 22:06] 0x_shahil_hussain
+I'm opening a new service, I'll monitor the chats and if anyone send any bug or hint I'll take ss of it and will sent to you.
+
+Terms & conditions applied
+
+{Reactions}
+😂 (3) 
+
+[08/04/2024 22:06] unnamedeth.lens
+how its cost ?
+
+
+[08/04/2024 22:07] 0x_shahil_hussain
+Depending upon how hard it would be for an average auditor to found that bug && how quickly they deleted the text
+
+
+[08/04/2024 22:09] unnamedeth.lens
+if u make it on severity ill apply
+
+
+[08/04/2024 22:09] 0x_shahil_hussain
+It's an open market, you have to think smart, you might pay me the fee more than what you would actually get from submission
+
+{Reactions}
+🤣 (2) 
+
+[08/04/2024 22:11] 0x_shahil_hussain
+Because if you think you ask me and submit the issue then a lot of other people are also thinking the same
+
+
+[08/04/2024 23:05] dontonka
+what did happen with ai arena audit 😅?
+
+
+[08/04/2024 23:08] brivan
+- 2.1k submissions
+- 2 months for judging
+- Crazy PJQA
+- 6H and 2 M worth $60
+- 2H worth $3
+
+{Reactions}
+😂 
+
+[08/04/2024 23:09] dontonka
+jesus. Ok i think i agree actually XD
+
+
+[08/04/2024 23:10] dontonka
+the judging was like a month I guess or more ?
+
+
+[08/04/2024 23:10] brivan
+2 months if I'm not wrong, I'm sure it was more than 90 days. Not easy to go over 2.1K submissions
+
+{Reactions}
+✅ 
+
+[08/04/2024 23:14] dontonka
+This means coded PoC is even more important for this contest, please take notes XD.
+
+
+[08/05/2024 00:43] quaternion2691
+@Docs Wolf How is initialNukeFactor calculated, if entropy/40 is 10 then does that mean, initialNukeFactor is 10% ??
+
+
+[08/05/2024 01:36] 0x_darko
+thanks gonna dig in deeper
+
+
+[08/05/2024 05:13] oxwhite
+ı don't think this is the case with this one. but it seems the num of subs will be high.   from the chat history, it seems some hints  that ı did not see  are shared twice in the chat, which will affect those subs if many people see them before  deletion. however ı am happy ı did not see them. I usually look at the discord every couple hours or during break time sometimes.
+
+
+[08/05/2024 05:36] 0x_shahil_hussain
+This contest will break the record of most submission
+
+
+[08/05/2024 05:37] 0x_shahil_hussain
+150+ duplicates
+
+
+[08/05/2024 06:16] pfapostol
+Sorry if late (I just prefer to work with code before Discord). But 99% of the work can be done by asking ChatGPT to convert hardhat(ts/js) tests to foundry(solidity) tests. In the latest version of ChatGPT this works "almost well enough", but if you have zero foundry experience it can be difficult to fix small issues.
+
+{Reactions}
+👍 
+
+[08/05/2024 06:52] 0xmujahid
+@ManPeach.0x can you explain MAX_denominater why we are using
+
+
+[08/05/2024 07:38] traitforgedev
+To keep everything in integer form, it represents 100%
+
+
+[08/05/2024 07:38] 7eleven1sthebest
+Is the calculation of token parameters here up to date?
+https://docs.google.com/document/d/1pihtkKyyxobFWdaNU4YfAy56Q7WIMbFJjSHUAfRm6BA/edit
+
+{Embed}
+https://docs.google.com/document/d/1pihtkKyyxobFWdaNU4YfAy56Q7WIMbFJjSHUAfRm6BA/edit
+TraitForge
+TraitForge  NFT Honeypot Game with Strong Value-accrual Elements and Strategic P2P Gameplay.   Abstract NFT projects have huge potential but are currently squandered by grifters and profiteers with no vision. Profile-pic collections are one-time releases with large mints but lack roadmap and valu...
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/AHkbwyKp0THyUY3MefblwY1cLNmUFt1iSE5_qvHRNJ-A8732
+
+
+[08/05/2024 07:38] traitforgedev
+Yes
+
+
+[08/05/2024 07:51] kalogerone
+Bruh if you think you have found a bug don’t disclose it publicly for everyone to see, create a private thread with the dev and ask him
+
+
+[08/05/2024 07:53] 7eleven1sthebest
+Oh sorry, I didn't realize it could be a bug😂
+
+{Reactions}
+💩 
+
+[08/05/2024 07:54] kalogerone
+Deleted my comment so people won’t know what we were talking about
+
+
+[08/05/2024 07:54] 7eleven1sthebest
+thanks bro
+
+
+[08/05/2024 07:55] kalogerone
+It could be not a bug or a valid finding due to the severity, but these questions should not be asked publicly, any code that is not following the docs could be a potential bug
+
+
+[08/05/2024 08:04] zdravkohr
+Man, again? 😭
+
+{Reactions}
+😎 😂 (3) 
+
+[08/05/2024 08:05] kalogerone
+I have seen all 3, need to be named discord mvp
+
+
+[08/05/2024 08:06] kalogerone
+Although I had thought of all 3 so it’s bad for me and the last one is probably a low
+
+
+[08/05/2024 08:07] .justuzair
+officially can be crowned as `THE WATCHER` 😂
+
+{Reactions}
+🔥 
+
+[08/05/2024 08:12] zdravkohr
+He's just trying to sell us the watcher service
+
+
+[08/05/2024 09:41] cryptomoon9046
+since sponsor mentioned that `ageMultiplier` is not going to be used, should we assume it's value set to `1`?
+
+
+[08/05/2024 09:45] kalogerone
+yes thats what he said
+
+
+[08/05/2024 10:09] oxwhite
+do you monitor the discord constantly?:) ı haven't seen any of them but happy that ı haven't. ı am curious how some guys manage discord, it seems some never sleep and always in multiple channels. dunno how they do this 😄 ı prefer to off the notification. only mentioned ones
+
+{Reactions}
+🤣 
+
+[08/05/2024 10:10] naties29
+Damn I was this waws communicated within the repo or something
+
+{Reactions}
+😢 
+
+[08/05/2024 10:12] kalogerone
+I have multiple monitors so discord is always open on 1 of them, all notifications are off
+
+{Reactions}
+👍 
+
+[08/05/2024 10:15] .justuzair
+noice
+
+
+[08/05/2024 11:17] 0xdemonnn
+history repeat it self :chefskiss:
+
+
+[08/05/2024 11:41] brivan
+I'm done with this contest
+
+
+[08/05/2024 11:41] brivan
+this is the worst contest I've seen so far. 4 findings disclosed publicly and someone saying **take it**
+
+{Reactions}
+✅ (8) 
+
+[08/05/2024 11:42] .justuzair
+Bruh I just hope this isn't like ai arena
+
+
+[08/05/2024 11:42] .justuzair
+🙂
+
+
+[08/05/2024 11:43] naties29
+Serious whiners in here lol
+
+
+[08/05/2024 11:43] naties29
+move onto the next contest if your unhappy
+
+
+[08/05/2024 11:44] 0x_6a70
+Did I pick the most stupid contest to loose one week on? fml
+
+
+[08/05/2024 11:44] karl_38410
+same happened with contest on other platform, the vulnerability was difficult to find, and someone posted it on public instead of private thread and guess what, 60 dups. Got 1 cent.
+
+{Reactions}
+🤣 (6) 
+
+[08/05/2024 11:45] .justuzair
+LOL
+
+
+[08/05/2024 11:47] _karanel
+i didn't wanna say anything but i agree
+
+{Reactions}
+💯 
+
+[08/05/2024 11:48] brivan
+I have a screenshot disclosing ur finding and saying **take it**. Already reported it
+
+
+[08/05/2024 11:49] 0x_shahil_hussain
+delete!!!
+
+
+[08/05/2024 11:49] naties29
+Didnt realize that was a violation of any extent
+
+
+[08/05/2024 11:49] naties29
+NO lol that is a question that does not pertain TO ANY violation of rules
+
+
+[08/05/2024 11:49] .justuzair
+bro they mean to say that although you aren't directly disclosing anything it gives hints and ideas to people
+
+
+[08/05/2024 11:49] _karanel
+man i wanna stop auditing on code4rena if this goes on
+
+
+[08/05/2024 11:49] kalogerone
+you are not respecting other auditors' time and effort
+
+
+[08/05/2024 11:50] .justuzair
+if you feel there is a problem with code or not just open a private thread not that tough
+
+
+[08/05/2024 11:50] tigerfrake
+Yea pal. I'm so done lmao
+
+
+[08/05/2024 11:50] _karanel
+wanna take it up with the team?
+
+
+[08/05/2024 11:50] 0x_shahil_hussain
+dude you just destroyed the hard work of so many people and acting like nothing happend
+
+
+[08/05/2024 11:51] 0x_shahil_hussain
+i've the ss of your question, it was not a simple question, you clearly knew what was going on there!!
+
+
+[08/05/2024 11:52] naties29
+Yall need to grow up and stop harassing people
+
+{Reactions}
+💩 
+
+[08/05/2024 11:52] 0x_shahil_hussain
+don't lie, you even said if you would accept this as a finding?
+
+
+[08/05/2024 11:53] tigerfrake
+I think from here on we should create private threads and ask the protocol team all our questions. This now seems like group discussion or some':4739_Skeletor:
+
+{Reactions}
+❤️ (2) 
+
+[08/05/2024 11:53] 0x_shahil_hussain
+you want to see the ss?
+
+
+[08/05/2024 11:54] tigerfrake
+We need to take this seriously. The pool already small and i can't imagine all the dupes, lmao. :4739_Skeletor:
+
+
+[08/05/2024 11:55] samuraii77
+if someone with not much experience who has no idea where to ask the question has found an issue, it was gonna be heavily duplicated anyway and wasn't hard to find. Just find the other bugs in the code, its not that big of a deal
+
+{Reactions}
+👍 (6) ✅ (7) 
+
+[08/05/2024 11:56] welith
+Totally agree on this one, the disclosed issues were obvious so it's not something so dramatic 😄
+
+
+[08/05/2024 11:56] tigerfrake
+I die
+
+{Reactions}
+😂 (5) 
+
+[08/05/2024 11:58] brivan
+For me, it's not about payout, it's about rules violation 4 times.
+
+{Reactions}
+✅ (16) 
+
+[08/05/2024 11:58] karl_38410
++1
+
+{Reactions}
+💯 (2) 
+
+[08/05/2024 12:00] _karanel
+exactly, these findings also matter for hunter gatherer pool. Now if everyone has the same number of findings because of someone disclosing 4 of the findings it becomes useless to participate
+
+
+[08/05/2024 12:01] unnamedeth.lens
+Not a fair game
+
+
+[08/05/2024 12:02] karl_38410
+Anyways nothing can be done now. I would request code4rena to kick out people who either intentionally or unintentionally disclose or hint findings, and all their submissions should be invalidated.
+
+{Reactions}
+✅ (2) 
+
+[08/05/2024 12:03] brivan
+Well, someone is too mad 😂
+
+{Reactions}
+😂 
+
+[08/05/2024 12:03] welith
+One of the disclosed issues was due to the sponsor making a public thread instead of a private one 😄
+
+
+[08/05/2024 12:03] welith
+So kick the sponsor and invalidate the contest? 😄
+
+
+[08/05/2024 12:04] traitforgedev
+It was deleted before anything was in it…
+
+{Reactions}
+✅ 
+
+[08/05/2024 12:04] karl_38410
+that's an exception like the ones in chemistry
+
+
+[08/05/2024 12:04] traitforgedev
+I know this because it’s the only thread I have made
+
+
+[08/05/2024 12:04] dimulski
+can you share some pointer as to where to look at, for the more difficult vulnerabilities
+
+{Reactions}
+this (3) 😂 (11) 🤫 (2) 
+
+[08/05/2024 12:04] welith
+The thread heading was enough to be honest 😄
+
+
+[08/05/2024 12:04] algodefi
+yall spend too much time on discord and not enough time on the codebase lol
+
+{Reactions}
+💯 🤣 
+
+[08/05/2024 12:05] kalogerone
+no one's mad at the sponsor for that, it was a mistake. other auditors seemed to do it intentionally or haven't read the rules
+
+
+[08/05/2024 12:05] tigerfrake
+It works, lol
+
+{Reactions}
+😂 (11) 🤣 
+
+[08/05/2024 12:05] algodefi
+XD
+
+
+[08/05/2024 12:05] welith
+I was kidding here 😄 its an honest mistake to forget to tick the private thread checkbox
+
+
+[08/05/2024 12:06] 0x_shahil_hussain
+The sponsor of this contest is the nicest one I've seen
+
+{Reactions}
+✅ (8) 
+
+[08/05/2024 12:06] welith
+Yes for sure
+
+
+[08/05/2024 12:06] traitforgedev
+Thanks homie😌
+
+{Reactions}
+❤️ (6) 
+
+[08/05/2024 12:06] tigerfrake
+Wait until you get `sponser disputed` tag
+
+{Reactions}
+😂 (5) 
+
+[08/05/2024 12:06] _karanel
+You too
+
+{Reactions}
+😂 (12) 
+
+[08/05/2024 12:06] _karanel
+More helpful than you should have
+
+{Reactions}
+🤣 (8) 
+
+[08/05/2024 12:06] karl_38410
+lmao
+
+
+[08/05/2024 12:07] algodefi
+EVIL NATE
+
+
+[08/05/2024 12:07] karl_38410
+you too, when you will see 1 cent after your name on leaderboard
+
+
+[08/05/2024 12:07] _karanel
+going to make one more finding public?
+
+{Reactions}
+🤣 (2) 😭 (3) 
+
+[08/05/2024 12:07] bytes032
+pls calm down folks
+
+
+[08/05/2024 12:08] strapontin
+Do you really not understand the impact you had here ? Not a single person is siding with you and you keep the attitude, not even acknowledged your mistake of apologized
+
+
+[08/05/2024 12:08] shubh0412
+Tag everyone so no one feels left out this time.
+
+{Reactions}
+😂 (7) 
+
+[08/05/2024 12:08] 0xjarix
+Are the issues that were hinted through public thread now added to the known issues?
+
+{Reactions}
+👎 
+
+[08/05/2024 12:08] karl_38410
+kind of, cuz u will get 1 cent
+
+
+[08/05/2024 12:09] tigerfrake
+Wait, there was a thread? :4739_Skeletor:
+
+
+[08/05/2024 12:09] strapontin
+You've really gotten some PTSD from that 1 cent time haha
+
+{Reactions}
+😂 (2) 
+
+[08/05/2024 12:10] _karanel
+gonna put a selenium script to monitor this chat for findings lol
+
+
+[08/05/2024 12:10] karl_38410
+nah! just remebered people posting that.
+
+
+[08/05/2024 12:11] karl_38410
+in ai arena
+
+
+[08/05/2024 12:11] tigerfrake
+Damn, that was real trauma innit!
+
+
+[08/05/2024 12:11] .nnez
+Mark it as known issues and no one gets a dime 😂
+
+
+[08/05/2024 12:12] .nnez
+jk though
+
+
+[08/05/2024 12:17] iwildsniperi
+Now i know it was the best choice in my life not to participate 🥲
+
+
+[08/05/2024 12:27] kartoonjoy
+Wardens, please no further conversation on this same topic. As always, please keep it professional. Thank you
+
+{Reactions}
+👍 (6) thankyou 
+
+[08/05/2024 12:27] cryptomoon9046
+when sponsor says that airdrop contract is out of scope, but there are some instances in code where it's referred. So, should we just assume that they doesn't exist?
+
+
+[08/05/2024 12:31] strapontin
+I would say that if a contract A not in scope is called in a contract B in scope, all bugs in the contract A are not accepted, but if for some reason it breaks something in contract B, then you could report this issue.
+Need someone with more experience than me to validate my message though, I might be wrong
+
+
+[08/05/2024 12:32] strapontin
+Hope this doesn't hint to anything at all though
+
+
+[08/05/2024 12:32] kalogerone
+findings are valid when the root cause comes from contracts in scope
+
+
+[08/05/2024 12:34] cryptomoon9046
+so, that means that one should also analyze contract out of scope?
+
+
+[08/05/2024 12:34] bytes032
+https://docs.google.com/document/d/1Y2wJVt0d2URv8Pptmo7JqNd0DuPk_qF9EPJAj3iSQiE
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/CleanShot_2024-08-05_at_15.33.52-363FF.png
+
+{Reactions}
+✅ 
+
+[08/05/2024 12:34] unnamedeth.lens
+whats if the root is in contract outs Of scope
+
+
+[08/05/2024 12:34] strapontin
+Then it's out of scope and won't be valid
+
+
+[08/05/2024 12:37] kalogerone
+i cant answer to this with yes or no cause it really depends on the context and it is different for every protocol, but typically you wanna make sure that in scope contracts interact correctly with out of scope contracts
+
+{Reactions}
+👍🏻 (3) 
+
+[08/05/2024 12:44] jes16jupyter
+what am I missing, mates?
+
+
+[08/05/2024 12:45] kartoonjoy
+we're not rehashing here. That conversation is done.
+
+{Reactions}
+😂 (6) ✅ (2) 
+
+[08/05/2024 14:03] mylifechangefast.eth_70767
+Omo
+
+
+[08/05/2024 14:04] mylifechangefast.eth_70767
+They should just come back
+
+
+[08/05/2024 14:05] mylifechangefast.eth_70767
+OOS bugs > IS bugs
+
+
+[08/05/2024 14:58] rcontre360
+This
+
+
+[08/05/2024 14:58] rcontre360
+thanks man
+
+
+[08/05/2024 14:59] rcontre360
+same, sherlock has more contest anyway :p
+
+
+[08/05/2024 15:00] _karanel
+Lol, I'd rather quit auditing than do at sherlock
+
+{Reactions}
+😂 (11) 💜 (4) 
+
+[08/05/2024 15:00] kartoonjoy
+ICYMI: Wardens, please no further conversation on this same topic. As always, please keep it professional. Thank you
+
+{Reactions}
+thankyou (2) 
+
+[08/05/2024 15:10] 0xhelium
+Looks like you didn’t experience how only the LSW always gets the total prize .
+
+
+[08/05/2024 15:21] kamensec
+I've written a bunch of tests with setup already in foundry can share after the audit is done! I'm only jumping on this for 2 days so very time limited but I feel like test assets are beneficial to project teams regardless so just hmu after and can share them!
+
+
+[08/05/2024 15:34] yashpatel2003
+@kamensec Hey I am getting revert saying Eth send failed while testing TraitForgeNft.sol Any suggestions?
+
+
+[08/05/2024 16:06] ui.ui.ui
+Wait POCs with foundry are not accepted?
+
+
+[08/05/2024 16:08] covey0x07
+@ManPeach.0x Please check pt.
+
+
+[08/05/2024 16:23] senyab
+no way 😂
+
+
+[08/05/2024 16:23] tigerfrake
+Lol
+
+{Reactions}
+🤣 
+
+[08/05/2024 16:34] welith
+They are, at least from what I've seen in the chat
+
+
+[08/05/2024 16:40] kartikgiri121
+Can you quote that chat?
+
+
+[08/05/2024 16:42] 0xhelium
+Dm me let write your PoC in hardhat quick
+
+{Reactions}
+😂 (4) 
+
+[08/05/2024 16:43] senyab
+not possible, @ManPeach.0x  pls confirm
+
+
+[08/05/2024 16:44] kalogerone
+I’m pretty sure all kind of PoCs are accepted on any contest
+
+{Reactions}
+🤝 (3) 
+
+[08/05/2024 16:49] kalogerone
+Just make sure you provide the whole test file in case the judge needs to run your tests, should make it as easy as possible for him
+
+{Reactions}
+👍 (2) 
+
+[08/05/2024 16:53] bugsfinder0x
+Just a question,
+Airdrop is not in scope, but the traitForgeNFT burn function, calls the airdrop.subUserAmount().
+I just skip that part?
+
+{Reactions}
+👍 
+
+[08/05/2024 16:54] strapontin
+The sponsor cannot confirm anything since they aren't judging.
+All valid PoCs should be accepted. If your PoC is invalid though, it may be not
+
+
+[08/05/2024 17:15] welith
+If the PoC is valid and you show the setup, why shouldn't it be accepted?
+
+
+[08/05/2024 17:15] welith
+HardHat provides full support for Foundry and vice versa
+
+
+[08/05/2024 17:29] 0xjarix
+Where can we get a bit more context on devFund?
+
+
+[08/05/2024 17:57] 0xjarix
+@ManPeach.0x please check pt
+
+{Reactions}
+☝️ 
+
+[08/05/2024 18:31] kartoonjoy
+The sponsor is in the ACST and AEST timezone(s).
+
+{Reactions}
+👍 
+
+[08/05/2024 19:52] _karanel
+@ManPeach.0x @Deleted User your discord server has been taken over. Please do check.
+
+
+[08/05/2024 21:30] granat__
+foundry tests should be accepted…
+
+
+[08/05/2024 23:11] memorydump55555
+they are but comment every single line so that they can understand it as well as the judge.
+
+
+[08/06/2024 00:33] traitforgedev
+I don’t see why any other wouldn’t be acceptable
+
+
+[08/06/2024 00:33] traitforgedev
+Yes one of our lead devs was hacked🤦🏽‍♂️ resolving now
+
+{Reactions}
+4739_Skeletor (5) 🤦‍♂️ (4) 
+
+[08/06/2024 02:27] quaternion2691
+@kartoonjoy | C4🎇🎇 if a low/QA finding is such that the it is defined in interface, but used in main contract, but the interface is out of scope, would that be counted as a valid finding ??
+
+
+[08/06/2024 05:58] jayeshshukla.
+@_karanel how did you know if there discord server was compromised ?
+
+
+[08/06/2024 06:02] _karanel
+Some link was posted as announcement for some airdrop by a bot (there was an "App" tag and all previous announcements were made by @ManPeach.0x himself). I opened it up on incognito and used a burner wallet, it said I wasn't eligible. I connected my hot wallet with very small funds and it said I was eligible and it was asking for seed phrase (obv red flag). 
+Tried opening any text channel, messages were disabled. Tagged the team and asked about it a channel that was open, and I was kicked lol.
+
+
+[08/06/2024 06:04] traitforgedev
+Yup. All resolved now. We are fixing our roles and channels now. For future reference. The airdrop will not be announced like how it was. And there will be no airdrop for WEWE either so pls be careful
+
+{Reactions}
+✅ 
+
+[08/06/2024 06:05] karl_38410
+Reason why 2FA is a must.
+
+{Reactions}
+💯 
+
+[08/06/2024 06:17] jayeshshukla.
+@ManPeach.0x @Deleted User please check the private thread, whenever you guys free !
+
+yqs
+
+
+[08/06/2024 06:17] jayeshshukla.
+tqs
+
+
+[08/06/2024 06:36] traitforgedev
+Yeah he has upped his security a lot after this😅
+
+
+[08/06/2024 10:41] jes16jupyter
+Hi @ManPeach.0x  @Deleted User  please kindly check the private thread~
+
+
+[08/06/2024 10:48] cryptoman256_
+guys what happens if many ppl report the same bug/vulnerability ?
+
+
+[08/06/2024 10:50] zdravkohr
+It's reward gets diluted
+
+{Reactions}
+🙏 
+
+[08/06/2024 11:32] yashpatel2003
+Anyone knows about ageMultiplier
+
+
+[08/06/2024 11:32] yashpatel2003
+In the NukeFund.sol
+
+
+[08/06/2024 11:32] yashpatel2003
+What it is and what will be the value set for that ?
+
+
+[08/06/2024 11:33] wanziskata
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-C22C2.png
+
+
+[08/06/2024 11:44] hex_panda
+@ManPeach.0x please check PT with 🐼 when you have time
+
+
+[08/06/2024 11:58] kartoonjoy
+Started a thread.
+
+
+[08/06/2024 15:22] 0xjarix
+@ManPeach.0x please check pt when you can
+
+
+[08/06/2024 17:37] hex_panda
+@ManPeach.0x please check PT again
+
+
+[08/06/2024 19:57] 0xhelium
+Any last minute hint ???
+
+{Reactions}
+😂 (4) 
+
+[08/06/2024 19:58] phoenixv110
+There might be bugs. Look hard
+
+{Reactions}
+😢 
+
+[08/06/2024 19:58] unnamedeth.lens
+next contests maybe
+
+
+[08/06/2024 20:00] dian.ivanov
+I was submitting a bug and the time just passed 😢
+
+{Reactions}
+🤯 
+
+[08/06/2024 20:01] dian.ivanov
+should I ask for around 10 minutes bonus ? 👀
+
+
+[08/06/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **TraitForge** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Feel free to ping a Civics-Admin if you have questions along the way!
+
+
+[08/06/2024 20:02] yashpatel2003
+How many submissions expected.
+
+
+[08/06/2024 20:02] unnamedeth.lens
+around 1k
+
+
+[08/06/2024 20:02] 0x_shahil_hussain
+i guess more than 2k lol
+
+
+[08/06/2024 20:03] unnamedeth.lens
+the first will recieve 60$
+
+
+[08/06/2024 20:04] mabdullah22
+it was a fun contest.
+
+
+[08/06/2024 20:05] pfapostol
+This was my personal record of HM submissions in one contest. But I doubt that any of them will be more than $50.
+
+
+[08/06/2024 20:05] jayeshshukla.
+how was it guys ? it was my first contenst and I was unable to submit my 7 Low's 🥲
+
+
+[08/06/2024 20:06] jayeshshukla.
+I realised finding bugs is one thing, reporting it with POC requires whole lot of other skills
+
+
+[08/06/2024 20:06] jayeshshukla.
+It was like a time bomb ticking
+
+
+[08/06/2024 20:06] 0xhelium
+Goat
+
+
+[08/06/2024 20:06] jayeshshukla.
+anyways loved the experienced
+
+{Reactions}
+🫡 
+
+[08/06/2024 20:07] 0x_shahil_hussain
+can anyone see the number of submissions?
+
+
+[08/06/2024 20:07] 0xhelium
+Walt for the repo to be released
+
+
+[08/06/2024 20:07] 0xhelium
+.
+
+
+[08/06/2024 20:10] brivan
+No need to wait for PJQA, cuz it was already started.
+
+
+[08/06/2024 20:11] d_auditor
+@0xHelium will the findings repo be shared here? I've not done a c4 contest in a while
+
+{Reactions}
+❌ 
+
+[08/06/2024 20:15] kartoonjoy
+Wardens, please let's not let today's conversation get too lively.
+
+
+[08/06/2024 20:47] brivan
+1645 submissions.
+See you in next months
+
+{Reactions}
+🥲 (6) 🔥 (3) 
+
+[08/06/2024 21:13] granat__
+where do you see that?
+
+
+[08/06/2024 21:18] 0xpopeye
+1438 Submissions, pretty hell
+
+
+[08/06/2024 21:34] demorextess
+Disabling the notifications for 2 months...
+
+
+[08/06/2024 21:35] iwildsniperi
+1645 for 5 valid findings👀
+
+{Reactions}
+🤣 
+
+[08/06/2024 21:38] kartoonjoy
+Wardens, keep it classy
+
+
+[08/06/2024 21:47] kamensec
+@kartoonjoy | C4🎇🎇 I can't seem to find the issues I've submitted for this audit in the backstage findings
+
+
+[08/06/2024 21:49] kartoonjoy
+This is probably a conversation to have in the SR channel but did you check both repos?
+
+
+[08/06/2024 21:49] kamensec
+sorry which SR channel?
+
+
+[08/06/2024 21:50] dontonka
+#⭐・sr
+
+
+[08/06/2024 21:52] kamensec
+Ahhh yeah sorry I've found them! I misunderstood the validation repo I thought thats where the issues get added after validation.
+
+
+[08/06/2024 21:53] kamensec
+how are issues being added as of one hour ago though on both of these repos? Didn't the time for submitting close 2 hours ago?
+
+
+[08/06/2024 21:53] lomesito
+Hey, would you mind sharing the links to the repos to see all the submissions? Thanks
+
+
+[08/06/2024 21:55] kartoonjoy
+Those can't be shared, actually. You'll need to be Certified + SR.
+
+{Reactions}
+🙏 
+
+[08/06/2024 21:56] kartoonjoy
+Let's keep these kinds of questions in the SR channel, please
+
+{Reactions}
+🙏 
+
+[08/06/2024 21:58] kamensec
+I'm sorry I have no idea what 'sr' stands for
+
+
+[08/06/2024 21:58] d_auditor
+@kartoonjoy | C4🎇🎇 How do I get certified. I believe I meet the requirements
+
+
+[08/06/2024 21:58] kartoonjoy
+Backstage = SR
+
+
+[08/06/2024 21:58] kamensec
+ahhh ok sorry @kartoonjoy | C4🎇🎇  its been a while since i jumped in here
+
+
+[08/06/2024 21:59] kamensec
+thanks for the tip will redirect questions there
+
+
+[08/06/2024 21:59] kartoonjoy
+When you told me you didn't know what SR was and you have the role, I knew instantly!
+
+{Reactions}
+🤪 
+
+[08/06/2024 22:00] kamensec
+ahahah yeah.... good to be back. seems very noisy in here nowadays!
+
+
+[08/06/2024 22:00] kartoonjoy
+That's your welcoming committee!
+
+{Reactions}
+💅 (2) 
+
+[08/06/2024 22:03] kartoonjoy
+The app is currently closed and we hope to have it open again in the next few weeks. Here is the doc with more info:
+
+https://docs.code4rena.com/roles/certified-contributors
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors
+Certified contributors | Code4rena
+In order to create opportunities for contributions which rely on establishment of trust, Code4rena allows community members to opt into certifying their identity and entering into a simple agreement.
+
+
+[08/06/2024 22:03] d_auditor
+Alright thanks
+
+{Reactions}
+hi5 
+
+[08/06/2024 23:55] dontonka
+SR = Security Researcher
+
+{Reactions}
+thankyou 
+
+[08/07/2024 04:32] karl_38410
+I got a dream 2-3 days ago, and in front of me was a screen with the title leaderboard, the contest title was not visible, but I can clearly read the leaderboard, 1st one got $74. First time I don't want my dream come true. lmao
+
+{Reactions}
+😭 (4) 👀 (2) 😂 (2) 
+
+[08/07/2024 05:05] blockchain555
+I wish your dream does not come true.
+
+
+[08/07/2024 07:38] 41ar.
+@kartoonjoy | C4🎇🎇 Is there judging repo available publicly?
+
+
+[08/07/2024 07:39] kartoonjoy
+No. https://docs.code4rena.com/roles/certified-contributors/sr-backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/sr-backstage-wardens
+Security Researcher role (formerly +backstage wardens) | Code4rena
+
+{Reactions}
+✅ 
+
+[08/07/2024 09:07] hex_panda
+@Docs Wolf how many rounds can be there at max?
+
+
+[08/07/2024 11:35] thebrittfactor
+Please tag docs wolf in a public or private thread.
+
+{Reactions}
+thankyou ❤️ 🙏 
+
+[08/07/2024 13:50] mylifechangefast.eth_70767
+Wtf??
+
+
+[08/07/2024 13:50] mylifechangefast.eth_70767
+Who be all these ones abeg na
+
+
+[08/07/2024 13:51] mylifechangefast.eth_70767
+Real
+
+{Reactions}
+💯 
+
+[08/07/2024 23:57] kunhah
+I submitted 3 findings and thought it would be good enough, but I didn't know that there would be so many submissions...
+
+
+[08/07/2024 23:59] kunhah
+I hope I can at least get enough to buy a milkshake for myself
+
+{Reactions}
+🧋 (13) 
+
+[08/08/2024 02:05] shui1
+https://tenor.com/view/copium-cat-gif-27161395
+
+{Embed}
+https://tenor.com/view/copium-cat-gif-27161395
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/copium-cat-2B08A.png
+
+
+[08/08/2024 05:15] pfapostol
+With 3 findings in this contest it's very unlikely
+
+{Reactions}
+kewk (3) 
+
+[08/08/2024 05:49] _karanel
+it'll take 2 months to get my 2 cents for this one
+
+{Reactions}
+👍 (3) 
+
+[08/08/2024 06:16] .nnez
+It'll be the contest with the most reports with insufficient proof
+
+
+[08/08/2024 07:05] traitforgedev
+Agreed. So far reviewing some, a lot are either not valid because they are literally how the game is supposed to work. Or bad PoC/no proof. We will see soon ig.
+
+
+[08/08/2024 08:05] yashpatel2003
+I submitted one and messed up writing POC at the endtime while submitting 😥
+
+
+[08/08/2024 08:51] pfapostol
+what's worse is that those that are actually valid have 50 to 120 duplicates.
+
+{Reactions}
+4739_Skeletor 🫣 
+
+[08/08/2024 09:07] _karanel
+I guess most bugs are so obvious that they don't require a poc.
+
+
+[08/08/2024 09:36] .justuzair
+Agreed
+
+
+[08/08/2024 10:26] granat__
+how many people do you think that have participated in this context?
+
+
+[08/08/2024 10:26] granat__
+over 200?
+
+
+[08/08/2024 10:26] _karanel
+I'll let you know after I get SR role (after this contest)
+
+
+[08/08/2024 20:19] mylifechangefast.eth_70767
+Yeah... Devfund😅
+
+{Reactions}
+😹 
+
+[08/08/2024 20:20] mylifechangefast.eth_70767
+:chefskiss:
+
+
+[08/08/2024 20:20] unnamedeth.lens
+Agree
+
+
+[08/09/2024 00:36] pickpeak1024
+who or which contract calls capitalPool.approve
+
+
+[08/09/2024 04:10] welith
+wrong channel dude 😀😀
+
+{Reactions}
+😂 (6) 🤣 (2) 
+
+[08/09/2024 04:34] _karanel
+Come to Cyfrin discord bro
+
+{Reactions}
+😂 (5) 
+
+[08/09/2024 05:39] modysec
+I assume we can't see the findings on the github repo until judging is completed?
+
+
+[08/09/2024 06:20] .nnez
+Yes, unless you have SR role
+
+
+[08/09/2024 06:39] _karanel
+I feel bad for the validators and judges. 1.6k findings for 1700 USDC validator pool and 2600 USDC judging pool.
+
+{Reactions}
+🤣 
+
+[08/09/2024 06:40] strapontin
+Is it possible to know already how many competitors were there ?
+
+
+[08/09/2024 06:51] pfapostol
+316 if I'm not mistaken
+
+{Reactions}
+😮 
+
+[08/09/2024 07:30] strapontin
+Anyone knows the average number of participants in Code4rena audits ? It was my first
+
+
+[08/09/2024 08:25] brandio
+around 200 or300 ish on average i guess
+
+
+[08/09/2024 09:30] modysec
+Thank you
+
+
+[08/09/2024 19:34] brivan
+Well. Results won't take that much time.
+Validators of this contest have crazy performance, GG
+
+
+[08/10/2024 14:41] _karanel
+Let us know here once it looks like validation is over
+
+
+[08/10/2024 15:48] brivan
+Already over, sponsor went through primary issues, judging should start next week
+
+
+[08/10/2024 15:50] _karanel
+Thanks for the info
+
+
+[08/10/2024 15:52] pfapostol
+Sponsor checks before judging? Odd logic, given that some valid findings are marked as duplicates of completely different and invalid primary findings. I thought validation was just a quick evaluation/pre-sort process.
+
+
+[08/10/2024 15:54] brivan
+That's how judging works, sponsors go over primary issues and drop their thoughts before the judge starts going over issues. 
+Still, the judge will go over all duplicates to double check.
+
+
+[08/11/2024 03:07] traitforgedev
+hey this may be the best place to ask. Does anybody know if Base L2 tx's can actually be susceptible to front-running? somebody told me the mempool is private therefore its virtually impossible to front-run/MEV on base. can somebody clarify as i cant find this info anywhere...
+
+
+[08/11/2024 03:30] sean3416
+The answer could be Yes and No. Yes currently the mempool is private; but developing decentralized sequencers is a trend currently undergoing for L2s , so when that happens, the mempool can be public. So if you plan to invalidate all the front-running related findings due to this reason, you may want to think twice about it.
+
+
+[08/11/2024 03:36] traitforgedev
+Ok I think I’ll mark as valid if that’s the case.
+
+{Reactions}
+😲 🤔 
+
+[08/11/2024 04:34] nihavent.
+How could an issue be marked valid based on speculation of future changes to the chain?
+
+
+[08/11/2024 04:44] pfapostol
+Especially when we had a conversation in this chat where it became clear that front-running is a feature, not a bug.
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-1A58E.png
+
+{Reactions}
+👍 (5) 
+
+[08/11/2024 04:52] karl_38410
+But I guess the judging happens on the basis of current scenarios not future scenarios. Suppose you integrated with usdc, and as they have upgradeable contracts, and they introduce fee on transfer, would a finding related to usdc being fee on transfer be validated?
+
+
+[08/11/2024 04:52] sean3416
+What did I speculate about? (1)The undergoing development of decentralized sequencer is a known fact (2) The immutability of deployed code is common sense. When (1) happens, (2) gets attacked.
+
+
+[08/11/2024 04:53] sean3416
+I'm not a related party in this. I didn't raise frontrunning ralated findings. It's up to the judge and C4 rules
+
+
+[08/11/2024 04:53] sean3416
+Sorry, C4 rules
+
+
+[08/11/2024 05:03] _karanel
+Agreed that it's a feature, however it wasn't disclosed in Known issues or design choice.
+I know sponsor texted this, but Contest readme  has no mention of this, so as per past contests it'll still be better to report to be on the safe side.
+
+As far as private mempool is concerned, I believe whatever the judge decides is fine by everyone.
+
+
+[08/11/2024 05:03] sean3416
+Not all front runnings are considered as "attack". There are boring cases, and also there are serious use cases.
+
+
+[08/11/2024 05:09] nihavent.
+What’s the mitigation that we recommend the sponsor make to future proof them self from this attack?
+My issue with these being valid is it’s not the current state of the chain, it was acknowledged as known by the sponsor, and there’s not a lot that can be done to protect against it. So the submissions aren’t adding any value to the sponsor.
+
+Obviously it’s going to be judged according to C4 rules so we’ll see what happens
+
+
+[08/11/2024 05:11] _karanel
+The mitigation is to not rely on only bit-stuffing. Since on-chain data is public, front running is being considered.
+
+
+[08/11/2024 05:13] nihavent.
+Yes but the sponsor noted that it was intended to be skill-based so the order of entropy was to be known ahead of time. That’s a design decision
+
+
+[08/11/2024 05:15] _karanel
+Read my previous message. I disclosed some other findings to the sponsors as well, they were aware of it. But I still reported them because they aren't mentioned in the known issues. If this was a design choice and sponsor is aware of such issues it should have been disclosed, if not you should have submitted it to be on the safe side.
+
+
+[08/11/2024 05:16] nihavent.
+Yes we’re both basically explaining why we did/did not submit these issues. Well played if they end up being valid. 
+Best to just let the process happen.
+
+
+[08/11/2024 05:18] _karanel
+I know this may come off as unfair, but that's how rules are. If it isn't known, and even if the sponsor says something in discord, do try to report it rather than missing out.
+
+
+[08/11/2024 06:03] decap1703
+In project docs there is info "The game will be ported to Solana after a launch on ETH L1. ". So why you talk about L2?
+
+
+[08/11/2024 06:05] traitforgedev
+Wrong example. It was different front-running finding
+
+
+[08/11/2024 06:06] traitforgedev
+Where does it say this? It was supposed to be updated by CMO
+
+
+[08/11/2024 06:06] traitforgedev
+Minting front-running is not an issue. It’s something else somebody found.
+
+
+[08/11/2024 06:07] traitforgedev
+Exactly
+
+
+[08/11/2024 06:07] decap1703
+Under Strategy->Multichain
+
+
+[08/11/2024 06:08] traitforgedev
+Ok Thankyou. Will get this updated. Sorry on the inaccuracy
+
+
+[08/11/2024 06:08] traitforgedev
+The README for the audit repo says base but our docs did not. Which is our fault
+
+
+[08/11/2024 06:31] 0x0bserver
+The assessment of severity should be based on the current codebase and the specific blockchain where the protocol is deployed. While there is a trend towards decentralized sequencers, this doesn't guarantee that it will materialize, especially for blockchains like Base or Solana. It's important to note that the next deployment for the protocol is planned on Solana, which also features a private mempool.
+
+
+[08/11/2024 06:32] 0x0bserver
+While the shift towards decentralized sequencers is possible, it remains speculative. Even if such changes occur, these blockchains might establish separate public mempools that do not interfere with private ones, protecting existing protocols from front-running risks.
+
+Decisions shouldn't be made purely based on trends, as trends alone don't justify potential future changes. I’m not suggesting that we dismiss findings related to this, but rather that we assign severity based on the actual likelihood of such events occurring.
+
+{Reactions}
+✅ (9) 
+
+[08/11/2024 06:34] 0x0bserver
+For blockchains like Base and Solana, the likelihood of these changes occurring is very low. As a result, bugs of this nature should be given a low likelihood or low severity rating, as such changes are either unlikely to occur or may not affect the currently deployed protocol.
+
+{Reactions}
+👍 (3) 
+
+[08/11/2024 09:08] ililhunterlili
+https://tenor.com/view/angry-angry-cat-mad-cat-mad-death-stare-gif-2007099240114134459
+
+{Embed}
+https://tenor.com/view/angry-angry-cat-mad-cat-mad-death-stare-gif-2007099240114134459
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/angry-angry-cat-08DD7.png
+
+{Reactions}
+👀 (3) 😂 (2) 
+
+[08/11/2024 11:14] 0xhelium
+PJQA gonna be wild
+
+
+[08/11/2024 11:22] kalogerone
+Imo it should be up to the judges to decide if front running issues should be valid
+
+
+[08/11/2024 11:25] 0xnevi
+Saw this today, but I don't think blast was in this list, but afaik, blast is a fork of optimism, which has a [private sequencer](https://docs.optimism.io/stack/protocol/rollup/overview#block-production)
+
+https://docs.chainstack.com/docs/mempool-configuration
+
+{Reactions}
+💯 (2) 
+
+[08/11/2024 11:36] mylifechangefast.eth_70767
+True. Didn't even think of front running😅
+
+
+[08/11/2024 13:02] samuraii77
+Frontrunning issues = invalid
+Race condition = valid
+
+{Reactions}
+🤣 
+
+[08/11/2024 13:06] pfapostol
+Isn't race condition in EVM terms just reentrancy?
+
+
+[08/11/2024 13:21] .nnez
+Reentrancy is a feature, race condition is a bug 😂
+
+{Reactions}
+🤣 
+
+[08/11/2024 13:48] pfapostol
+Because of the SR role I know what is meant by "different front-running" (but I can't disclose it on the public channel), but honestly I don't see the difference.
+
+And in general, it is a bad tendency to discuss private process issues in a public channel. So it is better to forget about it until PJQA.
+
+{Reactions}
+👍 (2) 
+
+[08/11/2024 13:56] .nnez
+Also, race condition doesn't require front-running
+
+
+[08/13/2024 13:38] saurabh_0312
+Have the results for the Trait Forge contest been announced yet?
+
+{Reactions}
+😂 (2) 
+
+[08/13/2024 14:06] ui.ui.ui
+Not yet, not even close
+
+{Reactions}
+🙃 (3) 
+
+[08/13/2024 19:01] _karanel
+pjqa started?
+
+
+[08/14/2024 04:05] pep7siup_
+https://discord.com/channels/810916927919620096/1166686843421593631
+
+
+[08/14/2024 04:23] _karanel
+Don't have SR
+
+
+[08/14/2024 05:44] pep7siup_
+I see. Not pjqa yet
+
+
+[08/14/2024 05:59] kartikgiri121
+Any one know how can I get SR role? I think I met the threshold.
+
+
+[08/14/2024 06:00] strapontin
+https://discord.com/channels/810916927919620096/991414579206828193/1270340126140268568
+
+
+[08/14/2024 06:01] kartikgiri121
+Thanks 😇
+
+{Reactions}
+❤️ 
+
+[08/14/2024 07:19] demorextess
+Waiting for munchables to be in PJQA in traitforge...
+
+{Reactions}
+🤣 (4) 
+
+[08/14/2024 09:49] ililhunterlili
+It takes time to convert, cause its manually handled
+
+
+[08/14/2024 09:50] demorextess
+I know I just hope 😄
+
+{Reactions}
+👀 
+
+[08/15/2024 07:40] demorextess
+Is PJQA started ?
+
+
+[08/15/2024 07:59] x0t0wt1w_62610
+https://tenor.com/view/tom-tom-and-jerry-waiting-tom-waiting-gif-17813304
+
+{Embed}
+https://tenor.com/view/tom-tom-and-jerry-waiting-tom-waiting-gif-17813304
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/tom-tom-and-jerry-67339.png
+
+{Reactions}
+😂 
+
+[08/15/2024 08:03] saurabh_0312
+https://tenor.com/view/work-school-stressed-focus-procrastinating-gif-20216203
+
+{Embed}
+https://tenor.com/view/work-school-stressed-focus-procrastinating-gif-20216203
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/work-school-B2391.png
+
+
+[08/15/2024 09:19] shubh0412
+Since the pjqa hasn't started yet, estimating the number of issues the wardens with the SR role would like for another look & the time to resolve those, I'm sure that the results would not be announced this month.
+
+{Reactions}
+🥲 (5) 😂 👍 (3) 👀 
+
+[08/16/2024 04:15] saurabh_0312
+any updates??
+
+
+[08/16/2024 05:07] anonimoux2k
+traitforge = karak + 2 weeks =)))) 
+While waiting for them to complete PJQA, I probably had time to marry two wives.
+
+{Reactions}
+😂 (7) 
+
+[08/17/2024 06:18] ililhunterlili
+congrats on the SR
+
+now you know for sure
+
+
+[08/17/2024 06:18] demorextess
+🙂
+
+{Reactions}
+❤️ (2) 
+
+[08/17/2024 06:19] demorextess
+It feels great guys, work hard and come here
+
+{Reactions}
+❤️ (7) 
+
+[08/18/2024 01:14] naties29
+Congrats brother!
+
+
+[08/18/2024 01:15] demorextess
+Thank you guys 🙂
+
+
+[08/18/2024 03:19] boraichodrunkenmaster
+
+
+{Stickers}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/754109474691612782-C3CA7.json
+
+{Reactions}
+❤️ 
+
+[08/18/2024 05:17] saurabh_0312
+result is out or what??
+
+
+[08/18/2024 07:59] _karanel
+any update on pjqa?
+
+
+[08/19/2024 05:33] dontonka
+should come very soon, the judge did his work 15 hours ago, so next step is PJQA.
+
+{Reactions}
+❤️ (3) 💜 🔥 
+
+[08/19/2024 05:52] saurabh_0312
+how you get all these updates bro??
+
+
+[08/19/2024 05:58] _karanel
+SR role
+
+{Reactions}
+🙂 (2) 
+
+[08/19/2024 09:48] avoloder
+Do you also need to have a SR role to access PJQA? Or is this visible to everyone?
+
+
+[08/19/2024 10:24] granat__
+that should be displayed here if i’m not wrong
+
+
+[08/19/2024 10:26] kalogerone
+You need sr to participate
+
+
+[08/19/2024 11:04] brivan
+There is no hope on this one folks, number of duplicates is crazy. Some findings will be worth $0.01
+
+
+[08/19/2024 11:04] _karanel
+What does the valid findings number look like?
+
+
+[08/19/2024 11:05] brivan
+Can't disclose this now. It will be mentioned in rewards announcement anyways
+
+{Reactions}
+👀 
+
+[08/19/2024 12:13] topmark1
+:4739_Skeletor:
+
+
+[08/19/2024 12:18] x0t0wt1w_62610
+https://tenor.com/view/angry-angry-cat-mad-cat-mad-death-stare-gif-2007099240114134459
+
+{Embed}
+https://tenor.com/view/angry-angry-cat-mad-cat-mad-death-stare-gif-2007099240114134459
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/angry-angry-cat-08DD7.png
+
+{Reactions}
+🩷 
+
+[08/19/2024 12:30] francise._
+Any possible timeline on announcements?
+
+
+[08/19/2024 12:42] brivan
+Next week probably
+
+{Reactions}
+🤝 (2) 
+
+[08/19/2024 14:16] ililhunterlili
+how many dups?😂
+
+
+[08/19/2024 14:26] covey0x07
+PJQA next week or Results?
+
+
+[08/19/2024 18:30] 0xaleko
+What is PJQA?
+
+
+[08/19/2024 18:46] boraichodrunkenmaster
+Post Judging Quality Assurance
+
+
+[08/19/2024 19:05] kalogerone
+no one knows when results will be out, imo 1 week it too optimistic
+
+{Reactions}
+🤣 
+
+[08/20/2024 07:21] tobi0x18
+when PJQA?
+
+
+[08/20/2024 19:13] 0xdemonnn
+now begin
+
+{Reactions}
+👍 
+
+[08/21/2024 00:19] kalogerone
+can the judge let us know if all frontrunning issues are invalid to prevent unnecessary escalations if that's the case?
+
+
+[08/21/2024 03:43] welith
+Can I get some info on what I should do if I submitted a low in the QA report, which seems to be a high from the current validation repo? 😀
+
+
+[08/21/2024 04:50] brivan
+If it is high on the **finding repo**, make a comment so the judge will upgrade it
+
+{Reactions}
+👍 
+
+[08/21/2024 05:24] pfapostol
+The severity in the validation repository is the severity assigned by the warden when it was submitted. And it's better to discuss these things on the SR channel
+
+
+[08/21/2024 05:28] welith
+got it.. will do
+
+
+[08/21/2024 06:25] blockchain555
+When final result?
+
+
+[08/21/2024 06:29] pfapostol
+When enough people ask the same question over and over again, even if it can't be answered even theoretically
+
+{Reactions}
+😂 (7) 🌹 
+
+[08/21/2024 08:25] mylifechangefast.eth_70767
+September
+
+
+[08/21/2024 09:44] strapontin
+2027
+
+{Reactions}
+😂 
+
+[08/21/2024 10:13] saurabh_0312
+how do you found that.... like where is this current validation repo
+
+
+[08/21/2024 10:16] welith
+I have the SR role, so I can participate in the PJQA
+
+{Reactions}
+🥲 (2) 💪 (3) 
+
+[08/21/2024 17:26] ebok21
+uh guys what is to be done during PJQA??
+
+
+[08/21/2024 17:26] ebok21
+this was my first c4 contest
+
+
+[08/21/2024 17:29] ebok21
+so since only SRs can participate, others just have to wait for the results and accept our fate?
+
+
+[08/21/2024 17:31] dontonka
+usually yes. if you have a friend which have SR he can escalate on your behalf.
+
+
+[08/21/2024 17:33] ebok21
+but can we at least see the status of our findings?
+
+
+[08/21/2024 17:41] pfapostol
+No, this functionality was promised probably more than a year ago, but it is not there yet.
+
+
+[08/21/2024 17:52] dontonka
+unfortunately, non-SR are definitely a bit (and maybe more than that) disadvantage against SRs. I'd say it's one of the single but important cons for new comer on this platform.
+- Not able to participate in PJQA, which can be a big deal.
+- Not able to see how classified are your issues, you are basically simply blind. When the results are out, you have no idea how this related to your findings and how does this map with your payout (or understand why you didn't get any) as the report sometimes takes months to be published.
+- Not able to see what others did submit, and learn from it and about your mistakes, which helps you improve skills much faster as a quick feedback loop.
+
+Always keep in mind that all SR where non-SR at the beginning.
+
+{Reactions}
+✅ (5) 💜 (2) 
+
+[08/21/2024 17:53] strapontin
+We're not able to see others valid submissions ?
+
+
+[08/21/2024 17:54] ebok21
+ah that's unfortunate
+
+
+[08/21/2024 17:54] dontonka
+Well when the report is out yes, but that can takes months (at that point you forgot that contest and code base) but still only the main issue (not the dup, but in theory they represent the same)
+
+{Reactions}
+👍 (4) 😮 
+
+[08/21/2024 17:54] ebok21
+that's the one thing i really like about CodeHawks, the IMMEDIATE feedback loop
+
+{Reactions}
+👍 
+
+[08/21/2024 17:55] ebok21
+well only gotta grind harder and get that role asap haha
+
+{Reactions}
+🔥 (2) 🫡 (2) 
+
+[08/21/2024 17:55] dontonka
+yes. and if you can participate more on CodeHawks, that's good, that should allow you to get the SR role much faster here as more skilled.
+
+
+[08/21/2024 17:56] ebok21
+i've done a contest each on all the platforms now, will rinse and repeat haha
+
+
+[08/21/2024 17:57] ebok21
+what's your twitter handle ser would like to follow you
+
+
+[08/21/2024 17:57] dontonka
+i'm not really active tbh, but `0xDontonka`
+
+{Reactions}
+❤️ 
+
+[08/21/2024 20:59] 0xwizard
+That's a big hindrance, I stayed away from C4 for the past 5 months because of it, let's see how things go
+
+{Reactions}
+✅ 
+
+[08/21/2024 21:23] dontonka
+You need to push through the line XD. 
+
+Overall, I still do think `C4 is one of the best audit contest platform` out there (granted once you are SR), at the top of the list along with Cantina and CodeHawks. Without SR, maybe a bit lower due to what I mention previously.
+
+
+[08/21/2024 21:27] dontonka
+The most annoying part is not being able to see your issues and others when the contest is completed, as least to have a quick feedback loop and improve your learning. All other platform allow that by default (except on certain occasion, sponsor can do it private (CCIP in codehawks recently), but that is not the default procedure). So I'm sure C4 can improve this and doesn't require SR for this. SR could be mandatory only to participate in PJQA. Throwing the idea at least (cc @CloudEllie ).
+
+{Reactions}
+👍 (5) noddinggoat (2) 10_10 (3) 
+
+[08/21/2024 21:29] dontonka
+In general, I also find that the cost of the platform for judging is a bit more expensive then other platforms, which take away more money from the pot from wardens to the judges/validators.
+
+
+[08/21/2024 23:20] 0xwizard
+the most annoying part for me would be the time not spent on other contests, C4 has something special, you want to achieve on it becuase of the name and it's an OG, that's a big deal for me
+
+{Reactions}
+💜 
+
+[08/22/2024 00:13] dontonka
+Interesting. I heard this multiple times. I guess it's something related to the ego. Somehow that doesn't really motivate me personally. Having multiple motivator to push yourself further is a good thing 👍.
+
+{Reactions}
+❤️ 
+
+[08/22/2024 05:09] namx05
+how long does this PJQA takes?
+
+
+[08/22/2024 05:12] pfapostol
+The active phase is about 2 days, then re-evaluation will take an indefinite amount of time.
+
+{Reactions}
+🤝 
+
+[08/22/2024 05:34] avoloder
+I totally agree. It's kind a big disadvantage to not be able to see how your issue is classified, so even if you have some friend that has a SR role and could escalate it for you in the PJQA, how on earth would you know that you need to escalate your issue? You can't, since you are completely blind in this case. I think this could be solve in the way you described it. On the other hand, that might bring much more "escalations" and discussions with judges and sponsors but still achieves a greater level of fairness, imo.
+
+
+[08/22/2024 05:36] pfapostol
+If you can ask your friend to escalate the issue, you can probably ask him to look at how your issue is classified.
+
+
+[08/22/2024 05:40] avoloder
+Not if you have multiple issues, for example. Or it doesn't necessarily have to be a friend. If I see my issue has been downgraded compared to another one, which I consider it might be duplicate I could ask here in the channel someone to escalate it for me.
+
+
+[08/22/2024 05:42] avoloder
+I guess everyone is able to achieve the SR role sooner or later, but I just agreed that there is a space for improvement 🙂
+
+
+[08/22/2024 09:22] brandio
+once in a while there will be a give away contest to farm your H/Ms, just dont worry
+
+
+[08/22/2024 09:29] zdravkohr
+I wonder which contest will that be 😄
+
+{Reactions}
+😹 
+
+[08/22/2024 10:12] pfapostol
+this one is good enough for H/M farming, unfortunately not money farming 😄
+
+{Reactions}
+💯 (2) 
+
+[08/22/2024 10:44] kunhah
+Someone with a duplicate of one of my findings told me that it was invalid, if it was considered invalid, I wish I would be able to talk to the judging team, because it was valid in my opinion
+
+
+[08/22/2024 10:45] kunhah
+I mean, I at least wanted to know why it's invalid
+
+
+[08/22/2024 10:55] brivan
+There will be $0 rewards for this one
+
+
+[08/22/2024 10:59] pfapostol
+Usually, even people with SR don't know why. The judge may explain their decision, but they are not required to
+
+
+[08/22/2024 12:57] saurabh_0312
+how much time is left for the result ??
+
+
+[08/22/2024 13:41] 0xakira1
+No one knows for sure. There's a table with a timeline
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/2024-08-22_16.38.49-08F8F.png
+
+
+[08/22/2024 13:46] brivan
+End of next week probably. PJQA ends today
+
+
+[08/22/2024 14:27] kunhah
+Can I ask a SR to check something for me?
+
+
+[08/22/2024 15:05] oxwhite
+right,but it will be a good opportunity to get SR role for many ı guess. ı am personally looking forward to get backstage role with the result of this. ı haven't competing on C4 for a while , have only a Medium from one of previous contests
+
+
+[08/22/2024 15:08] brivan
+Yea, this contest was like a First Flight, good opportunity for farming HM
+
+
+[08/22/2024 19:54] 0xhelium
+Nah , give it another 2 weeks in full . There are lot of escalations .
+
+
+[08/25/2024 01:37] .justuzair
+https://tenor.com/view/mr-bean-mrbean-bean-mr-bean-holiday-mr-bean-holiday-movie-gif-3228235746377647455
+
+{Embed}
+https://tenor.com/view/mr-bean-mrbean-bean-mr-bean-holiday-mr-bean-holiday-movie-gif-3228235746377647455
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/mr-bean-mrbean-9624D.png
+
+{Reactions}
+👀 (14) ➕ (3) 🤣 (4) 
+
+[08/26/2024 15:42] saurabh_0312
+Any update??
+
+{Reactions}
+c4question (6) 👀 (4) 4739_Skeletor (3) 8374_Telegram (2) code4rena (3) 💐 (2) 
+
+[08/27/2024 07:50] x0t0wt1w_62610
+https://tenor.com/view/lazy-cat-waiting-bored-kitten-gif-18187747
+
+{Embed}
+https://tenor.com/view/lazy-cat-waiting-bored-kitten-gif-18187747
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/lazy-cat-FDA36.png
+
+{Reactions}
+😂 
+
+[08/27/2024 11:25] brivan
+Next week folks
+
+{Reactions}
+🫡 (5) chefskiss (3) 
+
+[08/27/2024 12:12] saurabh_0312
+How many med and high
+
+
+[08/27/2024 12:12] saurabh_0312
+Are there in total
+
+
+[08/29/2024 17:16] mylifechangefast.eth_70767
+Fr??.. To be sure of what you said you mean like nextWeek, days in between Sun to Sat right?... Nice nice👏
+
+
+[08/31/2024 03:37] anonimoux2k
+Maybe they waited until the Russia-Ukraine war ended to announce it. 👀
+
+
+[08/31/2024 03:55] .nnez
+I believe a more appropriate term is in the next epoch
+
+{Reactions}
+🤓 🤣 (2) 
+
+[08/31/2024 08:11] mylifechangefast.eth_70767
+I see😅
+
+
+[08/31/2024 15:21] brivan
+This PJQA is not going easy. Lot of escalations with tricky POVs, so the judge is taking his time.
+
+{Reactions}
+😂 
+
+[08/31/2024 15:23] anonimoux2k
+Sorry for my bad joke :v
+
+
+[08/31/2024 18:17] oxwhite
+it seems a lot going on ,while people like me who do not have backstage yet, totally unaware of this if not mentioned. however soon ı'll get that SR role. ı am certain of 1M+1H of my submission, but curious about the other 2
+
+
+[08/31/2024 18:32] pfapostol
+I have SR, there have been no updates for 8 days. You overestimate the amount of information you get from SR.
+
+
+[08/31/2024 18:33] kalogerone
+I think you are not looking correctly, there hasn’t been an update for 1 day
+
+
+[08/31/2024 18:33] kalogerone
+Shooting you a dm to clarify
+
+
+[08/31/2024 18:37] pfapostol
+this was a minor change, i mean complete re-judging and end of PJQA.
+
+{Reactions}
+👍 
+
+[08/31/2024 19:35] oxwhite
+well if you say so💁‍♂️  but at least u can see the status of your submissions right? or escalate them if u want
+
+{Reactions}
+✅ 
+
+[08/31/2024 19:44] pfapostol
+yes, but from my experience. I waited for it much more than I actually use. When you write PoC, findings rarely need to be escalated.
+I thought that I would learn more quickly seeing the result, but not, because it is very difficult to dig through a large number of duplicates and meaningless findings until the final result announced publicly.
+
+
+[08/31/2024 19:44] pfapostol
+generally speaking, it's better to have SR than not to have it.
+but don't overestimate it.
+
+{Reactions}
+👍 (2) 
+
+[08/31/2024 19:47] nihavent.
+My gripe with it is people can escalate against your issues and you can't defend them
+
+
+[08/31/2024 19:48] oxwhite
+got your point. indeed ı had the same feeling recently in one of the contests that ı participated in on codehawks. Too many subs led me to go over only interesting subs. not sure what would be a good way in terms of feedback in case of  too many subs. Experimenting this
+
+{Reactions}
+👍 
+
+[09/01/2024 04:21] tamoghna.
+true
+
+
+[09/01/2024 12:38] saurabh_0312
+So this week result will be out ??
+
+
+[09/01/2024 16:42] kalogerone
+no one knows, my guess is no
+
+
+[09/01/2024 17:28] saurabh_0312
+😭
+
+
+[09/01/2024 17:58] juve3813
+👨🏾‍🦯‍➡️👨🏾‍🦯‍➡️👨🏾‍🦯‍➡️
+
+
+[09/02/2024 01:12] .justuzair
+https://tenor.com/view/mr-bean-mrbean-bean-mr-bean-holiday-mr-bean-holiday-movie-gif-11625313334009911234
+
+{Embed}
+https://tenor.com/view/mr-bean-mrbean-bean-mr-bean-holiday-mr-bean-holiday-movie-gif-11625313334009911234
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/mr-bean-mrbean-3802C.png
+
+{Reactions}
+👀 (3) 
+
+[09/02/2024 02:42] blockchain555
+https://tenor.com/view/wovies-the-kid-the-wovie-minions-despicable-me-gif-25757779
+
+{Embed}
+https://tenor.com/view/wovies-the-kid-the-wovie-minions-despicable-me-gif-25757779
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/wovies-the-kid-427C2.png
+
+{Reactions}
+👀 
+
+[09/02/2024 08:38] mylifechangefast.eth_70767
+You said next week👀
+
+{Reactions}
+😂 (5) 🥲 (2) 
+
+[09/02/2024 21:47] theyardmic
+there is still hope guyz🙂 
+https://discord.com/channels/810916927919620096/852275457847722014/1275678797991247893
+
+
+[09/02/2024 23:16] kalogerone
+thats for the initial juding, before the pjqa
+
+
+[09/03/2024 00:25] ericwillworkforcryptopunks
+So I submitted a few issues (before the deadline ofc) but do not see them in my user profile? Is this the case for everybody or am I missing a verification step?
+
+
+[09/03/2024 01:23] kalogerone
+they are not shown until the audit report becomes public
+
+{Reactions}
+👍🏻 
+
+[09/03/2024 01:42] ericwillworkforcryptopunks
+Then how do we know if we want to dispute the judges?
+
+
+[09/03/2024 02:51] 0xhelium
+You cannot dispute , you need SR role for that
+
+{Reactions}
+👍🏻 
+
+[09/03/2024 07:24] _karanel
+Is PJQA finished?
+
+
+[09/03/2024 09:21] blockchain555
+when final result?
+
+
+[09/03/2024 09:41] rodiontrubnikov
+There are 40 + comments in PJQA with multiple issues for consideration in each comment
+
+
+[09/03/2024 09:42] rodiontrubnikov
+And also additional comments after the judge's response
+
+
+[09/03/2024 09:42] rodiontrubnikov
+it takes time 😁
+
+
+[09/03/2024 09:45] rodiontrubnikov
+But pretty soon I think
+
+
+[09/03/2024 10:44] brivan
+Yes, just to resolve all comments is not easy. There are some interesting escalations to validate/invalidate some findings,  there are some escalations for wrong dupps for example that requires the judge to go over all issues and fix the dups, ..etc
+
+
+[09/03/2024 10:46] brivan
+Still, I believe by the end of this week, it will be ready for announcement, the judge is doing his best
+
+
+[09/03/2024 12:26] mylifechangefast.eth_70767
+Nice
+
+
+[09/03/2024 16:34] samuraii77
+https://tenor.com/view/doubt-press-x-la-noire-meme-x-button-gif-19259237
+
+{Embed}
+https://tenor.com/view/doubt-press-x-la-noire-meme-x-button-gif-19259237
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/doubt-press-x-B9174.png
+
+
+[09/03/2024 19:37] kalogerone
+It is like that with some contests with such high amount of submissions, issues and comments in PJQA. To be fair, the judge has been relatively fast considering the amount of work needed to be done. Be patient guys
+
+
+[09/04/2024 14:22] blockchain555
+https://tenor.com/view/wovies-the-kid-the-wovie-minions-despicable-me-gif-25757779
+
+{Embed}
+https://tenor.com/view/wovies-the-kid-the-wovie-minions-despicable-me-gif-25757779
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/wovies-the-kid-427C2.png
+
+
+[09/04/2024 15:01] tigerfrake
+Lmao. This is gonna take a minute bruh
+
+
+[09/04/2024 15:02] blockchain555
+https://tenor.com/view/mdr-gif-18285088358737753438
+
+{Embed}
+https://tenor.com/view/mdr-gif-18285088358737753438
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/mdr-2E9AD.png
+
+
+[09/04/2024 15:04] tigerfrake
+Judge no dey rest I tell you. It's more like wrestling on that discussion page:4739_Skeletor:
+Just rounds and rounds with lots of issues not yet settled
+
+{Reactions}
+😂 (5) 
+
+[09/05/2024 07:01] saurabh_0312
+https://tenor.com/view/calm-down-gif-24013477
+
+{Embed}
+https://tenor.com/view/calm-down-gif-24013477
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/calm-down-6E5A3.png
+
+
+[09/05/2024 10:47] brivan
+Really don't expect high incomes from this. Trust me when I say some payouts will be rounded to zero lol
+
+{Reactions}
+🙂 😮 (2) 
+
+[09/05/2024 12:15] lookman6596
+How many highs and mediums are there?
+
+
+[09/05/2024 12:22] brivan
+Can't be disclosed. The number will be indicated in the rewards announcements anyways. Even at the moment, the final valid submissions is not known as some valids are getting invalidated and some invalids are getting validated
+
+{Reactions}
+thankyou 
+
+[09/05/2024 12:31] rudhra_52418
+Can we expect in this week
+
+
+[09/05/2024 12:41] .justuzair
+Dayyyuummm 😶‍🌫️
+
+
+[09/05/2024 13:21] brivan
+Even if the judge is working at crazy speed, no. Next week
+
+{Reactions}
+👍 (3) 
+
+[09/09/2024 02:22] blockchain555
+https://tenor.com/view/bhibatsam-shruthi-hassan-waiting-vakeel-saab-gif-21420593
+
+{Embed}
+https://tenor.com/view/bhibatsam-shruthi-hassan-waiting-vakeel-saab-gif-21420593
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/bhibatsam-shruthi-hassan-78777.png
+
+
+[09/09/2024 03:46] 0xhelium
+Soon   But don’t expect too much from this one
+
+
+[09/09/2024 04:48] .justuzair
+I think most of us at least, myself; are waiting for farming HM this is gonna be my first public contest 😅😂
+
+{Reactions}
+🔥 
+
+[09/09/2024 07:32] x0t0wt1w_62610
+https://tenor.com/view/today-yay-gif-25615367
+
+{Embed}
+https://tenor.com/view/today-yay-gif-25615367
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/today-yay-B5CD4.png
+
+
+[09/09/2024 11:46] avoloder
+Are the escalations already resolved? What does it look like?
+
+
+[09/09/2024 13:55] rudhra_52418
+May not be
+
+
+[09/09/2024 14:10] pfapostol
+Most likely not, some changes are still happening
+
+{Reactions}
+😢 (2) hi5 
+
+[09/09/2024 21:38] 0xdemonnn
+very soon
+
+
+[09/09/2024 21:51] rudhra_52418
+Did all escalations sorted out ?
+
+
+[09/09/2024 22:32] brivan
+Tonight, or tomorrow
+
+
+[09/09/2024 22:33] rudhra_52418
+And results may be day after tomorrow
+
+
+[09/09/2024 22:34] brivan
+I was talking about announcements
+
+{Reactions}
+👍 (2) 
+
+[09/09/2024 22:38] brivan
+I figured out something after this PJQA, I won't do NFT games contests anymore
+
+{Reactions}
+😂 (9) 💯 🤣 
+
+[09/09/2024 22:40] nihavent.
+I wanna hear why haha
+
+
+[09/09/2024 22:42] brivan
+I can't say too much, but give the report a look after it is public.
+
+{Reactions}
+🫡 (2) 
+
+[09/09/2024 23:44] 0xhelium
+The ROI is very bad
+
+
+[09/10/2024 00:31] anonimoux2k
+My experience for predicting when results will be announced is the moment Abdessamed says "next week" and adds 20 days.
+
+{Reactions}
+😂 
+
+[09/10/2024 05:00] pfapostol
+I think it's more about situations where something that almost everyone thought was normal game logic somehow  turns out to be a vulnerability.
+
+
+[09/10/2024 06:26] avoloder
+And vice versa too .. Something that almost everyone thought was vulnerability (I can remember gaming the entropy and knowing when the golden one should be minted) turns out to be a normal gaming logic and that the sponsors want participants to compete and that is normal for those who have knowledge about contracts to take advantage of it 😄  You can't predict that
+
+
+[09/10/2024 10:26] brivan
+This PJQA was really tough, but everything is settled. The logo is even appearing on certified warden's profiles. Should be today
+
+
+[09/10/2024 11:01] _karanel
+Logo is not appearing on my profile
+
+
+[09/10/2024 11:19] 0xhelium
+Ishh
+
+
+[09/10/2024 11:25] brivan
+It is, **Helped Secure** section
+
+
+[09/10/2024 11:34] _karanel
+Ah just saw it. Thanks
+
+
+[09/10/2024 11:36] blockchain555
+how can i saw this?
+
+{Reactions}
+😂 
+
+[09/10/2024 11:38] avoloder
+You are not certified, so you can't see it. If you want to see how this looks like you can search for @_karanel 's profile in the leaderboard, and on the right side you have section Helped Secure.
+
+{Reactions}
+👍 
+
+[09/10/2024 11:58] lookman6596
+I have also seen yours
+
+
+[09/10/2024 12:05] avoloder
+Hm.. I am also not certified, and I can't see it 🙂
+
+{Reactions}
+c4services 🥲 (2) 
+
+[09/11/2024 01:37] liveactionllamac4
+🤑 🎉  Awards for **TraitForge**:
+
+$4,392.59 USDC » @0xlemon 
+$2,629.32 USDC » @samuraii77 
+$1,558.64 USDC » @KupiaSec 
+$1,435.21 USDC » @yixxas 
+$934.19 USDC » @pfapostol 
+$767.67 USDC » @Bauchibred 
+$704.43 USDC » @ZanyBonzy 
+$644.64 USDC » @Sabit 
+$582.00 USDC » @anonymous_joe 
+$472.40 USDC » @jesjupyter 
+$439.82 USDC » @0xDemon 
+$360.60 USDC » @OKOMO 
+$341.40 USDC » @p0wd3r 
+$327.60 USDC » @pep7siup 
+$288.69 USDC » @0rpse 
+$284.23 USDC » @Agontuk 
+$277.39 USDC » @gesha17 
+$233.10 USDC » @Kalogerone 
+$232.52 USDC » @Abhan1041 
+$223.19 USDC » @dimulski 
+$219.69 USDC » @sl1 
+$210.72 USDC » @Abdessamed 
+$209.13 USDC » @0xb0k0 
+$208.04 USDC » @kutu 
+$204.11 USDC » @shaflow2 
+$204.11 USDC » @amaron 
+$203.35 USDC » @boredpukar 
+$196.34 USDC » @Darko 
+$187.21 USDC » @smbv-1923 
+$187.21 USDC » @mansa11 
+$160.74 USDC » @cryptomoon 
+$158.31 USDC » @Shahil Hussain 
+$153.60 USDC » @perseus 
+$151.04 USDC » @0xDazai 
+$151.04 USDC » @Fitro 
+$151.03 USDC » @0xAadi 
+$151.03 USDC » @dvrkzy自我 
+$151.03 USDC » @h0lk0(Rolk) 
+$151.03 USDC » @naman 
+$146.60 USDC » @0x3b 
+$144.35 USDC » @Decap 
+$136.40 USDC » @yotov721 
+$118.21 USDC » @inzinko 
+$101.68 USDC » @d3e4 
+$94.79 USDC » @_karanel 
+$94.75 USDC » @AvantGard 
+$94.74 USDC » @K42 Ψ 
+$90.68 USDC » @Udsen 
+$82.27 USDC » @nnez 
+$82.21 USDC » @Trooper 
+$75.41 USDC » @0xshivay 
+$72.92 USDC » @0xR360 
+$72.90 USDC » @Shubham 
+$72.90 USDC » @0xJoyBoy03 
+$72.89 USDC » @King_ 
+$72.88 USDC » @PTolev 
+$69.70 USDC » @ZdravkoHr 
+$67.17 USDC » @stanchev 
+$63.26 USDC » @sesegel21 
+$63.26 USDC » @FastChecker 
+$63.24 USDC » @broccolirob 
+$58.90 USDC » @Matin 
+$52.46 USDC » @nikhil840096 
+$52.46 USDC » @Vijay T. 
+$48.59 USDC » @DemoreX 
+$47.84 USDC » @rbserver 
+$45.31 USDC » @JuggerNaut 
+$45.31 USDC » @preslaven 
+$45.31 USDC » @swapnaliss 
+$29.02 USDC » @cryptoman256 
+$29.01 USDC » @CyberscopeDevTeam 
+$28.44 USDC » @avoloder 
+$22.62 USDC » @oxait 
+$21.92 USDC » @Yaioxy 
+$21.88 USDC » Trident-Audits (@mgnfy_view and @EBOK) 
+$21.86 USDC » @Tamer 
+$21.86 USDC » @N3smaro 
+$15.83 USDC » @dontonka 
+$10.47 USDC » @ke1caM 
+$9.73 USDC » @shikhar229169 
+$9.68 USDC » @ABAIKUNANBAEV 
+$7.91 USDC » @desaperh 
+$7.20 USDC » @Zac🇬🇧 
+$7.19 USDC » @Nihavent 
+$7.15 USDC » @hail_the_lord 
+$7.15 USDC » @eta 
+$3.31 USDC » @peanuts 
+$3.28 USDC » @hl_ 
+$3.27 USDC » @vinica_boy 
+$2.58 USDC » @valkvalue 
+$2.52 USDC » @Villy 
+$2.52 USDC » @dyoff 
+$2.52 USDC » @hakunamatata 
+$2.51 USDC » @Eva
+
+{Reactions}
+🎉 (4) ❤️ (2) 🔥 (2) 
+
+[09/11/2024 01:37] liveactionllamac4
+$0.82 USDC » @shaka 
+$0.78 USDC » @0xrex 
+$0.77 USDC » @ilchovski 
+$0.77 USDC » @Rhaydden 
+$0.77 USDC » @gkrastenov 
+$0.76 USDC » @0xbeWater0Given 
+$0.76 USDC » @franfran20 
+$0.76 USDC » @joshuajee 
+$0.76 USDC » @burnerelu 
+$0.76 USDC » @Sherk 
+$0.76 USDC » @Zeta 
+$0.76 USDC » @slvDev 
+$0.07 USDC » @LeFy 
+$0.06 USDC » @Waydou 
+$0.06 USDC » @Autosaida 
+$0.06 USDC » @3n0ch 
+$0.06 USDC » @y4y 
+$0.06 USDC » @kapten.crtz 
+$0.06 USDC » @climber0707 
+$0.05 USDC » @4rdiii 
+$0.05 USDC » @LoneWolf 
+$0.05 USDC » @0xCoinymous 
+$0.05 USDC » @D_Auditor 
+$0.05 USDC » @den-sosnowsky 
+$0.05 USDC » @rndquu 
+$0.05 USDC » @Xcrypt 
+$0.05 USDC » @0xPwned 
+$0.05 USDC » @robertodf99 
+$0.04 USDC » MKVsentry (@MB, @FearZ and @Vik) 
+$0.04 USDC » Yunaci (@cholakovv and @Vancelot) 
+$0.04 USDC » @chaosSR 
+$0.04 USDC » @Enchev 
+$0.04 USDC » @Quaternion 
+$0.04 USDC » @artilugio0 
+$0.02 USDC » @Ruhum 
+$0.02 USDC » @dobrevaleri 
+$0.02 USDC » @LSH.F.GJ 
+$0.02 USDC » @Granat 
+$0.01 USDC » @Tigerfrake 
+$0.01 USDC » EaglesSecurity (@kane-goldmisth and @julian_avantgarde) 
+$0.01 USDC » @TopChallenger 
+$0.01 USDC » @zhaojohnson 
+$0.01 USDC » @dhank 
+$0.01 USDC » @0xAleko 
+$0.01 USDC » @TopStar 
+$0.01 USDC » @PASCAL 
+$0.01 USDC » @Topmark 
+$0.01 USDC » @JustUzair 
+$0.01 USDC » @kartik_giri_47538 
+$0.01 USDC » @JanuaryPersimmon2024 
+$0.01 USDC » @Tonchi 
+$0.01 USDC » @isamjay 
+$0.01 USDC » @iam_emptyset 
+$0.01 USDC » @Ryonen 
+$0.01 USDC » @denzi_ 
+$0.01 USDC » @emerald7017 
+$0.01 USDC » @ArsenLupin 
+$0.01 USDC » @eierina 
+$0.01 USDC » @aldarion 
+$0.01 USDC » @ikkun_1011 
+$0.01 USDC » @dimah7 
+$0.01 USDC » @Dots 
+$0.01 USDC » @PNS 
+$0.01 USDC » @straawhaat_ 
+$0.01 USDC » @eLSeR17 
+$0.01 USDC » @valentin_s2304 
+$0.01 USDC » @sutter 
+
+🏁 Findings summary
+--------------------------------------—
+6 High risk findings
+19 Med risk findings
+315 wardens contributed
+
+Top Hunter: 0xlemon
+Top Gatherer: samuraii77
+Top QA report: jesjupyter
+
+Awards will be distributed on Polygon. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to review [this announcement](https://discord.com/channels/810916927919620096/810929015509483554/1272625452909072415) and fill in your tax info if you haven't already. This must be completed within 30 days (i.e. before Friday, 11 October 2024) to receive your award distribution for this audit.
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions. Please keep in mind, only wardens who received awards exceeding $0 are included in the above list, regardless of the validity of their findings (e.g. if a valid finding had a high volume of duplicates).*
+
+*Also, the leaderboard will be updated at a later point in time.*
+
+{Reactions}
+🎉 (6) 
+
+[09/11/2024 01:45] dvrkzy999
+gg
+
+
+[09/11/2024 01:46] .justuzair
+One question guys, why do the findings not show up on the profile? Is there some delay?
+
+
+[09/11/2024 02:12] 0xdemonnn
+congrats all :chefskiss:
+
+
+[09/11/2024 02:13] preslaven
+finally, congrats everyone
+
+
+[09/11/2024 04:13] topchallenger
+I am unable to find my name on this list.
+
+
+[09/11/2024 04:14] topchallenger
+I've submitted over 10 findings
+
+
+[09/11/2024 04:31] 0x_shahil_hussain
+my first 3 digit payout ❤️
+
+{Reactions}
+🥂 (6) 🙌 
+
+[09/11/2024 04:43] 4gontuk
+It was my first c4 contest, and secured 16th place. Wah!
+
+{Reactions}
+🎉 (4) 🚀 
+
+[09/11/2024 07:09] strapontin
+Can we see the final report somewhere ?
+
+{Reactions}
+🔁 
+
+[09/11/2024 07:21] strapontin
+nvm "*wait until the report is published*"
+
+
+[09/11/2024 07:35] 0xhelium
+@CloudEllie , @kartoonjoy | C4🎇🎇 Something is wrong with this awards list. I'am seing the logo on my c4 account , i found 1 high and 1 med, so i should at least be mentionned somewhere in 1 cents winners. But i can't find my name on the awards list.
+
+
+[09/11/2024 07:45] samuraii77
+Quoting:
+
+"Please keep in mind, only wardens who received awards exceeding $0 are included in the above list, regardless of the validity of their findings (e.g. if a valid finding had a high volume of duplicates)."
+
+
+[09/11/2024 07:47] samuraii77
+However the text should be changed to maybe exceeding $0.01 or whatever it actually is? As if someone has a finding, it definitely exceeds $0, it might be $0.00001 but still more than 0 so it's a bit confusing tbh
+
+
+[09/11/2024 07:49] granat__
+I see someone is in the first 5 places with 2 high / mediums, and others are in the top 5 with 15 high / mediums, this means that the vulnerabilities of the first one are more “rare”?
+
+
+[09/11/2024 07:50] granat__
+they are not even unique, so i have this doubt
+
+
+[09/11/2024 07:50] 0x_shahil_hussain
+payout depends upon how many dups your finding has
+
+
+[09/11/2024 07:52] 0x_shahil_hussain
+those 2 HM has low dups compare to other HMs
+
+
+[09/11/2024 07:53] 0xfarman
+can we see the report of audits?
+
+
+[09/11/2024 08:00] 0xhelium
+Thanks for your input . I just checked again . Even if one med was worth $300 , my two findings are more than 1 cents
+
+
+[09/11/2024 08:03] granat__
+oh okay 👍
+
+
+[09/11/2024 08:13] sourcier.eth.15
+You can find the formula on the code4rena docs.
+
+
+[09/11/2024 08:23] samuraii77
+You have 1 finding with around 90 duplicates, it's very likely it's below 0.01$
+
+
+[09/11/2024 08:26] tigerfrake
+Huh, welcome to th club bruh. I've seen worse🫡
+
+
+[09/11/2024 08:51] klau5_
+I found 3 High and 2 Medium, but I'm not in the list. 😂
+
+
+[09/11/2024 08:51] tigerfrake
+🤣This is worse than what I've seen, lmao
+
+
+[09/11/2024 09:05] binary_circuit
+So me and my team mate submitted almost exactly the same  and his name is here and mine is not here lol
+
+
+[09/11/2024 09:06] binary_circuit
+Will never perticipate in this again, this is the worst place to perticipate in
+
+
+[09/11/2024 09:07] binary_circuit
+Code4rena lacks transparency than all others, see how everyone is complaining,
+
+People that stays all night and day to work and protect this space and you guys are treating them such way
+
+{Reactions}
+❓ (6) 👀 
+
+[09/11/2024 09:10] .nnez
+You submitted from a team account?
+
+
+[09/11/2024 09:10] pfapostol
+Only 3 of your issues were not invalidated/downgraded and they have 85-91 duplicates.
+That's probably why you're not being displayed.
+
+
+[09/11/2024 09:11] binary_circuit
+No we submitted differently but same bug
+
+
+[09/11/2024 09:15] mylifechangefast.eth_70767
+I had 10dups I can't see my name
+
+
+[09/11/2024 09:15] mylifechangefast.eth_70767
+Lmao
+
+
+[09/11/2024 09:21] pfapostol
+I can't find any of findings with your handle.
+
+
+[09/11/2024 09:22] binary_circuit
+So you mean all of them is less than 0.01$
+
+
+[09/11/2024 09:23] pfapostol
+Yes, definitely.
+
+
+[09/11/2024 09:23] pfapostol
+Formula is:
+```
+Med Risk Slice: 3 * (0.85 ^ (split - 1)) / split
+High Risk Slice: 10 * (0.85 ^ (split - 1)) / split
+```
+So for 91 this yield a lot (a lot in terms of negative power of 10)
+
+
+[09/11/2024 09:24] tigerfrake
+Hit a 0.01 this time and felt no pinch. I've grown guys 😂
+
+{Reactions}
+😹 
+
+[09/11/2024 09:25] mylifechangefast.eth_70767
+LogByte
+
+
+[09/11/2024 09:25] mylifechangefast.eth_70767
+Please check
+
+
+[09/11/2024 09:25] mylifechangefast.eth_70767
+Someone told me
+
+
+[09/11/2024 09:25] avalanc3
+It's logbytes
+
+
+[09/11/2024 09:26] binary_circuit
+Lol m out, for the fact that I can't even see my findings and everything is happening behind the scene, no transparency
+
+
+[09/11/2024 09:26] avalanc3
+@pfapostol It's LogBytes
+
+
+[09/11/2024 09:26] avalanc3
+Yeah ur right
+
+
+[09/11/2024 09:26] tigerfrake
+Takes time pal. You earn your way up fr
+
+
+[09/11/2024 09:27] mylifechangefast.eth_70767
+Our high got downgraded though.
+
+
+[09/11/2024 09:27] tigerfrake
+Happens a ton. Shoulda seen my end😂
+
+
+[09/11/2024 09:28] mylifechangefast.eth_70767
+Token not sent to owner?
+
+
+[09/11/2024 09:28] mylifechangefast.eth_70767
+A QA?
+
+
+[09/11/2024 09:28] pfapostol
+Mostly invalid/QA and 85-94 dups
+
+
+[09/11/2024 09:28] _karanel
+Waiting for SR request to be approved and then I would get to know what happened
+
+
+[09/11/2024 09:28] binary_circuit
+This is web3, is not about taking time, first they requested tax info which is violating the web3 space regulations , that is first a red flag, now this
+
+
+[09/11/2024 09:29] mylifechangefast.eth_70767
+Lot of things happening br😅
+
+{Reactions}
+💯 
+
+[09/11/2024 09:29] 0x_shahil_hussain
+what's the criteria to get SR role?
+
+
+[09/11/2024 09:29] pfapostol
+User error for this findings
+
+
+[09/11/2024 09:29] pfapostol
+User errors are always QA
+
+
+[09/11/2024 09:29] tigerfrake
+I can't comment nomo
+
+
+[09/11/2024 09:30] mylifechangefast.eth_70767
+I see 👀
+
+
+[09/11/2024 09:30] mylifechangefast.eth_70767
+Have you checked the name?
+
+
+[09/11/2024 09:31] 0xdemonnn
+good luck bro
+
+{Reactions}
+😅 
+
+[09/11/2024 09:31] mylifechangefast.eth_70767
+3 meds I guess
+
+
+[09/11/2024 09:32] 0x_shahil_hussain
+so everyone of us going to get the SR role?
+
+
+[09/11/2024 09:32] _karanel
+In short 3 contests with valid findings
+
+
+[09/11/2024 09:32] 0x_shahil_hussain
+aah!!
+
+
+[09/11/2024 09:33] 0x_shahil_hussain
+it's my 2nd contest in c4, so need to find a valid in one more contest to get the SR role
+
+{Reactions}
+👍 (3) 
+
+[09/11/2024 09:33] mylifechangefast.eth_70767
+@pfapostol ?
+
+
+[09/11/2024 09:34] pfapostol
+The criteria for SR are not that strict, which is not good for the original purpose, many people during PJQA are trying to raise issues that are obviously invalid and do not understand why they get rejected.
+
+{Reactions}
+👍 
+
+[09/11/2024 09:34] pfapostol
+What?
+
+
+[09/11/2024 09:36] mylifechangefast.eth_70767
+Did you check the name? 
+
+Logbytes?
+
+
+[09/11/2024 09:36] tigerfrake
+Gotta force something innit:4739_Skeletor:
+
+
+[09/11/2024 09:37] pfapostol
+Yes, I have already provided you with information about your findings.
+
+
+[09/11/2024 09:37] mylifechangefast.eth_70767
+No you didn't... Whats it?
+
+
+[09/11/2024 09:48] 4b69
+Earn your way up to see what you submitted?😹
+
+
+[09/11/2024 09:49] tigerfrake
+Hilarious right? But there's no way around it pal.
+
+
+[09/11/2024 09:51] 4b69
+Hmm yeah! We just gotta keep grinding I think
+
+
+[09/11/2024 09:51] pfapostol
+Mainly to argue about the judging.You saw how long it took to resolve this contests even with the SR limitation, without it there would have been chaos,
+
+
+[09/11/2024 09:53] mylifechangefast.eth_70767
+@🦙 liveactionllama | C4  i can see i have some valid findings in the contests but I don't see my team name in the list for the rewards. Would you be able to share the rewards distribution list based on the fidings.
+
+
+[09/11/2024 09:58] 4b69
+Bro.....some of us this is a learning experience for us, so to make life easier for us. You can let us see our findings and why they were invalid, we can compare to the valid ones to know what we should improve, it doesn't mean you should give us the right to escalate. And be assured if I know this is wrong or these type of bugs are not accepted, the next time you aren't seeing me submitting them therefore reducing the tons of shit I report and it goes up from there
+
+
+[09/11/2024 10:00] mylifechangefast.eth_70767
+We go explain tire
+
+
+[09/11/2024 10:02] pfapostol
+Bro. I can't do that because I'm not a C4 developer 😄 . I asked for this feature a year and a half ago when I wasn't certified. But it's probably not a feature C4 wants to implement, probably because it would make a lot of people try to defend their findings in public channels.
+
+
+[09/11/2024 10:03] pfapostol
+https://discord.com/channels/810916927919620096/810931711609143326/1283366981617188875 This is the answer to why is you not showed in the rewards list.
+
+{Reactions}
+thankyou 
+
+[09/11/2024 10:04] 4b69
+Oh yeah I know I would've seen |C4 closer to your name 😹 it was a discussion so I was just trying to make my point clear
+
+
+[09/11/2024 10:05] cloudellie
+I see several people asking about their names not being in the list, and/or low awards on this audit, and have responded here: https://discord.com/channels/810916927919620096/810931711609143326/1283366981617188875
+
+
+[09/11/2024 10:05] brivan
+lol
+
+
+[09/11/2024 10:06] 4b69
+Bro they are tons of people with big egos so even with this model it will still happen or you think it effectively prevents it 
+
+Tbh I respect their decision
+
+
+[09/11/2024 10:06] cloudellie
+> Would you be able to share the rewards distribution list based on the fidings
+
+Working on improvements to this. Meanwhile also working on assembling the report for publication, so that you all can see the full details.
+
+
+[09/11/2024 10:07] brivan
+Listen, this PJQA was not easy at all. 10 issues were upgraded after PJQA, many wardens disagreed with some judge decisions. But after all, the final say goes to the judge and it should be respected
+
+
+[09/11/2024 10:08] 4b69
+Oh yeah I totally understand this but I would just like to have a sneak peek on what findings were there after a contest. It's a general thing I'm saying
+
+
+[09/11/2024 10:11] mylifechangefast.eth_70767
+But why is it not displayed on team site?
+
+
+[09/11/2024 10:15] cloudellie
+Answered here: https://discord.com/channels/810916927919620096/810931711609143326/1283365516680888362
+
+{Reactions}
+👍 
+
+[09/11/2024 10:20] 4b69
+Bro relax I don't have any problem with judging. Read my comments well.  Judges can't satisfy everyone and they do a very good job regardless because they know more and I respect that
+
+
+[09/11/2024 10:21] mylifechangefast.eth_70767
+Thx
+
+{Reactions}
+hi5 
+
+[09/11/2024 10:22] 4b69
+Is there any way I can read valid reports submitted or I  have to wait till the reports tab on the website is updated
+
+
+[09/11/2024 10:26] cloudellie
+You'll need to wait for the report to be published. We're quite strict about [this rule](https://docs.code4rena.com/roles/wardens#tl-dr): 
+
+> Publicly disclosing (e.g. publishing or discussing) any discovered bugs or vulnerabilities before the audit report has been published is grounds for disqualification from all C4 events.
+
+
+[09/11/2024 10:28] 4b69
+Ok thanks will be checking the reports published from time to time
+
+{Reactions}
+hi5 
+
+[09/11/2024 10:48] granat__
+Hi, how can i see my findings for traitforge?
+
+
+[09/11/2024 10:48] granat__
+Can i if i have not the senior role?
+
+
+[09/11/2024 11:06] 0xhelium
+No evidence
+
+{Reactions}
+😹 (2) 
+
+[09/11/2024 11:22] 4b69
+Naaa you have to get SR role before & if your findings are valid ones have some patience it will show in your findings section when everything is done
+
+
+[09/11/2024 11:23] granat__
+ok, thank you
+
+{Reactions}
+hi5 
+
+[09/11/2024 14:02] nick.auditor
+Is this contest result updated in findings.csv?
+
+
+[09/11/2024 14:04] pfapostol
+Not yet
+
+
+[09/11/2024 14:04] nick.auditor
+When is the expected time for it?
+
+
+[09/11/2024 14:06] cloudellie
+should be done by the end of the week
+
+
+[09/11/2024 14:06] nick.auditor
+Thank you very much, @CloudEllie
+
+{Reactions}
+hi5 
+
+[09/11/2024 14:44] guy_in0xnito
+Did my amount got rounded off to 0 , I don't see my name nor any penny?
+@CloudEllie
+@kartoonjoy | C4🎇🎇  also mentioning you in case
+
+
+[09/11/2024 15:21] king.null
+You are definitely Nigerian i swear😂
+
+{Reactions}
+👀 (2) 
+
+[09/11/2024 17:32] nicks_2.07_
+🎊
+
+
+[09/12/2024 18:37] nicks_2.07_
+When will be rewards distribution start?
+
+
+[09/12/2024 19:14] thebrittfactor
+We typically start sending awards within one week, as long as your tax information has been completed.
+
+{Reactions}
+👍 
+
+[09/12/2024 22:43] dontonka
+Omg I'm so eager to get my 15$ rewards, def not worth the time I spent on this contest, I need to learn how to select contest better 😂.
+
+
+[09/12/2024 22:46] dontonka
+Why are the results not yet available on the audit page?
+
+{Reactions}
+👍 
+
+[09/13/2024 03:09] namx05
+If the tax info review is pending at the time of distribution, will there be reattempt for those ones?
+
+
+[09/13/2024 07:11] ebok21
+where can we see the selected findings?
+
+
+[09/13/2024 07:46] _karanel
+When report is published
+
+{Reactions}
+👍 
+
+[09/13/2024 12:09] thebrittfactor
+Our devs are working through a minor update. We'll push awards to the leaderboard as soon as able. 🙂
+
+{Reactions}
+👍 
+
+[09/13/2024 12:11] thebrittfactor
+Tax info is checked every couple of days. As long as your information is reviewed/approved by the deadline noted in the awarding announcement, you'll be able to receive awards.
+
+{Reactions}
+🤝 
+
+[09/13/2024 23:05] liveactionllamac4
+ℹ️ The leaderboard has been updated. Thanks for your patience!
+
+{Reactions}
+hi5 (6) ✅ (3) 
+
+[09/14/2024 10:53] nihavent.
+Hi, I'm new to the platform and trying to understand the grouping in the report. For example the report indicates that I did not find [M-05]. But I did here https://github.com/code-423n4/2024-07-traitforge-findings/issues/391
+How does the grouping work? I can see it was grouped with [M-09] but identified the root cause/impact/fix from [M-05] which would have paid much higher rewards due to less duplication
+
+{Embed}
+https://github.com/code-423n4/2024-07-traitforge-findings/issues/391
+Due to an incorrect `require` statement in the `writeEntropyBatch()...
+Lines of code https://github.com/code-423n4/2024-07-traitforge/blob/279b2887e3d38bc219a05d332cbcb0655b2dc644/contracts/EntropyGenerator/EntropyGenerator.sol#L47-L98 Vulnerability details Bug Descri...
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/391-0837A
+
+{Reactions}
+👀 
+
+[09/14/2024 10:56] nihavent.
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-CE339.png
+
+
+[09/14/2024 11:00] 0xpessimist
+I may have achieved a first in the history of Code4rena, my report was selected (pause bug/Ward) and I earned $0.00 from it :KEKW:
+
+{Reactions}
+😂 (5) chefskiss 🔥 
+
+[09/14/2024 11:02] 0xpessimist
+Glad I didn't really compete in this one, I found the bug while looking to see if I should compete lol
+
+
+[09/14/2024 11:22] nihavent.
+Additionally my report https://github.com/code-423n4/2024-07-traitforge-findings/issues/388
+Should be duplicate-30 [M-19] but instead it's duplicate-656 [M-06]. 
+My report identifies exactly the same root cause/impact/mitigation as [M-19].
+
+I can see the comments on https://github.com/code-423n4/2024-07-traitforge-findings/issues/30 got that report de-duped from 656, but my report was not despite being the same.
+
+Would be great if anyone could provide insight as these duplications significantly affected payouts.
+
+{Embed}
+https://github.com/code-423n4/2024-07-traitforge-findings/issues/388
+Due to the the `entropySlots` array containing 10,010 slots, it is ...
+Lines of code https://github.com/code-423n4/2024-07-traitforge/blob/279b2887e3d38bc219a05d332cbcb0655b2dc644/contracts/EntropyGenerator/EntropyGenerator.sol#L47-L61 https://github.com/code-423n4/20...
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/388-E5247
+
+{Embed}
+https://github.com/code-423n4/2024-07-traitforge-findings/issues/30
+Each generation should have 1 "Golden God" NFT, but there could be ...
+Lines of code https://github.com/code-423n4/2024-07-traitforge/blob/main/contracts/EntropyGenerator/EntropyGenerator.sol#L206 https://github.com/code-423n4/2024-07-traitforge/blob/main/contracts/Tr...
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/30-FC2E3
+
+{Reactions}
+👀 
+
+[09/14/2024 11:31] nihavent.
+Can these issues be fixed? I'm sure I'm not the only one impacted by this but I had no visibility prior to the report being published
+
+
+[09/14/2024 11:38] _karanel
+cc: @kartoonjoy | C4🎇🎇 @CloudEllie
+
+{Reactions}
+❤️ 
+
+[09/14/2024 11:40] cloudellie
+If you submit a help desk request (https://code4rena.com/help), we’ll look into it.
+
+{Embed}
+https://code4rena.com/help),
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/c4-og-v2-8A18A.png
+
+
+[09/14/2024 11:43] kartoonjoy
+Hi there. Are you talking about visibility after the audit closed until the report was published?
+
+
+[09/14/2024 11:44] nihavent.
+Yes I would have raised the duplication issue sooner but I don't have SR role and couldn't see this until the report was published
+
+
+[09/14/2024 11:48] kartoonjoy
+Understood. That isn't a defect actually. You would need to have the SR in order to have had access. So are you're able to meet the qualifications, you're invited to create a help desk request at that time.
+
+This doc explains the current criteria.
+
+https://docs.code4rena.com/roles/certified-contributors/sr-backstage-wardens
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors/sr-backstage-wardens
+Security Researcher role (formerly +backstage wardens) | Code4rena
+
+
+[09/14/2024 11:48] nihavent.
+I completely understand this, and am not claiming it is a defect. Thanks for your response
+
+
+[09/14/2024 11:49] _karanel
+There is duplication issue here.
+
+{Reactions}
+❤️ 
+
+[09/14/2024 11:53] kartoonjoy
+Ah, of the report. My apologies.
+
+
+[09/14/2024 11:53] _karanel
+Yeah, M-19 is one of least duped reports. His issue #388 is a duplicate of M-19  but was marked a dup of M-06.
+
+{Reactions}
+❤️ 
+
+[09/14/2024 11:54] kartoonjoy
+Oh, I'm not going to be able to resolve that. For that, you are invited to create the help desk request. Someone can take a look during the week.
+
+{Reactions}
+❤️ 
+
+[09/14/2024 11:55] nihavent.
+Thanks everyone
+
+{Reactions}
+hi5 
+
+[09/14/2024 12:37] 0xsorrynotsorry
+That's so cool bro. It's priceless actually in real terms 😂
+
+{Reactions}
+KEKW (3) 
+
+[09/14/2024 15:08] tobi0x18
+@everyone You can find the [report](https://code4rena.com/reports/2024-07-traitforge) and [comments](https://github.com/code-423n4/2024-07-traitforge-findings/issues). Feel free to see your results without SR role~ 😁
+
+{Embed}
+https://code4rena.com/reports/2024-07-traitforge
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/c4-og-v2-8A18A.png
+
+
+[09/14/2024 17:59] jayeshshukla.
+Hi did the reward distribution start ? I am yet to receive mine. Also my tax is also done ! so ...?
+
+
+[09/14/2024 18:00] _karanel
+i have received
+
+
+[09/14/2024 18:03] 4gontuk
+Just received
+
+
+[09/14/2024 20:04] jayeshshukla.
+Me too I got it !
+
+
+[09/15/2024 03:23] jayeshshukla.
+Hi guys what does this (1,2) indicate in wardens handle ?
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-8A971.png
+
+
+[09/15/2024 05:41] _karanel
+it means two reports of the said warden were duped in the same finding (having same root cause). they are still rewarded for only one of them.
+
+{Reactions}
+👍 (2) 
+
+[09/15/2024 06:17] topchallenger
+It is first time for me(c4). as you can see med-risk counts are different. what's  wrong??
+also I can find 5 issues(2-high, 3-med) in final trait-forge report.
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - traitforge-jul29 [1266325696079466609].txt_Files/image-560AD.png
+
+
+[09/15/2024 07:31] _karanel
+Explained in the message just above yours, 2M pairs of your findings are duplicated with each other so the actual valid issues are 2H and 3M
+
+
+[09/15/2024 16:45] 0xtrooper
+What determines the wardens listed under `also found by ...`. Should that list all wardens with issues or just a few selected ones? 
+Eg. M-05 https://code4rena.com/reports/2024-07-traitforge#m-05-incorrect-check-against-golden-entropy-value-in-the-first-two-batches only lists 10 + the selected report. But the issues repo has 46 issues with that group (https://github.com/code-423n4/2024-07-traitforge-findings/issues?q=is%3Aclosed+label%3Aduplicate-229)
+
+
+[09/15/2024 17:34] gesha17.
+Thats not the correct group, M-05 is duplicate-927
+
+{Reactions}
+🤝 
+
+[09/15/2024 18:51] 0xtrooper
+Ah okay, feels a bit strange that m05 and m09 are separate issues. As almost all of the dubs of m09 mention the issue from m05
+
+
+[09/15/2024 19:02] nihavent.
+Yep I was thinking the same.
+If I understand correctly:
+M-05 root cause: is due to the incorrect require() statement there is no protection against Golden God existing in the entropy prior to the third batch (and implicitly Golden God can be minted twice in a single gen)
+M-09 root cause: due to having two mechanisms (random entropy and specified Golden God indexes), two Golden Gods can be minted per gen.
+
+So two distinct root cause results in two unique issues. I'm sure a lot of M-09 (including my report) mentioned the root cause of M-05 but were grouped in M-09
+
+
+[09/16/2024 07:14] jayeshshukla.
+I submitted a bug, It was at last moment, I was in hassel as its my 1st audit. So PoC is missing but judge marked it satisfactory and sufficient quality report (which it is clearly not)
+
+but why was it not added to the bug list ?
+
+https://github.com/code-423n4/2024-07-traitforge-findings/issues/248
+
+
+[09/16/2024 07:20] _karanel
+it is added, check M-14 in the report, it is there
+
+
+[09/16/2024 07:58] jayeshshukla.
+yup got it
+
+
+[09/16/2024 07:58] jayeshshukla.
+tqs
+
+
+[09/16/2024 08:12] pascal9476
+Submitted an issue as QA it came out as valid medium 
+Mine wasn’t upgraded fairs 😅
+
+
+[09/17/2024 21:09] mylifechangefast.eth_70767
+Damn that SR
+
+
+[09/17/2024 21:09] mylifechangefast.eth_70767
+😅
+
+
+[09/20/2024 10:06] danielwang_55601
+https://code4rena.com/reports/2024-07-traitforge#m-02-funds-can-be-locked-indefinitely-in-nukefundsol
+
+
+[09/20/2024 10:07] danielwang_55601
+Is it medium issue? "Add a function that allows the contract owner to withdraw funds in case of emergencies or when all NFTs are burned."
+
+
+[09/20/2024 11:25] 0xsl1
+the severity is based on the impact, not the mitigation
+
+
+[09/20/2024 15:52] danielwang_55601
+Yes, I am telling about its impact. "If all NFTs are burned or if no one calls the nuke() function, there’s a real risk that funds could remain permanently locked in the contract."
+
+
+[10/07/2024 21:00] itsmetechjay
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted on Friday, 11 October 2024.  Please make sure to grab anything you might need before then.
+
+
+[10/10/2024 22:13] itsmetechjay
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 1,296 message(s)
+==============================================================
